@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The South County Signal</title>
+<!--[if mso]>
+<style>table,td,div,p,span{font-family:Arial,sans-serif !important;}</style>
+<![endif]-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: #F2EDE6;
+    font-family: 'Source Sans 3', Arial, Helvetica, sans-serif;
+    color: #2D2D2D;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .email-wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #FAF8F5;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: #1B4965;
+    padding: 32px 32px 28px;
+    text-align: center;
+    border-bottom: 4px solid #D4A843;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 900;
+    font-size: 36px;
+    color: #FAF8F5;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .header .tagline {
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    font-size: 13px;
+    color: #D4A843;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .header .date-line {
+    font-size: 13px;
+    color: rgba(250, 248, 245, 0.6);
+    margin-top: 12px;
+    font-weight: 400;
+  }
+
+  /* ── OPENER ── */
+  .opener {
+    padding: 28px 32px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #3A3A3A;
+    border-bottom: 1px solid #E8E2D9;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #D4A843;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #1B4965;
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+
+  /* ── HEADLINER ── */
+  .headliner {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .headliner .sponsor-tag {
+    font-size: 11px;
+    color: #999;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .headliner-card {
+    background: #1B4965;
+    border-radius: 8px;
+    padding: 28px;
+    color: #FAF8F5;
+  }
+  .headliner-card .section-label { color: #D4A843; }
+  .headliner-card .event-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .headliner-card .event-meta {
+    font-size: 14px;
+    color: #D4A843;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .headliner-card .event-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(250,248,245,0.9);
+    margin-bottom: 18px;
+  }
+  .headliner-card .cta-btn {
+    display: inline-block;
+    background: #D4A843;
+    color: #1B4965;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 4px;
+  }
+
+  /* ── LINEUP / ROUNDUP ── */
+  .lineup {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .lineup-item {
+    padding: 18px 0;
+    border-bottom: 1px dashed #DDD7CE;
+  }
+  .lineup-item:last-child { border-bottom: none; }
+  .lineup-item .category-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FAF8F5;
+    background: #1B4965;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  .lineup-item .category-tag.music { background: #6B3FA0; }
+  .lineup-item .category-tag.food { background: #C4572A; }
+  .lineup-item .category-tag.outdoor { background: #2E7D4F; }
+  .lineup-item .category-tag.arts { background: #B8860B; }
+  .lineup-item .category-tag.nightlife { background: #8B2252; }
+  .lineup-item .category-tag.family { background: #3A7CA5; }
+  .lineup-item .category-tag.wellness { background: #5F8575; }
+  .lineup-item .category-tag.sponsored {
+    background: transparent;
+    color: #999;
+    border: 1px solid #CCC;
+    font-size: 9px;
+    margin-left: 6px;
+  }
+  .lineup-item .item-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1B4965;
+    margin-bottom: 4px;
+  }
+  .lineup-item .item-name a {
+    color: #1B4965;
+    text-decoration: none;
+  }
+  .lineup-item .item-name a:hover { text-decoration: underline; }
+  .lineup-item .item-meta {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .lineup-item .item-desc {
+    font-size: 15px;
+    color: #4A4A4A;
+    line-height: 1.55;
+  }
+
+  /* ── FOOD & DRINK SPOTLIGHT ── */
+  .spotlight {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .spotlight-card {
+    background: linear-gradient(135deg, #FAF3E8 0%, #F5EDE0 100%);
+    border-radius: 8px;
+    padding: 24px;
+    border-left: 4px solid #D4A843;
+  }
+  .spotlight-card .spot-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1B4965;
+    margin-bottom: 4px;
+  }
+  .spotlight-card .spot-location {
+    font-size: 13px;
+    color: #D4A843;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .spotlight-card .spot-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #4A4A4A;
+  }
+
+  /* ── WORTH THE DRIVE ── */
+  .worth-drive {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .pvd-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FAF8F5;
+    background: #333;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  .pvd-item {
+    margin-bottom: 14px;
+  }
+  .pvd-item:last-child { margin-bottom: 0; }
+  .pvd-item .item-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1B4965;
+  }
+  .pvd-item .item-meta {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .pvd-item .item-desc {
+    font-size: 14px;
+    color: #4A4A4A;
+    line-height: 1.55;
+  }
+
+  /* ── INSIDER DEAL ── */
+  .deal {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .deal-card {
+    background: #1B4965;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .deal-card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    background: #D4A843;
+    border-radius: 50%;
+    opacity: 0.15;
+  }
+  .deal-card .deal-business {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #D4A843;
+    margin-bottom: 8px;
+  }
+  .deal-card .deal-offer {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FAF8F5;
+    margin-bottom: 8px;
+  }
+  .deal-card .deal-details {
+    font-size: 14px;
+    color: rgba(250,248,245,0.7);
+    margin-bottom: 16px;
+  }
+  .deal-card .deal-code {
+    display: inline-block;
+    background: rgba(212,168,67,0.2);
+    border: 1px dashed #D4A843;
+    color: #D4A843;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 8px 20px;
+    border-radius: 4px;
+  }
+
+  /* ── SIGNAL NOISE / HOT TAKE ── */
+  .signal-noise {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .noise-card {
+    background: #F5F0E8;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+  }
+  .noise-card .noise-q {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1B4965;
+    margin-bottom: 16px;
+    line-height: 1.35;
+  }
+  .noise-card .poll-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .noise-card .poll-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 2px solid #1B4965;
+    border-radius: 6px;
+    color: #1B4965;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .noise-card .poll-btn:hover {
+    background: #1B4965;
+    color: #FAF8F5;
+  }
+
+  /* ── MID-NEWSLETTER AD ── */
+  .mid-ad {
+    padding: 20px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .mid-ad-card {
+    background: #F8F5EE;
+    border: 1px solid #E8E2D9;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+  }
+  .mid-ad-card .ad-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #BBB;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .mid-ad-card .ad-content {
+    font-size: 15px;
+    color: #4A4A4A;
+    line-height: 1.5;
+  }
+  .mid-ad-card .ad-content a {
+    color: #1B4965;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #1B4965;
+    padding: 28px 32px;
+    text-align: center;
+    color: rgba(250,248,245,0.6);
+    font-size: 13px;
+  }
+  .footer .footer-cta {
+    color: #D4A843;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .footer .footer-prompt {
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  .footer .social-links {
+    margin-bottom: 18px;
+  }
+  .footer .social-links a {
+    color: #D4A843;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  .footer .footer-sponsor {
+    border-top: 1px solid rgba(250,248,245,0.1);
+    padding-top: 16px;
+    margin-top: 16px;
+  }
+  .footer .footer-sponsor .ad-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(250,248,245,0.3);
+    margin-bottom: 6px;
+  }
+  .footer .footer-sponsor .sponsor-name {
+    color: #D4A843;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .footer .footer-links {
+    margin-top: 18px;
+    font-size: 12px;
+  }
+  .footer .footer-links a {
+    color: rgba(250,248,245,0.5);
+    text-decoration: underline;
+    margin: 0 8px;
+  }
+  .footer .advertise-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 12px;
+    color: #D4A843;
+    text-decoration: none;
+    border: 1px solid rgba(212,168,67,0.4);
+    padding: 6px 16px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 28px; }
+    .headliner-card .event-name { font-size: 20px; }
+    .opener, .headliner, .lineup, .spotlight, .worth-drive, .deal, .signal-noise, .mid-ad { padding: 24px 20px; }
+    .footer { padding: 24px 20px; }
+    .noise-card .poll-options { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<div class="email-wrapper">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <div class="header">
+    <h1>THE SOUTH COUNTY SIGNAL</h1>
+    <div class="tagline">Your Weekly Cheat Sheet for Southern RI</div>
+    <div class="date-line">Week of March 15, 2026 · Issue #1</div>
+  </div>
+
+  <!-- ═══════════ OPENER ═══════════ -->
+  <div class="opener">
+    The vernal equinox hits Friday and South County is already acting like it's spring. The Knick is back from its renovation hiatus under the United Theatre banner, the St. Pat's energy is building all week, and if you've been hibernating since January — this is your week to come out. Here's what's worth your time.
+  </div>
+
+  <!-- ═══════════ THIS WEEK'S MOVE (HEADLINER) ═══════════ -->
+  <div class="headliner">
+    <span class="sponsor-tag"></span>
+    <div class="headliner-card">
+      <span class="section-label">THIS WEEK'S MOVE</span>
+      <div class="event-name">The Hoolios: Swing Dance Night at The Knick</div>
+      <div class="event-meta">Saturday, March 21 · 8:00 PM · The Knickerbocker Music Center, Westerly</div>
+      <div class="event-desc">
+        The Knick is officially back. After months of renovations and its new partnership with the United Theatre, the legendary 91-year-old venue reopens its storied dance floor for a proper swing night with The Hoolios. This is the first public dance event under the new programming — and if you've ever set foot on that Starlight Ballroom floor, you know there's nothing else like it in South County. Dress sharp, dance hard, get there early.
+      </div>
+      <a href="https://unitedtheatre.org/coming-soon-events/" class="cta-btn">Get Details →</a>
+    </div>
+  </div>
+
+  <!-- ═══════════ THE LINEUP (ROUNDUP) ═══════════ -->
+  <div class="lineup">
+    <span class="section-label">THE LINEUP</span>
+    <div class="section-title">This Week in South County</div>
+
+    
+    <div class="lineup-item">
+      <span class="category-tag music">Live Music</span>
+      <div class="item-name"><a href="https://unitedtheatre.org/coming-soon-events/">Roots Music Stomp ft. Austin Scelzo</a></div>
+      <div class="item-meta">Friday, March 20 · 8:00 PM · United Theatre, Westerly</div>
+      <div class="item-desc">The March edition of Roots Music Stomp features beloved bluegrass fiddler and singer Austin Scelzo. If you like your Friday nights with fiddle strings and foot stomping, this is your room.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag food">Food &amp; Drink</span>
+      <div class="item-name"><a href="https://unitedtheatre.org/coming-soon-events/">Italian Cocktail Tasting: 'The Imbible' with Anthony Caporale</a></div>
+      <div class="item-meta">Thursday, March 19 · 7:00 PM · United Theatre, Westerly</div>
+      <div class="item-desc">Part of the 2026 SoupyFest series — award-winning mixologist and star of 'The Imbible' leads a deep dive into the history and craft of Italian cocktails. Tasting included. This is not your average Thursday night.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag nightlife">Nightlife</span>
+      <div class="item-name"><a href="https://www.oceanmist.net/live-music-and-events/">Monday Night Trivia at the Ocean Mist</a></div>
+      <div class="item-meta">Monday, March 16 · 8:00 PM - 11:00 PM · The Ocean Mist, Matunuck</div>
+      <div class="item-desc">Free to play, 21+. The Mist runs trivia every Monday and it's quietly one of the best bar nights in South County. Grab a table early and a Narragansett tall boy for courage.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag arts">Arts &amp; Culture</span>
+      <span class="category-tag sponsored">Featured</span>
+      <div class="item-name"><a href="https://unitedtheatre.org/now-playing/">'Bridget' — Irish Film Screening &amp; Filmmaker Talk</a></div>
+      <div class="item-meta">Sunday, March 15 · 4:00 PM · United Theatre, Westerly</div>
+      <div class="item-desc">Part of the United's Irish Film Fest. Filmmaker Anne Williamson joins for a screening and post-film conversation. Perfect St. Patrick's weekend counter-programming if parades aren't your speed.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag outdoor">Beach &amp; Outdoor</span>
+      <div class="item-name"><a href="https://runrhody.com/event/st-pats-5k/">St. Pat's 5K — Tour de Patrick Race 2</a></div>
+      <div class="item-meta">Saturday, March 21 · 11:00 AM · RI State House (Smith St.), Providence</div>
+      <div class="item-desc">Run the actual St. Patrick's Day Parade route before the parade kicks off at noon. Stick around after for the parade and the best people-watching in Rhode Island. $38 pre-registration, $45 day-of.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag family">Family Friendly</span>
+      <div class="item-name"><a href="https://narragansettcoc.com/event-calendar/">Narragansett Community Ice Rink — Open Skating</a></div>
+      <div class="item-meta">Daily, Dawn to Dusk · Free · Clarke Road Ice Rink, Narragansett</div>
+      <div class="item-desc">The year-round outdoor rink donated by the Narragansett Chamber is one of the best-kept secrets in town. Bring your own skates, bring the kids, bring a thermos of something warm. No excuses.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag arts">Arts &amp; Culture</span>
+      <div class="item-name"><a href="https://unitedtheatre.org/now-playing/">'Fences' — Film Screening with Westerly ARC</a></div>
+      <div class="item-meta">Thursday, March 19 · 7:00 PM · United Theatre, Westerly</div>
+      <div class="item-desc">Denzel Washington and Viola Davis in the Pulitzer-winning August Wilson adaptation. Presented in partnership with the Westerly ARC. A powerful film in an intimate setting.</div>
+    </div>
+  </div>
+
+  
+
+  <!-- ═══════════ FOOD & DRINK SPOTLIGHT ═══════════ -->
+  <div class="spotlight">
+    <span class="section-label">WHERE TO EAT &amp; DRINK THIS WEEK</span>
+    <div class="spotlight-card">
+      <div class="spot-name">The Ocean Mist</div>
+      <div class="spot-location">Matunuck · 895 Matunuck Beach Rd, right on the water</div>
+      <div class="spot-desc">
+        Yes, it's a beach bar. Yes, you probably already know it. But here's what you might not know: they serve breakfast daily until 2pm, the Bloody Mary is legitimately one of the best in the state, and the kitchen stays open until 10pm every night — not just summer. The deck hangs over the actual ocean. You can see Block Island. In March, it's uncrowded and perfect. Go on a weeknight, sit at the bar, order the Benedicts, and remember why you live here.
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ WORTH THE DRIVE (PROVIDENCE) ═══════════ -->
+  <!-- INCLUDE THIS SECTION ONLY WHEN THERE'S SOMETHING GENUINELY WORTH IT -->
+  <div class="worth-drive">
+    <span class="section-label">WORTH THE DRIVE</span>
+    <span class="pvd-badge">Providence</span>
+
+    
+    <div class="pvd-item">
+      <div class="item-name">Providence St. Patrick's Day Parade</div>
+      <div class="item-meta">Saturday, March 21 · 12:00 PM · Smith St. to RI State House</div>
+      <div class="item-desc">The parade kicks off at noon sharp from Smith and Rosebank Streets. One of Providence's biggest annual traditions — and it's free. Combine with the 5K for a full day.</div>
+    </div>
+
+    <div class="pvd-item">
+      <div class="item-name">GFree Fest — RI's Gluten-Free Festival</div>
+      <div class="item-meta">Saturday &amp; Sunday, March 21-22 · 12:00 PM - 5:00 PM · WaterFire Arts Center</div>
+      <div class="item-desc">Third year, and it's sold out both previous years. 85+ vendors, fully gluten-free bar with cocktails and ciders, food pop-ups. Founded by a local with celiac who actually gets it. GA tickets are $10.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ INSIDER DEAL ═══════════ -->
+  <div class="deal">
+    <span class="section-label">INSIDER DEAL</span>
+    <div class="deal-card">
+      <div class="deal-business">The Ocean Mist</div>
+      <div class="deal-offer">Free Appetizer with Any Two Entrees</div>
+      <div class="deal-details">Valid Monday through Thursday this week only. Mention 'South County Signal' to your server. Cannot be combined with other offers.</div>
+      <div class="deal-code">CODE: SIGNALMIST</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SIGNAL NOISE (HOT TAKE / POLL) ═══════════ -->
+  <div class="signal-noise">
+    <span class="section-label">SIGNAL NOISE</span>
+    <div class="noise-card">
+      <div class="noise-q">The Knick is officially under new management with the United Theatre. What do you want to see on that stage? (Besides everything.)</div>
+      <div class="poll-options">
+        <a href="mailto:signal@southcountysignal.com?subject=More%20dance%20nights" class="poll-btn">More dance nights</a>
+        <a href="mailto:signal@southcountysignal.com?subject=Local%20blues%20revival" class="poll-btn">Local blues revival</a>
+        <a href="mailto:signal@southcountysignal.com?subject=Comedy%20shows" class="poll-btn">Comedy shows</a>
+        <a href="mailto:signal@southcountysignal.com?subject=All-ages%20open%20mics" class="poll-btn">All-ages open mics</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <div class="footer">
+    <div class="footer-cta">Know something we should feature?</div>
+    <div class="footer-prompt">Hit reply — we read every email.</div>
+
+    <div class="social-links">
+      <a href="https://instagram.com/southcountysignal">Instagram</a>
+      <a href="https://facebook.com/southcountysignal">Facebook</a>
+      <a href="https://tiktok.com/@southcountysignal">TikTok</a>
+    </div>
+
+    <a href="#" class="advertise-link">Advertise With Us</a>
+
+    <div class="footer-sponsor">
+      <div class="ad-label">Presented By</div>
+      <div class="sponsor-name">South County Tourism Council</div>
+    </div>
+
+    <div class="footer-links">
+      <a href="{{manage_preferences}}">Preferences</a>
+      <a href="{{unsubscribe}}">Unsubscribe</a>
+      <a href="{{view_in_browser}}">View in Browser</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

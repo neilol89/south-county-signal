@@ -1,0 +1,32 @@
+{
+  "week_of": "March 19, 2026",
+  "notes_to_curator": "Spring is here, lean into outdoor stuff. The Knick reopening is big news.",
+
+  "forced_items": [
+    {
+      "section": "lineup",
+      "category": "food",
+      "name": "Example: Wine Dinner at Shelter Harbor Inn",
+      "date": "Friday, March 20",
+      "time": "6:30 PM",
+      "venue": "Shelter Harbor Inn",
+      "town": "Charlestown",
+      "description": "Five-course pairing with a Willamette Valley winemaker. $95/person, reservations required.",
+      "link": "https://example.com",
+      "sponsored": true,
+      "sponsor_name": "Shelter Harbor Inn",
+      "notes": "PAID PLACEMENT — Shelter Harbor is a launch advertiser. Write in our voice but make sure the reservation link is prominent."
+    }
+  ],
+
+  "forced_spotlight": null,
+
+  "forced_deal": null,
+
+  "forced_signal_noise": null,
+
+  "editorial_notes": [
+    "The Ocean Mist has a new breakfast menu — could be spotlight material",
+    "Skip anything at Coast Guard House this week, they're between chefs"
+  ]
+}

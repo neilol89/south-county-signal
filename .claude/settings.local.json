@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "WebFetch(domain:www.oceanmist.net)",
+      "WebFetch(domain:unitedtheatre.org)",
+      "WebFetch(domain:narragansettcoc.com)",
+      "WebSearch",
+      "WebFetch(domain:southcountyri.com)",
+      "WebFetch(domain:knickmusic.com)",
+      "WebFetch(domain:www.eventbrite.com)",
+      "Bash(curl:*)",
+      "Bash(pip3 install:*)"
+    ]
+  }
+}

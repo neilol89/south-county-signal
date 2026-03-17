@@ -1,0 +1,163 @@
+{
+  "last_updated": "2026-03-16",
+  "notes": "Add or remove sources anytime. The scout skill reads this file dynamically each run.",
+
+  "web_sources": [
+    {
+      "name": "United Theatre — Coming Soon",
+      "url": "https://unitedtheatre.org/coming-soon-events/",
+      "type": "venue_calendar",
+      "town": "Westerly",
+      "prompt": "Extract all upcoming events with dates, times, venue (United Theatre or Knickerbocker), descriptions, and ticket prices. Return as a structured list.",
+      "priority": "high",
+      "categories": ["music", "arts", "nightlife"]
+    },
+    {
+      "name": "United Theatre — Now Playing",
+      "url": "https://unitedtheatre.org/now-playing/",
+      "type": "venue_calendar",
+      "town": "Westerly",
+      "prompt": "Extract all currently playing films and events with showtimes, descriptions, and durations. Return as a structured list.",
+      "priority": "medium",
+      "categories": ["arts", "family"]
+    },
+    {
+      "name": "Ocean Mist — Events",
+      "url": "https://www.oceanmist.net/live-music-and-events/",
+      "type": "venue_calendar",
+      "town": "Matunuck",
+      "prompt": "Extract all upcoming live music events and special events with dates, times, performer names, cover charges, and any details. Return as a structured list.",
+      "priority": "high",
+      "categories": ["music", "nightlife"],
+      "notes": "Main page may not render events. Try /live-music-and-events-1/ (Box Office) as fallback."
+    },
+    {
+      "name": "Ocean Mist — Box Office (fallback)",
+      "url": "https://www.oceanmist.net/live-music-and-events-1/",
+      "type": "venue_calendar",
+      "town": "Matunuck",
+      "prompt": "Extract all upcoming events with dates, times, performer names, ticket prices, and details.",
+      "priority": "medium",
+      "categories": ["music", "nightlife"]
+    },
+    {
+      "name": "Eventbrite — Narragansett/South Kingstown This Week",
+      "url": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
+      "type": "aggregator",
+      "town": "various",
+      "prompt": "Extract all events with dates, times, locations, towns, descriptions, and ticket prices. Return as a structured list.",
+      "priority": "high",
+      "categories": ["music", "food", "arts", "wellness", "outdoor", "family"]
+    },
+    {
+      "name": "Eventbrite — South Kingstown This Weekend",
+      "url": "https://www.eventbrite.com/d/ri--south-kingstown/events--this-weekend/",
+      "type": "aggregator",
+      "town": "various",
+      "prompt": "Extract all events with dates, times, locations, towns, descriptions, and ticket prices. Return as a structured list.",
+      "priority": "medium",
+      "categories": ["music", "food", "arts", "wellness", "outdoor", "family"]
+    },
+    {
+      "name": "Narragansett Chamber — Event Calendar",
+      "url": "https://narragansettcoc.com/event-calendar/",
+      "type": "town_calendar",
+      "town": "Narragansett",
+      "prompt": "Extract all upcoming events with dates, times, locations, and descriptions. Return as a structured list.",
+      "priority": "high",
+      "categories": ["food", "outdoor", "family", "arts"]
+    },
+    {
+      "name": "South County Tourism — Events",
+      "url": "https://southcountyri.com/events/",
+      "type": "aggregator",
+      "town": "various",
+      "prompt": "Extract all listed events with dates, times, locations, towns, and descriptions. Return as a structured list.",
+      "priority": "high",
+      "categories": ["outdoor", "family", "arts", "food"]
+    },
+    {
+      "name": "Courthouse Center for the Arts",
+      "url": "https://courthousearts.org",
+      "type": "venue_calendar",
+      "town": "South Kingstown",
+      "prompt": "Extract all upcoming performances, exhibits, and events with dates, times, and descriptions. Return as a structured list.",
+      "priority": "medium",
+      "categories": ["arts", "music"]
+    },
+    {
+      "name": "Ocean Chamber (Westerly) — Events",
+      "url": "https://www.oceanchamber.org/events",
+      "type": "town_calendar",
+      "town": "Westerly",
+      "prompt": "Extract all upcoming events with dates, times, locations, and descriptions. Return as a structured list.",
+      "priority": "medium",
+      "categories": ["food", "outdoor", "family", "arts"]
+    },
+    {
+      "name": "GoProvidence — Events",
+      "url": "https://www.goprovidence.com/events/",
+      "type": "pvd_calendar",
+      "town": "Providence",
+      "prompt": "Extract notable upcoming events this week — concerts, festivals, major restaurant openings, cultural events. Only include events that would be worth a 30-45 minute drive from South County. Return as a structured list.",
+      "priority": "low",
+      "categories": ["music", "arts", "food"]
+    },
+    {
+      "name": "Visit Rhode Island — Events",
+      "url": "https://www.visitrhodeisland.com/events/",
+      "type": "aggregator",
+      "town": "various",
+      "prompt": "Extract events happening in South County / Washington County Rhode Island this week with dates, times, locations, and descriptions. Return as a structured list.",
+      "priority": "low",
+      "categories": ["outdoor", "family", "arts", "food"]
+    }
+  ],
+
+  "search_queries": [
+    "South County Rhode Island events this week",
+    "Westerly Rhode Island events this weekend",
+    "Narragansett Rhode Island events this weekend",
+    "Wakefield South Kingstown RI events this week",
+    "Charlestown Rhode Island events",
+    "East Greenwich Rhode Island events this week"
+  ],
+
+  "manual_check_sources": [
+    {
+      "name": "Ocean Mist Instagram",
+      "handle": "@oceanmistbar",
+      "reason": "Website calendar doesn't always render — Instagram is more reliable"
+    },
+    {
+      "name": "Matunuck Oyster Bar Instagram",
+      "handle": "@matunuckoysterbar",
+      "reason": "Events and specials posted to Stories/feed only"
+    },
+    {
+      "name": "Coast Guard House Instagram",
+      "handle": "@coastguardhouseri",
+      "reason": "Seasonal events, no public calendar"
+    },
+    {
+      "name": "Perks & Corks Instagram",
+      "handle": "@perksandcorks",
+      "reason": "Wine events posted to Instagram only"
+    },
+    {
+      "name": "Fantastic Umbrella Factory",
+      "handle": "@fantasticumbrellafactory",
+      "reason": "Markets and events — no structured calendar"
+    },
+    {
+      "name": "The Malted Barley Instagram",
+      "handle": "@themaltedbarleys",
+      "reason": "Trivia, live music posted to social only"
+    },
+    {
+      "name": "Facebook Groups",
+      "handle": "South County RI Community, Narragansett Neighbors, Westerly/Pawcatuck Area",
+      "reason": "Auth wall — requires manual check for community-posted events"
+    }
+  ]
+}

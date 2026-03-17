@@ -1,0 +1,138 @@
+{
+  "issue_number": 1,
+  "week_of": "March 19, 2026",
+  "opener": "Spring is technically four days away but the crocuses in Wickford don't care about calendars. Neither do we. Here's what's worth your time this week in South County.",
+
+  "headliner": {
+    "name": "St. Patrick's Weekend Oyster & Stout Pairing",
+    "date": "Saturday, March 21",
+    "time": "5:00 PM - 9:00 PM",
+    "venue": "Matunuck Oyster Bar",
+    "town": "South Kingstown",
+    "description": "Six local stouts paired with six preparations of Point Judith oysters. They do this once a year and it sells out in 48 hours. If you're reading this and there are still tickets, stop reading and go buy them. We'll be here when you get back.",
+    "link": "https://example.com/oyster-stout",
+    "sponsor": null
+  },
+
+  "lineup": [
+    {
+      "category": "music",
+      "category_label": "Live Music",
+      "name": "Acoustic Fridays: The Silks",
+      "date": "Friday, March 20",
+      "time": "7:30 PM",
+      "venue": "The Ocean Mist",
+      "town": "Matunuck",
+      "description": "Indie folk duo with a loyal local following. Get there early — the Mist doesn't do reservations and the parking lot tells you everything you need to know.",
+      "link": "https://example.com/the-silks",
+      "sponsored": false
+    },
+    {
+      "category": "food",
+      "category_label": "Food & Drink",
+      "name": "Wine Wednesday: Natural Wine Flight",
+      "date": "Wednesday, March 18",
+      "time": "5:00 PM - 8:00 PM",
+      "venue": "Perks & Corks",
+      "town": "Wakefield",
+      "description": "Four natural wines, all under $15 a glass. The sommelier actually knows what she's talking about, which is more than we can say for most.",
+      "link": "https://example.com/wine-wed",
+      "sponsored": false
+    },
+    {
+      "category": "outdoor",
+      "category_label": "Beach & Outdoor",
+      "name": "Narragansett Beach Cleanup",
+      "date": "Saturday, March 21",
+      "time": "9:00 AM - 11:00 AM",
+      "venue": "Narragansett Town Beach",
+      "town": "Narragansett",
+      "description": "Earn your afternoon beer. Bags and gloves provided, coffee truck on-site. Actually a great way to meet people who aren't terrible.",
+      "link": "https://example.com/cleanup",
+      "sponsored": false
+    },
+    {
+      "category": "arts",
+      "category_label": "Arts & Culture",
+      "name": "Opening Night: 'The Humans' at Theatre by the Sea",
+      "date": "Thursday, March 19",
+      "time": "7:30 PM",
+      "venue": "Theatre by the Sea",
+      "town": "Matunuck",
+      "description": "Tony Award-winning family drama. If your in-laws are visiting this weekend, this is either the perfect outing or a terrible idea. You know which.",
+      "link": "https://example.com/the-humans",
+      "sponsored": true
+    },
+    {
+      "category": "nightlife",
+      "category_label": "Nightlife",
+      "name": "Saturday Night Karaoke",
+      "date": "Saturday, March 21",
+      "time": "9:00 PM",
+      "venue": "The Malted Barley",
+      "town": "Westerly",
+      "description": "Liquid courage is $5 during happy hour. The song book is deep. Your dignity is optional.",
+      "link": "https://example.com/karaoke",
+      "sponsored": false
+    },
+    {
+      "category": "family",
+      "category_label": "Family Friendly",
+      "name": "Fantastic Umbrella Factory Spring Market",
+      "date": "Sunday, March 22",
+      "time": "10:00 AM - 4:00 PM",
+      "venue": "The Fantastic Umbrella Factory",
+      "town": "Charlestown",
+      "description": "Local artisans, live animals, and the kind of weird-beautiful energy that makes you remember why you live here. Kids love the emus. Adults love the gift shop.",
+      "link": "https://example.com/umbrella-factory",
+      "sponsored": false
+    }
+  ],
+
+  "mid_ad": null,
+
+  "spotlight": {
+    "name": "Coast Guard House",
+    "town": "Narragansett",
+    "location_detail": "Ocean Road, right on the seawall",
+    "description": "Yes, everyone knows it. But have you been since they revamped the raw bar menu? The tuna poke bowl is absurdly good for a place most people write off as touristy. Go on a weeknight, sit at the bar, watch the waves, and pretend you don't have anywhere to be tomorrow."
+  },
+
+  "pvd_events": [
+    {
+      "name": "Providence Restaurant Week",
+      "date": "March 15-28",
+      "time": "Lunch & Dinner",
+      "venue": "50+ participating restaurants",
+      "description": "Multi-course prix fixe menus across the city. Worth the drive for Oberlin, Bayberry Beer Hall, or Kleos."
+    }
+  ],
+
+  "deal": {
+    "business": "Shelter Harbor Inn",
+    "offer": "15% Off Sunday Brunch for Two",
+    "details": "Valid Sundays through March 31. Mention 'South County Signal' when booking. Cannot be combined with other offers.",
+    "code": "SIGNAL15"
+  },
+
+  "signal_noise": {
+    "type": "poll",
+    "question": "Best lobster roll in South County — and don't just say Aunt Carrie's because your parents did.",
+    "options": ["Aunt Carrie's", "Matunuck Oyster Bar", "Champlin's"],
+    "poll_link": null
+  },
+
+  "social": {
+    "instagram": "https://instagram.com/southcountysignal",
+    "facebook": "https://facebook.com/southcountysignal",
+    "tiktok": "https://tiktok.com/@southcountysignal"
+  },
+
+  "ads": {
+    "headliner_sponsor": null,
+    "mid_sponsor": null,
+    "footer_sponsor": {
+      "name": "South County Tourism Council"
+    }
+  }
+}

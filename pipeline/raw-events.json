@@ -1,0 +1,237 @@
+{
+  "scout_date": "2026-03-16",
+  "scout_week": "March 16-22, 2026",
+  "sources_checked": [
+    "unitedtheatre.org/coming-soon-events",
+    "unitedtheatre.org/now-playing",
+    "oceanmist.net",
+    "eventbrite.com (Narragansett/South Kingstown)",
+    "narragansettcoc.com/event-calendar",
+    "southcountyri.com/events",
+    "knickmusic.com (404 — site not live yet)",
+    "WebSearch: South County RI events",
+    "WebSearch: Westerly RI events",
+    "WebSearch: Narragansett RI events"
+  ],
+
+  "raw_events": [
+    {
+      "name": "Dance Night with The Hoolios",
+      "date": "Saturday, March 21",
+      "time": "7:30 PM",
+      "venue": "Knickerbocker Music Center",
+      "town": "Westerly",
+      "description": "Evening of swing on the storied Knick dance floor. First public dance event under new United Theatre partnership.",
+      "source": "unitedtheatre.org/coming-soon-events",
+      "link": "https://unitedtheatre.org/coming-soon-events/",
+      "category_suggestion": "music",
+      "headliner_candidate": true,
+      "notes": "The Knick reopening is big local news"
+    },
+    {
+      "name": "Spring Equinox: Musical Spring — Beethoven & Vivaldi",
+      "date": "Friday, March 20",
+      "time": "7:00 PM",
+      "venue": "United Theatre Gallery Event Space",
+      "town": "Westerly",
+      "description": "Beethoven and Vivaldi performance featuring violin and piano.",
+      "source": "unitedtheatre.org/coming-soon-events",
+      "link": "https://unitedtheatre.org/coming-soon-events/",
+      "category_suggestion": "arts",
+      "headliner_candidate": false
+    },
+    {
+      "name": "SoupyFest Bocce Drop-In",
+      "date": "Saturday, March 21",
+      "time": "12:00 PM - 5:00 PM",
+      "venue": "United Theatre Black Box",
+      "town": "Westerly",
+      "description": "Drop-in bocce tournament with local supervision. Part of the 2026 SoupyFest series.",
+      "source": "unitedtheatre.org/coming-soon-events",
+      "link": "https://unitedtheatre.org/coming-soon-events/",
+      "category_suggestion": "outdoor",
+      "headliner_candidate": false
+    },
+    {
+      "name": "The Ravers w/ Special Guest Nena Belén",
+      "date": "Friday, March 20",
+      "time": "9:00 PM",
+      "venue": "The Ocean Mist",
+      "town": "Matunuck",
+      "description": "Live music — get ready to dance the night away. Sales ending soon.",
+      "source": "eventbrite.com",
+      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
+      "category_suggestion": "music",
+      "headliner_candidate": false
+    },
+    {
+      "name": "Sugar",
+      "date": "Saturday, March 21",
+      "time": "9:00 PM",
+      "venue": "The Ocean Mist",
+      "town": "Matunuck",
+      "description": "A sweet night of music, drinks, and good vibes.",
+      "source": "eventbrite.com",
+      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
+      "category_suggestion": "nightlife",
+      "headliner_candidate": false
+    },
+    {
+      "name": "Beppe Gambetta with Victor Main",
+      "date": "Saturday, March 21",
+      "time": "6:00 PM",
+      "venue": "Pump House Music Works",
+      "town": "Wakefield",
+      "description": "All ages concert featuring guitar performances. Italian flatpicking legend.",
+      "source": "eventbrite.com",
+      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
+      "category_suggestion": "music",
+      "headliner_candidate": true,
+      "notes": "Beppe Gambetta is internationally known — could be headliner material"
+    },
+    {
+      "name": "Sourdough & Brews",
+      "date": "Monday, March 16",
+      "time": "5:30 PM",
+      "venue": "Tower Hill Brewing Co.",
+      "town": "South Kingstown",
+      "description": "2.5 hour hands-on sourdough class with brewing pairing. Use code KNEAD for $20 off.",
+      "source": "eventbrite.com",
+      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
+      "category_suggestion": "food",
+      "headliner_candidate": false,
+      "notes": "Great food & drink pick, local brewery + hands-on"
+    },
+    {
+      "name": "Root to Rise: Spring Equinox Sound Bath",
+      "date": "Friday, March 20",
+      "time": "6:00 PM",
+      "venue": "NURTURE Holistic Wellness",
+      "town": "East Greenwich",
+      "description": "Sound healing and relaxation experience. Almost full.",
+      "source": "eventbrite.com",
+      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
+      "category_suggestion": "wellness",
+      "headliner_candidate": false
+    },
+    {
+      "name": "'Awash' in Watercolor — Art Workshop",
+      "date": "Saturday, March 21",
+      "time": "12:30 PM",
+      "venue": "140 Boon St",
+      "town": "Narragansett",
+      "description": "Watercolor painting workshop.",
+      "source": "eventbrite.com",
+      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
+      "category_suggestion": "arts",
+      "headliner_candidate": false
+    },
+    {
+      "name": "The Bride! (Film)",
+      "date": "Now Playing",
+      "time": "12:00 PM, 4:00 PM, 7:15 PM",
+      "venue": "United Theatre",
+      "town": "Westerly",
+      "description": "A lonely Frankenstein seeks a scientist in 1930s Chicago to create a companion. 126 minutes.",
+      "source": "unitedtheatre.org/now-playing",
+      "link": "https://unitedtheatre.org/now-playing/",
+      "category_suggestion": "arts",
+      "headliner_candidate": false,
+      "notes": "Film — could be worth mentioning if it's a notable release"
+    },
+    {
+      "name": "Hoppers (Film)",
+      "date": "Now Playing",
+      "time": "12:00 PM, 2:30 PM, 5:00 PM, 7:15 PM",
+      "venue": "United Theatre",
+      "town": "Westerly",
+      "description": "Animal lover uses consciousness-transfer technology to communicate with animals. 105 minutes.",
+      "source": "unitedtheatre.org/now-playing",
+      "link": "https://unitedtheatre.org/now-playing/",
+      "category_suggestion": "family",
+      "headliner_candidate": false
+    },
+    {
+      "name": "The Apartment (1960) — Classic Film Screening",
+      "date": "Now Playing",
+      "time": "12:00 PM, 7:00 PM",
+      "venue": "United Theatre",
+      "town": "Westerly",
+      "description": "Classic Billy Wilder film about a clerk using his apartment to advance his career. Jack Lemmon, Shirley MacLaine. 125 minutes.",
+      "source": "unitedtheatre.org/now-playing",
+      "link": "https://unitedtheatre.org/now-playing/",
+      "category_suggestion": "arts",
+      "headliner_candidate": false,
+      "notes": "Classic film screening at an indie theater — fits the Signal vibe"
+    },
+    {
+      "name": "Restaurant Week Kick-Off Party",
+      "date": "Thursday, March 26",
+      "time": "5:30 PM - 8:00 PM",
+      "venue": "Narragansett Towers",
+      "town": "Narragansett",
+      "description": "Kick-off event for Restaurant Week 2026.",
+      "source": "narragansettcoc.com",
+      "link": "https://narragansettcoc.com/event-calendar/",
+      "category_suggestion": "food",
+      "headliner_candidate": false,
+      "notes": "Next week — but worth teasing this week"
+    },
+    {
+      "name": "Monday Night Trivia",
+      "date": "Monday, March 16",
+      "time": "8:00 PM",
+      "venue": "The Ocean Mist",
+      "town": "Matunuck",
+      "description": "Free to play, 21+. Weekly trivia night.",
+      "source": "known recurring event",
+      "link": "https://www.oceanmist.net/live-music-and-events/",
+      "category_suggestion": "nightlife",
+      "headliner_candidate": false
+    },
+    {
+      "name": "Narragansett Community Ice Rink — Open Skating",
+      "date": "Daily",
+      "time": "Dawn to Dusk",
+      "venue": "Clarke Road Ice Rink",
+      "town": "Narragansett",
+      "description": "Free year-round outdoor rink. Bring your own skates.",
+      "source": "narragansettcoc.com / known",
+      "link": "https://narragansettcoc.com/event-calendar/",
+      "category_suggestion": "family",
+      "headliner_candidate": false
+    }
+  ],
+
+  "upcoming_notable": [
+    {
+      "name": "Lucius: Songs & Stories",
+      "date": "March 25",
+      "venue": "United Theatre Black Box",
+      "town": "Westerly",
+      "notes": "Could tease next week"
+    },
+    {
+      "name": "Rick Wakeman and Son (of YES)",
+      "date": "March 28",
+      "venue": "United Theatre Black Box",
+      "town": "Westerly",
+      "notes": "Legendary — worth a tease"
+    },
+    {
+      "name": "Restaurant Week Kick-Off Party",
+      "date": "March 26",
+      "venue": "Narragansett Towers",
+      "notes": "Tease for next week"
+    }
+  ],
+
+  "sources_that_need_manual_check": [
+    "Ocean Mist Instagram (@oceanmistbar) — their website calendar didn't render, but Eventbrite had 2 shows",
+    "Facebook groups (South County RI Community, Narragansett Neighbors, etc.) — requires login",
+    "Perks & Corks, Matunuck Oyster Bar, Coast Guard House — no events scraped, check Instagram",
+    "Courthouse Center for the Arts (courthousearts.org) — not checked",
+    "Fantastic Umbrella Factory — not checked",
+    "Shelter Harbor Inn — not checked"
+  ]
+}

@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The South County Signal — Your Weekly Cheat Sheet for Southern RI</title>
+<meta name="description" content="A free weekly email newsletter curating the best events, food, music, nightlife, and things to do in Southern Rhode Island.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B4965;
+    --navy-deep: #132F42;
+    --gold: #D4A843;
+    --gold-light: #E8C96A;
+    --gold-muted: rgba(212, 168, 67, 0.15);
+    --bg: #FAF8F5;
+    --bg-linen: #F2EDE6;
+    --text: #2D2D2D;
+    --text-secondary: #4A4A4A;
+    --text-light: #888888;
+    --border: #E8E2D9;
+    --border-light: #F0EBE3;
+    --white: #FFFFFF;
+    --shadow-sm: 0 1px 3px rgba(27, 73, 101, 0.04);
+    --shadow-md: 0 4px 20px rgba(27, 73, 101, 0.06);
+    --shadow-lg: 0 8px 40px rgba(27, 73, 101, 0.08);
+    --shadow-gold: 0 4px 24px rgba(212, 168, 67, 0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Source Sans 3', -apple-system, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ══════════════════════════════════════
+     NAVIGATION
+  ══════════════════════════════════════ */
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(250, 248, 245, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-light);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav.scrolled {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--navy);
+  }
+
+  .nav-brand img {
+    height: 42px;
+    width: auto;
+  }
+
+  .nav-brand-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+    letter-spacing: 0.3px;
+  }
+
+  .nav-links a:hover {
+    color: var(--navy);
+    background: var(--gold-muted);
+  }
+
+  .nav-links a.nav-cta {
+    background: var(--navy);
+    color: var(--bg);
+    font-weight: 600;
+    padding: 8px 20px;
+  }
+
+  .nav-links a.nav-cta:hover {
+    background: var(--navy-deep);
+    color: var(--bg);
+  }
+
+  .nav-mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--navy);
+  }
+
+  .nav-mobile-toggle svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ══════════════════════════════════════
+     HERO
+  ══════════════════════════════════════ */
+
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 72px 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Left: hero image */
+  .hero-image {
+    position: relative;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .hero-image-inner {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, rgba(27, 73, 101, 0.15) 0%, rgba(27, 73, 101, 0.03) 100%),
+      linear-gradient(to bottom, var(--bg-linen) 0%, var(--border) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Placeholder coastal scene built with CSS */
+  .hero-image-inner::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35%;
+    background: linear-gradient(to top, rgba(27, 73, 101, 0.08), transparent);
+  }
+
+  .hero-placeholder {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .hero-placeholder-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 24px;
+    filter: drop-shadow(0 4px 20px rgba(27, 73, 101, 0.1));
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .hero-placeholder-text {
+    font-size: 13px;
+    color: var(--text-light);
+    font-style: italic;
+    background: rgba(250, 248, 245, 0.7);
+    backdrop-filter: blur(8px);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px dashed var(--border);
+    display: inline-block;
+  }
+
+  /* Decorative wave shapes in the image area */
+  .hero-image-inner::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: -5%;
+    right: -5%;
+    height: 80px;
+    background: var(--bg);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  }
+
+  /* Gold beam accent on the image side */
+  .hero-image .beam-accent {
+    position: absolute;
+    top: 20%;
+    right: -40px;
+    width: 200px;
+    height: 500px;
+    background: linear-gradient(160deg, rgba(212, 168, 67, 0.1) 0%, transparent 50%);
+    transform: rotate(-20deg);
+    pointer-events: none;
+    animation: beamShimmer 8s ease-in-out infinite alternate;
+    z-index: 2;
+  }
+
+  @keyframes beamShimmer {
+    0% { opacity: 0.4; transform: rotate(-20deg); }
+    100% { opacity: 1; transform: rotate(-17deg); }
+  }
+
+  /* Right: signup content */
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 60px 56px 60px 48px;
+    max-width: 560px;
+  }
+
+  .hero-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.12;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+  }
+
+  .hero-tagline {
+    font-size: clamp(16px, 1.8vw, 19px);
+    color: var(--text-secondary);
+    font-weight: 400;
+    line-height: 1.65;
+    margin-bottom: 36px;
+    font-style: italic;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+  }
+
+  .hero-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+  }
+
+  .hero-form input[type="email"] {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--text);
+    background: var(--white);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hero-form input[type="email"]::placeholder {
+    color: var(--text-light);
+  }
+
+  .hero-form input[type="email"]:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.12);
+  }
+
+  .hero-form .btn-primary {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 28px;
+    font-size: 16px;
+  }
+
+  .hero-bullets {
+    list-style: none;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: fadeInUp 0.8s ease-out 0.55s both;
+  }
+
+  .hero-bullets li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-bullets li .bullet-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--gold-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 10px;
+  }
+
+  /* ══════════════════════════════════════
+     LATEST ISSUE BANNER (below hero)
+  ══════════════════════════════════════ */
+
+  .latest-banner {
+    background: var(--navy);
+    padding: 24px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .latest-banner::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 10%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(212, 168, 67, 0.08);
+    pointer-events: none;
+  }
+
+  .latest-banner-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .latest-banner-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .latest-banner-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--gold);
+    padding: 5px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .latest-banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .latest-banner-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bg);
+  }
+
+  .latest-banner-date {
+    font-size: 13px;
+    color: rgba(250, 248, 245, 0.5);
+  }
+
+  .latest-banner .btn-outline-light {
+    padding: 10px 22px;
+    font-size: 13px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--navy);
+    color: var(--bg);
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+  }
+
+  .btn-primary:hover {
+    background: var(--navy-deep);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  .btn-gold:hover {
+    background: var(--gold-light);
+    color: var(--navy-deep);
+  }
+
+  .hero-note {
+    font-size: 13px;
+    color: var(--text-light);
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+  }
+
+  .hero-note strong {
+    color: var(--text-secondary);
+  }
+
+  /* ══════════════════════════════════════
+     SHARED SECTION STYLES
+  ══════════════════════════════════════ */
+
+  .section {
+    padding: 100px 32px;
+  }
+
+  .section-linen {
+    background: var(--bg-linen);
+  }
+
+  .section-navy {
+    background: var(--navy);
+    color: var(--bg);
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .section-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.3px;
+  }
+
+  .section-navy .section-heading {
+    color: var(--bg);
+  }
+
+  .section-subhead {
+    font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+
+  .section-navy .section-subhead {
+    color: rgba(250, 248, 245, 0.7);
+  }
+
+  .gold-rule {
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+    border: none;
+    margin-bottom: 32px;
+  }
+
+  /* Reveal animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ══════════════════════════════════════
+     WHAT YOU GET (HOME)
+  ══════════════════════════════════════ */
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+
+  .feature-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 32px 28px;
+    border: 1px solid var(--border-light);
+    transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+  }
+
+  .feature-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .feature-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .feature-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  /* ══════════════════════════════════════
+     SOCIAL PROOF STRIP
+  ══════════════════════════════════════ */
+
+  .proof-strip {
+    padding: 56px 32px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .proof-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    text-align: center;
+  }
+
+  .proof-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .proof-number {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .proof-label {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .proof-divider {
+    width: 1px;
+    height: 48px;
+    background: var(--border);
+  }
+
+  /* ══════════════════════════════════════
+     LATEST ISSUE PREVIEW
+  ══════════════════════════════════════ */
+
+  .latest-preview {
+    text-align: center;
+  }
+
+  .preview-container {
+    margin-top: 48px;
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 48px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--shadow-md);
+    position: relative;
+  }
+
+  .preview-container::before {
+    content: 'LATEST ISSUE';
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-linen);
+    padding: 0 16px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+  }
+
+  .preview-placeholder {
+    color: var(--text-light);
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  .preview-placeholder .issue-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+    font-style: normal;
+    margin-bottom: 12px;
+  }
+
+  .preview-placeholder .issue-date {
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-style: normal;
+    margin-bottom: 20px;
+  }
+
+  .preview-placeholder .issue-excerpt {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-style: normal;
+    margin-bottom: 24px;
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 24px;
+    border: 1.5px solid var(--navy);
+    border-radius: 8px;
+    color: var(--navy);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline:hover {
+    background: var(--navy);
+    color: var(--bg);
+  }
+
+  /* ══════════════════════════════════════
+     ABOUT SECTION
+  ══════════════════════════════════════ */
+
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-mission-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 32px;
+    position: relative;
+    padding-left: 24px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .about-body p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+
+  .coverage-towns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+
+  .town-tag {
+    padding: 6px 14px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all 0.25s ease;
+  }
+
+  .town-tag:hover {
+    border-color: var(--gold);
+    color: var(--navy);
+    background: var(--gold-muted);
+  }
+
+  .difference-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .difference-list li {
+    padding-left: 0;
+    position: relative;
+  }
+
+  .diff-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--gold-muted);
+    color: var(--gold);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+    vertical-align: middle;
+  }
+
+  .diff-title {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 15px;
+  }
+
+  .diff-desc {
+    display: block;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    padding-left: 40px;
+    line-height: 1.6;
+  }
+
+  /* ══════════════════════════════════════
+     CATEGORIES
+  ══════════════════════════════════════ */
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .cat-card {
+    text-align: center;
+    padding: 24px 16px;
+    border-radius: 10px;
+    background: rgba(250, 248, 245, 0.6);
+    border: 1px solid rgba(250, 248, 245, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .cat-card:hover {
+    background: rgba(250, 248, 245, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .cat-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .cat-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bg);
+    letter-spacing: 0.5px;
+  }
+
+  /* ══════════════════════════════════════
+     ARCHIVE
+  ══════════════════════════════════════ */
+
+  .archive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .archive-card {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    padding: 28px;
+    transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+  }
+
+  .archive-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold);
+  }
+
+  .archive-card .issue-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .archive-card .issue-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .archive-card .issue-date {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  .archive-card .read-link {
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: gap 0.25s ease;
+  }
+
+  .archive-card:hover .read-link {
+    gap: 8px;
+  }
+
+  .archive-coming {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+    font-style: italic;
+    font-size: 15px;
+  }
+
+  /* ══════════════════════════════════════
+     ADVERTISE
+  ══════════════════════════════════════ */
+
+  .advertise-hero {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 72px;
+  }
+
+  .stat-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+  }
+
+  .stat-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+  }
+
+  .stat-value {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .stat-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .stat-badge {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--gold-muted);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  .placements-heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .placements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 72px;
+  }
+
+  .placement-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid var(--border-light);
+    transition: all 0.35s ease;
+    position: relative;
+  }
+
+  .placement-card:hover {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-gold);
+    transform: translateY(-2px);
+  }
+
+  .placement-card h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .placement-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .placement-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .placement-price span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-light);
+  }
+
+  /* Packages */
+  .packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 72px;
+  }
+
+  .package-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 36px 28px;
+    border: 1px solid var(--border-light);
+    text-align: center;
+    transition: all 0.35s ease;
+    position: relative;
+  }
+
+  .package-card.featured {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .package-card.featured::before {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 14px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+
+  .package-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .package-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .package-price {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .package-price span {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-light);
+  }
+
+  .package-desc {
+    font-size: 14px;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .package-features {
+    list-style: none;
+    text-align: left;
+  }
+
+  .package-features li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .package-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold-muted);
+    border: 2px solid var(--gold);
+  }
+
+  /* Why it works */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .why-card {
+    padding: 28px;
+    border-left: 3px solid var(--gold);
+    background: var(--white);
+    border-radius: 0 10px 10px 0;
+  }
+
+  .why-card h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .why-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  .advertise-cta {
+    text-align: center;
+    background: var(--navy);
+    border-radius: 16px;
+    padding: 56px 40px;
+  }
+
+  .advertise-cta h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--bg);
+    margin-bottom: 12px;
+  }
+
+  .advertise-cta p {
+    color: rgba(250, 248, 245, 0.7);
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 28px;
+    border: 1.5px solid rgba(250, 248, 245, 0.3);
+    border-radius: 8px;
+    color: var(--bg);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline-light:hover {
+    border-color: var(--bg);
+    background: rgba(250, 248, 245, 0.1);
+  }
+
+  /* ══════════════════════════════════════
+     SUBSCRIBE
+  ══════════════════════════════════════ */
+
+  .subscribe-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .subscribe-form-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 48px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--text);
+    background: var(--bg);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.12);
+    background: var(--white);
+  }
+
+  .form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888888' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+  }
+
+  .subscribe-form-card .btn-primary {
+    width: 100%;
+    justify-content: center;
+    padding: 16px;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .form-fine-print {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 16px;
+  }
+
+  .expect-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .expect-list li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .expect-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--gold-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .expect-text h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+
+  .expect-text p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* ══════════════════════════════════════
+     FOOTER
+  ══════════════════════════════════════ */
+
+  .site-footer {
+    background: var(--navy-deep);
+    padding: 64px 32px 40px;
+    color: rgba(250, 248, 245, 0.5);
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--bg);
+    margin-bottom: 12px;
+  }
+
+  .footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 320px;
+  }
+
+  .footer-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+  }
+
+  .footer-col li {
+    margin-bottom: 10px;
+  }
+
+  .footer-col a {
+    color: rgba(250, 248, 245, 0.6);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.25s ease;
+  }
+
+  .footer-col a:hover {
+    color: var(--gold);
+  }
+
+  .footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-top: 1px solid rgba(250, 248, 245, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-social a {
+    color: rgba(250, 248, 245, 0.4);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.25s ease;
+  }
+
+  .footer-social a:hover {
+    color: var(--gold);
+  }
+
+  /* ══════════════════════════════════════
+     ANIMATIONS
+  ══════════════════════════════════════ */
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stagger children */
+  .stagger > * {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .stagger.visible > *:nth-child(1) { transition-delay: 0s; }
+  .stagger.visible > *:nth-child(2) { transition-delay: 0.08s; }
+  .stagger.visible > *:nth-child(3) { transition-delay: 0.16s; }
+  .stagger.visible > *:nth-child(4) { transition-delay: 0.24s; }
+  .stagger.visible > *:nth-child(5) { transition-delay: 0.32s; }
+  .stagger.visible > *:nth-child(6) { transition-delay: 0.40s; }
+
+  .stagger.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ══════════════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════════════ */
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-image { min-height: 40vh; }
+    .hero-content { padding: 48px 32px 64px; max-width: 100%; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-layout { grid-template-columns: 1fr; gap: 48px; }
+    .subscribe-layout { grid-template-columns: 1fr; gap: 48px; }
+    .archive-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .placements-grid { grid-template-columns: repeat(2, 1fr); }
+    .packages-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+    .why-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    .proof-inner { gap: 32px; }
+  }
+
+  @media (max-width: 640px) {
+    .section { padding: 72px 20px; }
+    .nav-inner { padding: 0 20px; }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: var(--bg);
+      flex-direction: column;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      gap: 4px;
+    }
+
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 12px 16px; }
+
+    .nav-mobile-toggle { display: block; }
+
+    .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 72px; }
+    .hero-image { min-height: 50vh; }
+    .hero-content { padding: 40px 20px 60px; max-width: 100%; }
+    .hero-placeholder-logo { width: 140px; }
+
+    .latest-banner { padding: 20px; }
+    .latest-banner-inner { flex-direction: column; text-align: center; gap: 16px; }
+    .latest-banner-left { flex-direction: column; gap: 10px; }
+
+    .features-grid { grid-template-columns: 1fr; }
+    .archive-grid { grid-template-columns: 1fr; }
+    .stats-row { grid-template-columns: 1fr; }
+    .placements-grid { grid-template-columns: 1fr; }
+
+    .proof-inner { flex-direction: column; gap: 24px; }
+    .proof-divider { width: 48px; height: 1px; }
+
+    .subscribe-form-card { padding: 32px 24px; }
+    .advertise-cta { padding: 40px 24px; }
+    .preview-container { padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">
+      <img src="logomockup.png" alt="The South County Signal">
+      <span class="nav-brand-text">The South County<br>Signal</span>
+    </a>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#archive">Archive</a></li>
+      <li><a href="#advertise">Advertise</a></li>
+      <li><a href="#subscribe" class="nav-cta">Subscribe</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <!-- LEFT: Large image area -->
+  <div class="hero-image">
+    <div class="hero-image-inner">
+      <div class="hero-placeholder">
+        <img src="logomockup.png" alt="The South County Signal" class="hero-placeholder-logo">
+        <div class="hero-placeholder-text">Hero image — replace with coastal photo</div>
+      </div>
+    </div>
+    <div class="beam-accent"></div>
+  </div>
+
+  <!-- RIGHT: Subscribe content -->
+  <div class="hero-content">
+    <div class="hero-label">Free Weekly Newsletter</div>
+    <h1 class="hero-title">Know what's happening in South County.</h1>
+    <p class="hero-tagline">Your weekly cheat sheet for living well below the Providence line.</p>
+    <form class="hero-form" onsubmit="return false;">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit" class="btn-primary btn-gold">Subscribe Free &rarr;</button>
+    </form>
+    <p class="hero-note" style="animation: fadeInUp 0.8s ease-out 0.5s both;">Once a week. <strong>Free forever.</strong></p>
+    <ul class="hero-bullets">
+      <li><span class="bullet-icon">&#10003;</span> Curated weekly event picks</li>
+      <li><span class="bullet-icon">&#10003;</span> Food &amp; drink spotlights</li>
+      <li><span class="bullet-icon">&#10003;</span> Insider deals from local spots</li>
+      <li><span class="bullet-icon">&#10003;</span> Hot takes &amp; community polls</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     LATEST ISSUE BANNER
+═══════════════════════════════════════════ -->
+<div class="latest-banner">
+  <div class="latest-banner-inner">
+    <div class="latest-banner-left">
+      <span class="latest-banner-badge">Latest Issue</span>
+      <div class="latest-banner-text">
+        <div class="latest-banner-title">Issue #1 — The Signal is live. Here's your week.</div>
+        <div class="latest-banner-date">Coming Soon</div>
+      </div>
+    </div>
+    <a href="#archive" class="btn-outline-light">Read It &rarr;</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     WHAT YOU GET
+═══════════════════════════════════════════ -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-eyebrow">What You Get</div>
+    <h2 class="section-heading">One email. The whole week. Sorted.</h2>
+    <p class="section-subhead">We dig through every venue, calendar, and back-channel so you don't have to. Here's what lands in your inbox every week.</p>
+
+    <div class="features-grid stagger reveal">
+      <div class="feature-card">
+        <span class="feature-icon">🎯</span>
+        <h3>This Week's Move</h3>
+        <p>The single best thing to do this week. Our headliner pick with the full story on why you should go.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🎶</span>
+        <h3>The Lineup</h3>
+        <p>5-8 curated picks across music, food, outdoor, arts, nightlife, and family events. Only the good stuff.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🍽️</span>
+        <h3>Food &amp; Drink Spotlight</h3>
+        <p>A place we'd actually take a friend. New menus, hidden gems, seasonal specials, and honest takes.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔥</span>
+        <h3>Insider Deals &amp; Hot Takes</h3>
+        <p>Exclusive offers from local spots plus our weekly debate starter. We have opinions — you will too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SOCIAL PROOF
+═══════════════════════════════════════════ -->
+<div class="proof-strip">
+  <div class="proof-inner reveal">
+    <div class="proof-stat">
+      <div class="proof-number">42%+</div>
+      <div class="proof-label">Open Rate</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <div class="proof-number">8%+</div>
+      <div class="proof-label">Click Rate</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <div class="proof-number">3-4 min</div>
+      <div class="proof-label">Avg. Read Time</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <div class="proof-number">Weekly</div>
+      <div class="proof-label">Every Single Week</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-layout">
+      <div class="reveal">
+        <div class="section-eyebrow">About the Signal</div>
+        <h2 class="section-heading">We're not the town calendar.</h2>
+        <hr class="gold-rule">
+
+        <blockquote class="about-mission-text">
+          The friend who always knows what's going on — and isn't afraid to have an opinion about it.
+        </blockquote>
+
+        <div class="about-body">
+          <p>The South County Signal is a free weekly email newsletter curating the best things to do in Southern Rhode Island. Live music, food and drink specials, beach events, nightlife, arts, and family-friendly happenings — all filtered through a local lens with actual personality.</p>
+          <p>We exist because South County has no single, curated, personality-driven source for weekly events. Information is scattered across Facebook groups, venue Instagram accounts, and word of mouth. We do the work so you don't have to.</p>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:16px;margin-top:32px;">Where we cover</h3>
+        <div class="coverage-towns">
+          <span class="town-tag">Narragansett</span>
+          <span class="town-tag">Wakefield</span>
+          <span class="town-tag">Westerly</span>
+          <span class="town-tag">Watch Hill</span>
+          <span class="town-tag">Charlestown</span>
+          <span class="town-tag">Matunuck</span>
+          <span class="town-tag">Point Judith</span>
+          <span class="town-tag">North Kingstown</span>
+          <span class="town-tag">East Greenwich</span>
+          <span class="town-tag">Wickford</span>
+          <span class="town-tag">+ Providence picks</span>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay: 0.15s;">
+        <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:28px;">What makes us different</h3>
+        <ul class="difference-list">
+          <li>
+            <span class="diff-number">1</span>
+            <span class="diff-title">Voice</span>
+            <span class="diff-desc">We have opinions. The newsletter reads like your most plugged-in friend, not a municipal press release.</span>
+          </li>
+          <li>
+            <span class="diff-number">2</span>
+            <span class="diff-title">Curation</span>
+            <span class="diff-desc">We don't list everything. We pick the 8-10 best things and tell you why they matter.</span>
+          </li>
+          <li>
+            <span class="diff-number">3</span>
+            <span class="diff-title">Consistency</span>
+            <span class="diff-desc">Same format, same day, every week. You always know exactly what to expect.</span>
+          </li>
+          <li>
+            <span class="diff-number">4</span>
+            <span class="diff-title">Local-first</span>
+            <span class="diff-desc">Written by people who live here year-round — not just summer. We know the back roads, the inside jokes, and the real names.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CATEGORIES (NAVY STRIP)
+═══════════════════════════════════════════ -->
+<section class="section section-navy">
+  <div class="container" style="text-align:center;">
+    <div class="section-eyebrow" style="color:var(--gold);">What We Cover</div>
+    <h2 class="section-heading">Every corner of the scene.</h2>
+    <div class="categories-grid stagger reveal">
+      <div class="cat-card">
+        <span class="cat-icon">🎵</span>
+        <div class="cat-name">Live Music</div>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">🍹</span>
+        <div class="cat-name">Food &amp; Drink</div>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">🏖️</span>
+        <div class="cat-name">Beach &amp; Outdoor</div>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">🎭</span>
+        <div class="cat-name">Arts &amp; Culture</div>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">🌙</span>
+        <div class="cat-name">Nightlife</div>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">👨‍👩‍👧‍👦</span>
+        <div class="cat-name">Family Friendly</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ARCHIVE
+═══════════════════════════════════════════ -->
+<section class="section section-linen" id="archive">
+  <div class="container">
+    <div class="section-eyebrow">Archive</div>
+    <h2 class="section-heading">Past issues</h2>
+    <p class="section-subhead">Missed one? Every issue of the Signal lives here.</p>
+
+    <div class="archive-grid stagger reveal">
+      <a href="#" class="archive-card">
+        <div class="issue-num">Issue #1</div>
+        <div class="issue-headline">The Signal is live. Here's your week.</div>
+        <div class="issue-date">Coming Soon</div>
+        <div class="read-link">Read issue &rarr;</div>
+      </a>
+      <div class="archive-card" style="opacity:0.5;pointer-events:none;">
+        <div class="issue-num">Issue #2</div>
+        <div class="issue-headline">Coming soon...</div>
+        <div class="issue-date">&mdash;</div>
+      </div>
+      <div class="archive-card" style="opacity:0.5;pointer-events:none;">
+        <div class="issue-num">Issue #3</div>
+        <div class="issue-headline">Coming soon...</div>
+        <div class="issue-date">&mdash;</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ADVERTISE
+═══════════════════════════════════════════ -->
+<section class="section" id="advertise">
+  <div class="container">
+    <div class="advertise-hero reveal">
+      <div class="section-eyebrow">Advertise</div>
+      <h2 class="section-heading">Reach the people who actually<br>go out in South County.</h2>
+      <p class="section-subhead" style="margin-left:auto;margin-right:auto;text-align:center;">The Signal delivers your business to an engaged local audience of millennials and active adults who dine out, attend events, and support local. Your ad doesn't look like an ad — it looks like a recommendation from a friend.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row stagger reveal">
+      <div class="stat-card">
+        <div class="stat-value">70%</div>
+        <div class="stat-desc">Readers aged 28-55</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">85%</div>
+        <div class="stat-desc">Live in or visit South County</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">42-48%</div>
+        <div class="stat-desc">Email open rate</div>
+        <div class="stat-badge">2x industry avg</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">6-9%</div>
+        <div class="stat-desc">Click-through rate</div>
+        <div class="stat-badge">3x industry avg</div>
+      </div>
+    </div>
+
+    <!-- Placements -->
+    <div class="placements-heading reveal">
+      <h3 class="section-heading" style="font-size:28px;">Placement Options</h3>
+      <p style="color:var(--text-secondary);font-size:15px;margin-top:8px;">Every placement is written in our editorial voice. Your business, our personality.</p>
+    </div>
+
+    <div class="placements-grid stagger reveal">
+      <div class="placement-card">
+        <h4>Headliner Sponsor</h4>
+        <p>Your name on our top weekly pick. Maximum visibility, top of every email.</p>
+      </div>
+      <div class="placement-card">
+        <h4>Featured Lineup Event</h4>
+        <p>Your event in our curated roundup with a "Featured" badge. Blends with editorial.</p>
+      </div>
+      <div class="placement-card">
+        <h4>Mid-Newsletter Ad</h4>
+        <p>Dedicated ad card between our two most-read sections. We can write it for you.</p>
+      </div>
+      <div class="placement-card">
+        <h4>Food &amp; Drink Spotlight</h4>
+        <p>A full editorial profile of your restaurant, bar, or brewery. Premium placement.</p>
+      </div>
+      <div class="placement-card">
+        <h4>Insider Deal</h4>
+        <p>Feature an exclusive offer with a redemption code. Highest engagement section.</p>
+      </div>
+      <div class="placement-card">
+        <h4>Footer Sponsor</h4>
+        <p>Persistent "Presented By" placement at the bottom of every issue.</p>
+      </div>
+    </div>
+
+
+    <!-- Why it works -->
+    <div class="placements-heading reveal">
+      <h3 class="section-heading" style="font-size:28px;">Why the Signal Works</h3>
+    </div>
+
+    <div class="why-grid stagger reveal">
+      <div class="why-card">
+        <h4>We're not social media.</h4>
+        <p>Your post on Instagram competes with 500 others. In the Signal, your placement sits in a curated email that people chose to open and read for 3-4 minutes.</p>
+      </div>
+      <div class="why-card">
+        <h4>We're not the newspaper.</h4>
+        <p>Our audience is younger, more engaged, and actively looking for things to do this week — not catching up on yesterday's news.</p>
+      </div>
+      <div class="why-card">
+        <h4>We're not a coupon mailer.</h4>
+        <p>Every piece of content is written with personality. Your ad doesn't look like an ad — it looks like a recommendation from a friend.</p>
+      </div>
+      <div class="why-card">
+        <h4>Our readers act.</h4>
+        <p>With open rates 2x and click rates 3x the industry average, Signal readers don't just see your business — they visit it.</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="advertise-cta reveal">
+      <h3>Ready to reach South County?</h3>
+      <p>No contracts. No minimums. We'll help you pick the right placement for your goals.</p>
+      <div class="cta-buttons">
+        <a href="mailto:hello@southcountysignal.com" class="btn-primary btn-gold">Email Us &rarr;</a>
+        <a href="#" class="btn-outline-light">Schedule a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SUBSCRIBE
+═══════════════════════════════════════════ -->
+<section class="section section-linen" id="subscribe">
+  <div class="container">
+    <div class="subscribe-layout">
+      <div class="reveal">
+        <div class="section-eyebrow">Subscribe</div>
+        <h2 class="section-heading">Your week, curated.</h2>
+        <p class="section-subhead">Once a week — the best events, food, music, and things to do in South County. Written with personality. Free forever.</p>
+
+        <ul class="expect-list">
+          <li>
+            <div class="expect-icon">🎯</div>
+            <div class="expect-text">
+              <h4>This Week's Move</h4>
+              <p>Our #1 pick for the week with the full story</p>
+            </div>
+          </li>
+          <li>
+            <div class="expect-icon">📋</div>
+            <div class="expect-text">
+              <h4>The Lineup</h4>
+              <p>5-8 curated events across every category</p>
+            </div>
+          </li>
+          <li>
+            <div class="expect-icon">🍽️</div>
+            <div class="expect-text">
+              <h4>Food &amp; Drink Spotlight</h4>
+              <p>A restaurant or bar worth your time right now</p>
+            </div>
+          </li>
+          <li>
+            <div class="expect-icon">💰</div>
+            <div class="expect-text">
+              <h4>Insider Deal</h4>
+              <p>Exclusive offers from local businesses</p>
+            </div>
+          </li>
+          <li>
+            <div class="expect-icon">🗣️</div>
+            <div class="expect-text">
+              <h4>Signal Noise</h4>
+              <p>Our weekly hot take and community poll</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="reveal" style="transition-delay: 0.15s;">
+        <div class="subscribe-form-card">
+          <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px;text-align:center;">Join the Signal</h3>
+          <p style="text-align:center;color:var(--text-light);font-size:14px;margin-bottom:28px;">Takes 10 seconds. Unsubscribe anytime.</p>
+
+          <form onsubmit="return false;">
+            <div class="form-group">
+              <label for="sub-email">Email address</label>
+              <input type="email" id="sub-email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="sub-name">First name</label>
+              <input type="text" id="sub-name" placeholder="What should we call you?">
+            </div>
+            <div class="form-group">
+              <label for="sub-town">Your town</label>
+              <select id="sub-town">
+                <option value="" disabled selected>Select your town...</option>
+                <option>Narragansett</option>
+                <option>Wakefield / South Kingstown</option>
+                <option>Westerly / Watch Hill</option>
+                <option>Charlestown</option>
+                <option>North Kingstown</option>
+                <option>East Greenwich</option>
+                <option>Matunuck</option>
+                <option>Wickford</option>
+                <option>Providence</option>
+                <option>Other RI</option>
+                <option>Out of state</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary btn-gold">Subscribe Free &rarr;</button>
+          </form>
+          <p class="form-fine-print">No spam. No selling your info. Just the Signal, once a week.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>The South County Signal</h3>
+      <p>Your weekly cheat sheet for living well below the Providence line. A free email newsletter covering the best events, food, music, and things to do in Southern Rhode Island.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#archive">Archive</a></li>
+        <li><a href="#advertise">Advertise</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="mailto:hello@southcountysignal.com">Email Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 The South County Signal. All rights reserved.</span>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">TikTok</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════ -->
+<script>
+  // Mobile nav toggle
+  const toggle = document.getElementById('mobileToggle');
+  const navLinks = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  // Close mobile nav on link click
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Reveal on scroll
+  const revealElements = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  revealElements.forEach(el => observer.observe(el));
+
+  // Active nav highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navAnchors.forEach(a => {
+      a.style.color = '';
+      if (a.getAttribute('href') === '#' + current && !a.classList.contains('nav-cta')) {
+        a.style.color = 'var(--navy)';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+{
+  "issue_number": 1,
+  "week_of": "March 15, 2026",
+  "opener": "The vernal equinox hits Friday and South County is already acting like it's spring. The Knick is back from its renovation hiatus under the United Theatre banner, the St. Pat's energy is building all week, and if you've been hibernating since January — this is your week to come out. Here's what's worth your time.",
+
+  "headliner": {
+    "name": "The Hoolios: Swing Dance Night at The Knick",
+    "date": "Saturday, March 21",
+    "time": "8:00 PM",
+    "venue": "The Knickerbocker Music Center",
+    "town": "Westerly",
+    "description": "The Knick is officially back. After months of renovations and its new partnership with the United Theatre, the legendary 91-year-old venue reopens its storied dance floor for a proper swing night with The Hoolios. This is the first public dance event under the new programming — and if you've ever set foot on that Starlight Ballroom floor, you know there's nothing else like it in South County. Dress sharp, dance hard, get there early.",
+    "link": "https://unitedtheatre.org/coming-soon-events/",
+    "sponsor": null
+  },
+
+  "lineup": [
+    {
+      "category": "music",
+      "category_label": "Live Music",
+      "name": "Roots Music Stomp ft. Austin Scelzo",
+      "date": "Friday, March 20",
+      "time": "8:00 PM",
+      "venue": "United Theatre",
+      "town": "Westerly",
+      "description": "The March edition of Roots Music Stomp features beloved bluegrass fiddler and singer Austin Scelzo. If you like your Friday nights with fiddle strings and foot stomping, this is your room.",
+      "link": "https://unitedtheatre.org/coming-soon-events/",
+      "sponsored": false
+    },
+    {
+      "category": "food",
+      "category_label": "Food & Drink",
+      "name": "Italian Cocktail Tasting: 'The Imbible' with Anthony Caporale",
+      "date": "Thursday, March 19",
+      "time": "7:00 PM",
+      "venue": "United Theatre",
+      "town": "Westerly",
+      "description": "Part of the 2026 SoupyFest series — award-winning mixologist and star of 'The Imbible' leads a deep dive into the history and craft of Italian cocktails. Tasting included. This is not your average Thursday night.",
+      "link": "https://unitedtheatre.org/coming-soon-events/",
+      "sponsored": false
+    },
+    {
+      "category": "nightlife",
+      "category_label": "Nightlife",
+      "name": "Monday Night Trivia at the Ocean Mist",
+      "date": "Monday, March 16",
+      "time": "8:00 PM - 11:00 PM",
+      "venue": "The Ocean Mist",
+      "town": "Matunuck",
+      "description": "Free to play, 21+. The Mist runs trivia every Monday and it's quietly one of the best bar nights in South County. Grab a table early and a Narragansett tall boy for courage.",
+      "link": "https://www.oceanmist.net/live-music-and-events/",
+      "sponsored": false
+    },
+    {
+      "category": "arts",
+      "category_label": "Arts & Culture",
+      "name": "'Bridget' — Irish Film Screening & Filmmaker Talk",
+      "date": "Sunday, March 15",
+      "time": "4:00 PM",
+      "venue": "United Theatre",
+      "town": "Westerly",
+      "description": "Part of the United's Irish Film Fest. Filmmaker Anne Williamson joins for a screening and post-film conversation. Perfect St. Patrick's weekend counter-programming if parades aren't your speed.",
+      "link": "https://unitedtheatre.org/now-playing/",
+      "sponsored": true
+    },
+    {
+      "category": "outdoor",
+      "category_label": "Beach & Outdoor",
+      "name": "St. Pat's 5K — Tour de Patrick Race 2",
+      "date": "Saturday, March 21",
+      "time": "11:00 AM",
+      "venue": "RI State House (Smith St.)",
+      "town": "Providence",
+      "description": "Run the actual St. Patrick's Day Parade route before the parade kicks off at noon. Stick around after for the parade and the best people-watching in Rhode Island. $38 pre-registration, $45 day-of.",
+      "link": "https://runrhody.com/event/st-pats-5k/",
+      "sponsored": false
+    },
+    {
+      "category": "family",
+      "category_label": "Family Friendly",
+      "name": "Narragansett Community Ice Rink — Open Skating",
+      "date": "Daily, Dawn to Dusk",
+      "time": "Free",
+      "venue": "Clarke Road Ice Rink",
+      "town": "Narragansett",
+      "description": "The year-round outdoor rink donated by the Narragansett Chamber is one of the best-kept secrets in town. Bring your own skates, bring the kids, bring a thermos of something warm. No excuses.",
+      "link": "https://narragansettcoc.com/event-calendar/",
+      "sponsored": false
+    },
+    {
+      "category": "arts",
+      "category_label": "Arts & Culture",
+      "name": "'Fences' — Film Screening with Westerly ARC",
+      "date": "Thursday, March 19",
+      "time": "7:00 PM",
+      "venue": "United Theatre",
+      "town": "Westerly",
+      "description": "Denzel Washington and Viola Davis in the Pulitzer-winning August Wilson adaptation. Presented in partnership with the Westerly ARC. A powerful film in an intimate setting.",
+      "link": "https://unitedtheatre.org/now-playing/",
+      "sponsored": false
+    }
+  ],
+
+  "mid_ad": null,
+
+  "spotlight": {
+    "name": "The Ocean Mist",
+    "town": "Matunuck",
+    "location_detail": "895 Matunuck Beach Rd, right on the water",
+    "description": "Yes, it's a beach bar. Yes, you probably already know it. But here's what you might not know: they serve breakfast daily until 2pm, the Bloody Mary is legitimately one of the best in the state, and the kitchen stays open until 10pm every night — not just summer. The deck hangs over the actual ocean. You can see Block Island. In March, it's uncrowded and perfect. Go on a weeknight, sit at the bar, order the Benedicts, and remember why you live here."
+  },
+
+  "pvd_events": [
+    {
+      "name": "Providence St. Patrick's Day Parade",
+      "date": "Saturday, March 21",
+      "time": "12:00 PM",
+      "venue": "Smith St. to RI State House",
+      "description": "The parade kicks off at noon sharp from Smith and Rosebank Streets. One of Providence's biggest annual traditions — and it's free. Combine with the 5K for a full day."
+    },
+    {
+      "name": "GFree Fest — RI's Gluten-Free Festival",
+      "date": "Saturday & Sunday, March 21-22",
+      "time": "12:00 PM - 5:00 PM",
+      "venue": "WaterFire Arts Center",
+      "description": "Third year, and it's sold out both previous years. 85+ vendors, fully gluten-free bar with cocktails and ciders, food pop-ups. Founded by a local with celiac who actually gets it. GA tickets are $10."
+    }
+  ],
+
+  "deal": {
+    "business": "The Ocean Mist",
+    "offer": "Free Appetizer with Any Two Entrees",
+    "details": "Valid Monday through Thursday this week only. Mention 'South County Signal' to your server. Cannot be combined with other offers.",
+    "code": "SIGNALMIST"
+  },
+
+  "signal_noise": {
+    "type": "poll",
+    "question": "The Knick is officially under new management with the United Theatre. What do you want to see on that stage? (Besides everything.)",
+    "options": ["More dance nights", "Local blues revival", "Comedy shows", "All-ages open mics"],
+    "poll_link": null
+  },
+
+  "social": {
+    "instagram": "https://instagram.com/southcountysignal",
+    "facebook": "https://facebook.com/southcountysignal",
+    "tiktok": "https://tiktok.com/@southcountysignal"
+  },
+
+  "ads": {
+    "headliner_sponsor": null,
+    "mid_sponsor": null,
+    "footer_sponsor": {
+      "name": "South County Tourism Council"
+    }
+  }
+}
