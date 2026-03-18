@@ -2114,69 +2114,11 @@
     });
   });
 
-  // Beehiiv API config
-  const BH_API = 'https://api.beehiiv.com/v2';
-  const BH_PUB = 'pub_5c2f95be-b6c8-42bf-9dd5-261629c52417';
-  const BH_KEY = 'DO7S64UHjKOnMFGZqD7FTozIXHpUI2wbdgQOcAvSpv4zrmiKmgr7rJImWyS7XqoZ';
+  // Beehiiv subscribe URL
+  const BH_SUBSCRIBE = 'https://the-south-county-signal-164fe5.beehiiv.com/subscribe';
 
-  async function subscribeToBH(email, customFields = [], utmSource = 'website') {
-    let resp;
-    try {
-      resp = await fetch(`${BH_API}/publications/${BH_PUB}/subscriptions`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${BH_KEY}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          email: email,
-          send_welcome_email: true,
-          reactivate_existing: false,
-          utm_source: utmSource,
-          custom_fields: customFields
-        })
-      });
-    } catch (networkErr) {
-      throw new Error('Network error — please try again');
-    }
-    if (!resp.ok) {
-      let msg = 'Subscription failed';
-      try {
-        const err = await resp.json();
-        msg = err.errors?.[0]?.message || msg;
-      } catch (e) { /* response wasn't JSON */ }
-      throw new Error(msg);
-    }
-    return resp.json();
-  }
-
-  function showFormSuccess(form, btn, originalText) {
-    btn.innerHTML = '&#10003; You\'re in!';
-    btn.style.background = '#2E7D4F';
-    btn.style.color = '#fff';
-    form.reset();
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.style.background = '';
-      btn.style.color = '';
-      btn.disabled = false;
-    }, 3000);
-  }
-
-  function showFormError(btn, originalText, msg) {
-    btn.textContent = msg || 'Something went wrong';
-    btn.style.background = '#C4572A';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.style.background = '';
-      btn.style.color = '';
-      btn.disabled = false;
-    }, 3000);
-  }
-
-  // Hero form — email only
-  document.getElementById('heroForm').addEventListener('submit', async function(e) {
+  // Hero form — email only, opens Beehiiv in background iframe
+  document.getElementById('heroForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const email = document.getElementById('hero-email').value.trim();
     if (!email) return;
@@ -2186,26 +2128,52 @@
     btn.textContent = 'Subscribing...';
     btn.disabled = true;
 
-    try {
-      await subscribeToBH(email, [
-        { name: 'Signup Source', value: 'website_hero' }
-      ], 'website_hero');
-      showFormSuccess(this, btn, originalText);
-    } catch (err) {
-      const msg = err.message.includes('already') ? 'Already subscribed!'
-        : err.message.includes('Network') ? 'Connection error — try again'
-        : null;
-      showFormError(btn, originalText, msg);
-      console.error('Hero form error:', err.message);
+    // Submit via hidden form to Beehiiv
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = BH_SUBSCRIBE;
+    form.target = 'bh_signup';
+    form.style.display = 'none';
+    const input = document.createElement('input');
+    input.name = 'email';
+    input.value = email;
+    form.appendChild(input);
+    const src = document.createElement('input');
+    src.name = 'utm_source';
+    src.value = 'website_hero';
+    form.appendChild(src);
+    document.body.appendChild(form);
+
+    // Create hidden iframe target
+    let iframe = document.getElementById('bh_iframe');
+    if (!iframe) {
+      iframe = document.createElement('iframe');
+      iframe.id = 'bh_iframe';
+      iframe.name = 'bh_signup';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
     }
+
+    form.submit();
+    document.body.removeChild(form);
+
+    // Show success
+    btn.innerHTML = '&#10003; You\'re in!';
+    btn.style.background = '#2E7D4F';
+    btn.style.color = '#fff';
+    this.reset();
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.disabled = false;
+    }, 3000);
   });
 
   // Subscribe section form — email, name, town
-  document.getElementById('subscribeForm').addEventListener('submit', async function(e) {
+  document.getElementById('subscribeForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const email = document.getElementById('sub-email').value.trim();
-    const name = document.getElementById('sub-name').value.trim();
-    const town = document.getElementById('sub-town').value;
     if (!email) return;
 
     const btn = this.querySelector('button[type="submit"]');
@@ -2213,20 +2181,46 @@
     btn.textContent = 'Subscribing...';
     btn.disabled = true;
 
-    const fields = [{ name: 'Signup Source', value: 'website_subscribe' }];
-    if (name) fields.push({ name: 'First Name', value: name });
-    if (town) fields.push({ name: 'Town', value: town });
+    // Submit via hidden form to Beehiiv
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = BH_SUBSCRIBE;
+    form.target = 'bh_signup';
+    form.style.display = 'none';
+    const input = document.createElement('input');
+    input.name = 'email';
+    input.value = email;
+    form.appendChild(input);
+    const src = document.createElement('input');
+    src.name = 'utm_source';
+    src.value = 'website_subscribe';
+    form.appendChild(src);
+    document.body.appendChild(form);
 
-    try {
-      await subscribeToBH(email, fields, 'website_subscribe');
-      showFormSuccess(this, btn, originalText);
-    } catch (err) {
-      const msg = err.message.includes('already') ? 'Already subscribed!'
-        : err.message.includes('Network') ? 'Connection error — try again'
-        : null;
-      showFormError(btn, originalText, msg);
-      console.error('Subscribe form error:', err.message);
+    // Create hidden iframe target
+    let iframe = document.getElementById('bh_iframe');
+    if (!iframe) {
+      iframe = document.createElement('iframe');
+      iframe.id = 'bh_iframe';
+      iframe.name = 'bh_signup';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
     }
+
+    form.submit();
+    document.body.removeChild(form);
+
+    // Show success
+    btn.innerHTML = '&#10003; You\'re in!';
+    btn.style.background = '#2E7D4F';
+    btn.style.color = '#fff';
+    this.reset();
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.disabled = false;
+    }, 3000);
   });
 </script>
 
