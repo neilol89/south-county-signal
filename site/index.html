@@ -1604,10 +1604,9 @@
     <div class="hero-label">Free Weekly Newsletter</div>
     <h1 class="hero-title">Know what's happening in South County.</h1>
     <p class="hero-tagline">Your weekly cheat sheet for living well below the Providence line.</p>
-    <form class="hero-form" id="heroForm">
-      <input type="email" id="hero-email" placeholder="Your email address" required>
-      <button type="submit" class="btn-primary btn-gold">Subscribe Free &rarr;</button>
-    </form>
+    <div class="hero-embed" style="animation: fadeInUp 0.8s ease-out 0.4s both;">
+      <iframe src="https://subscribe-forms.beehiiv.com/762cd151-dfe9-42ce-a4cd-5955dfc8002e" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:80px;margin:0;background:transparent;"></iframe>
+    </div>
     <p class="hero-note" style="animation: fadeInUp 0.8s ease-out 0.5s both;">Once a week. <strong>Free forever.</strong></p>
     <ul class="hero-bullets">
       <li><span class="bullet-icon">&#10003;</span> Curated weekly event picks</li>
@@ -1983,36 +1982,8 @@
       <div class="reveal" style="transition-delay: 0.15s;">
         <div class="subscribe-form-card">
           <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px;text-align:center;">Join the Signal</h3>
-          <p style="text-align:center;color:var(--text-light);font-size:14px;margin-bottom:28px;">Takes 10 seconds. Unsubscribe anytime.</p>
-
-          <form id="subscribeForm">
-            <div class="form-group">
-              <label for="sub-email">Email address</label>
-              <input type="email" id="sub-email" placeholder="you@example.com" required>
-            </div>
-            <div class="form-group">
-              <label for="sub-name">First name</label>
-              <input type="text" id="sub-name" placeholder="What should we call you?">
-            </div>
-            <div class="form-group">
-              <label for="sub-town">Your town</label>
-              <select id="sub-town">
-                <option value="" disabled selected>Select your town...</option>
-                <option>Narragansett</option>
-                <option>Wakefield / South Kingstown</option>
-                <option>Westerly / Watch Hill</option>
-                <option>Charlestown</option>
-                <option>North Kingstown</option>
-                <option>East Greenwich</option>
-                <option>Matunuck</option>
-                <option>Wickford</option>
-                <option>Providence</option>
-                <option>Other RI</option>
-                <option>Out of state</option>
-              </select>
-            </div>
-            <button type="submit" class="btn-primary btn-gold">Subscribe Free &rarr;</button>
-          </form>
+          <p style="text-align:center;color:var(--text-light);font-size:14px;margin-bottom:20px;">Takes 10 seconds. Unsubscribe anytime.</p>
+          <iframe src="https://subscribe-forms.beehiiv.com/762cd151-dfe9-42ce-a4cd-5955dfc8002e" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:80px;margin:0;background:transparent;"></iframe>
           <p class="form-fine-print">No spam. No selling your info. Just the Signal, once a week.</p>
         </div>
       </div>
@@ -2114,25 +2085,9 @@
     });
   });
 
-  // Beehiiv subscribe page
-  const BH_URL = 'https://the-south-county-signal-164fe5.beehiiv.com/subscribe';
 
-  // Hero form — redirect to Beehiiv with email pre-filled
-  document.getElementById('heroForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('hero-email').value.trim();
-    if (!email) return;
-    window.location.href = BH_URL + '?email=' + encodeURIComponent(email) + '&utm_source=website_hero';
-  });
-
-  // Subscribe form — redirect to Beehiiv with email pre-filled
-  document.getElementById('subscribeForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('sub-email').value.trim();
-    if (!email) return;
-    window.location.href = BH_URL + '?email=' + encodeURIComponent(email) + '&utm_source=website_subscribe';
-  });
 </script>
+<script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
 
 </body>
 </html>
