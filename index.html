@@ -1604,8 +1604,8 @@
     <div class="hero-label">Free Weekly Newsletter</div>
     <h1 class="hero-title">Know what's happening in South County.</h1>
     <p class="hero-tagline">Your weekly cheat sheet for living well below the Providence line.</p>
-    <form class="hero-form" onsubmit="return false;">
-      <input type="email" placeholder="Your email address" required>
+    <form class="hero-form" id="heroForm">
+      <input type="email" id="hero-email" placeholder="Your email address" required>
       <button type="submit" class="btn-primary btn-gold">Subscribe Free &rarr;</button>
     </form>
     <p class="hero-note" style="animation: fadeInUp 0.8s ease-out 0.5s both;">Once a week. <strong>Free forever.</strong></p>
@@ -1985,7 +1985,7 @@
           <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px;text-align:center;">Join the Signal</h3>
           <p style="text-align:center;color:var(--text-light);font-size:14px;margin-bottom:28px;">Takes 10 seconds. Unsubscribe anytime.</p>
 
-          <form onsubmit="return false;">
+          <form id="subscribeForm">
             <div class="form-group">
               <label for="sub-email">Email address</label>
               <input type="email" id="sub-email" placeholder="you@example.com" required>
@@ -2112,6 +2112,104 @@
         a.style.color = 'var(--navy)';
       }
     });
+  });
+
+  // Beehiiv API config
+  const BH_API = 'https://api.beehiiv.com/v2';
+  const BH_PUB = 'pub_5c2f95be-b6c8-42bf-9dd5-261629c52417';
+  const BH_KEY = 'DO7S64UHjKOnMFGZqD7FTozIXHpUI2wbdgQOcAvSpv4zrmiKmgr7rJImWyS7XqoZ';
+
+  async function subscribeToBH(email, customFields = [], utmSource = 'website') {
+    const resp = await fetch(`${BH_API}/publications/${BH_PUB}/subscriptions`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${BH_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: email,
+        send_welcome_email: true,
+        reactivate_existing: false,
+        utm_source: utmSource,
+        custom_fields: customFields
+      })
+    });
+    if (!resp.ok) {
+      const err = await resp.json();
+      throw new Error(err.errors?.[0]?.message || 'Subscription failed');
+    }
+    return resp.json();
+  }
+
+  function showFormSuccess(form, btn, originalText) {
+    btn.innerHTML = '&#10003; You\'re in!';
+    btn.style.background = '#2E7D4F';
+    btn.style.color = '#fff';
+    form.reset();
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.disabled = false;
+    }, 3000);
+  }
+
+  function showFormError(btn, originalText, msg) {
+    btn.textContent = msg || 'Something went wrong';
+    btn.style.background = '#C4572A';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.disabled = false;
+    }, 3000);
+  }
+
+  // Hero form — email only
+  document.getElementById('heroForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('hero-email').value.trim();
+    if (!email) return;
+
+    const btn = this.querySelector('button[type="submit"]');
+    const originalText = btn.innerHTML;
+    btn.textContent = 'Subscribing...';
+    btn.disabled = true;
+
+    try {
+      await subscribeToBH(email, [
+        { name: 'Signup Source', value: 'website_hero' }
+      ], 'website_hero');
+      showFormSuccess(this, btn, originalText);
+    } catch (err) {
+      showFormError(btn, originalText, err.message.includes('already') ? 'Already subscribed!' : null);
+    }
+  });
+
+  // Subscribe section form — email, name, town
+  document.getElementById('subscribeForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('sub-email').value.trim();
+    const name = document.getElementById('sub-name').value.trim();
+    const town = document.getElementById('sub-town').value;
+    if (!email) return;
+
+    const btn = this.querySelector('button[type="submit"]');
+    const originalText = btn.innerHTML;
+    btn.textContent = 'Subscribing...';
+    btn.disabled = true;
+
+    const fields = [{ name: 'Signup Source', value: 'website_subscribe' }];
+    if (name) fields.push({ name: 'First Name', value: name });
+    if (town) fields.push({ name: 'Town', value: town });
+
+    try {
+      await subscribeToBH(email, fields, 'website_subscribe');
+      showFormSuccess(this, btn, originalText);
+    } catch (err) {
+      showFormError(btn, originalText, err.message.includes('already') ? 'Already subscribed!' : null);
+    }
   });
 </script>
 
