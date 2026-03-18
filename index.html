@@ -2120,23 +2120,32 @@
   const BH_KEY = 'DO7S64UHjKOnMFGZqD7FTozIXHpUI2wbdgQOcAvSpv4zrmiKmgr7rJImWyS7XqoZ';
 
   async function subscribeToBH(email, customFields = [], utmSource = 'website') {
-    const resp = await fetch(`${BH_API}/publications/${BH_PUB}/subscriptions`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${BH_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        email: email,
-        send_welcome_email: true,
-        reactivate_existing: false,
-        utm_source: utmSource,
-        custom_fields: customFields
-      })
-    });
+    let resp;
+    try {
+      resp = await fetch(`${BH_API}/publications/${BH_PUB}/subscriptions`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${BH_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: email,
+          send_welcome_email: true,
+          reactivate_existing: false,
+          utm_source: utmSource,
+          custom_fields: customFields
+        })
+      });
+    } catch (networkErr) {
+      throw new Error('Network error — please try again');
+    }
     if (!resp.ok) {
-      const err = await resp.json();
-      throw new Error(err.errors?.[0]?.message || 'Subscription failed');
+      let msg = 'Subscription failed';
+      try {
+        const err = await resp.json();
+        msg = err.errors?.[0]?.message || msg;
+      } catch (e) { /* response wasn't JSON */ }
+      throw new Error(msg);
     }
     return resp.json();
   }
@@ -2183,7 +2192,11 @@
       ], 'website_hero');
       showFormSuccess(this, btn, originalText);
     } catch (err) {
-      showFormError(btn, originalText, err.message.includes('already') ? 'Already subscribed!' : null);
+      const msg = err.message.includes('already') ? 'Already subscribed!'
+        : err.message.includes('Network') ? 'Connection error — try again'
+        : null;
+      showFormError(btn, originalText, msg);
+      console.error('Hero form error:', err.message);
     }
   });
 
@@ -2208,7 +2221,11 @@
       await subscribeToBH(email, fields, 'website_subscribe');
       showFormSuccess(this, btn, originalText);
     } catch (err) {
-      showFormError(btn, originalText, err.message.includes('already') ? 'Already subscribed!' : null);
+      const msg = err.message.includes('already') ? 'Already subscribed!'
+        : err.message.includes('Network') ? 'Connection error — try again'
+        : null;
+      showFormError(btn, originalText, msg);
+      console.error('Subscribe form error:', err.message);
     }
   });
 </script>
