@@ -2114,113 +2114,23 @@
     });
   });
 
-  // Beehiiv subscribe URL
-  const BH_SUBSCRIBE = 'https://the-south-county-signal-164fe5.beehiiv.com/subscribe';
+  // Beehiiv subscribe page
+  const BH_URL = 'https://the-south-county-signal-164fe5.beehiiv.com/subscribe';
 
-  // Hero form — email only, opens Beehiiv in background iframe
+  // Hero form — redirect to Beehiiv with email pre-filled
   document.getElementById('heroForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const email = document.getElementById('hero-email').value.trim();
     if (!email) return;
-
-    const btn = this.querySelector('button[type="submit"]');
-    const originalText = btn.innerHTML;
-    btn.textContent = 'Subscribing...';
-    btn.disabled = true;
-
-    // Submit via hidden form to Beehiiv
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = BH_SUBSCRIBE;
-    form.target = 'bh_signup';
-    form.style.display = 'none';
-    const input = document.createElement('input');
-    input.name = 'email';
-    input.value = email;
-    form.appendChild(input);
-    const src = document.createElement('input');
-    src.name = 'utm_source';
-    src.value = 'website_hero';
-    form.appendChild(src);
-    document.body.appendChild(form);
-
-    // Create hidden iframe target
-    let iframe = document.getElementById('bh_iframe');
-    if (!iframe) {
-      iframe = document.createElement('iframe');
-      iframe.id = 'bh_iframe';
-      iframe.name = 'bh_signup';
-      iframe.style.display = 'none';
-      document.body.appendChild(iframe);
-    }
-
-    form.submit();
-    document.body.removeChild(form);
-
-    // Show success
-    btn.innerHTML = '&#10003; You\'re in!';
-    btn.style.background = '#2E7D4F';
-    btn.style.color = '#fff';
-    this.reset();
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.style.background = '';
-      btn.style.color = '';
-      btn.disabled = false;
-    }, 3000);
+    window.location.href = BH_URL + '?email=' + encodeURIComponent(email) + '&utm_source=website_hero';
   });
 
-  // Subscribe section form — email, name, town
+  // Subscribe form — redirect to Beehiiv with email pre-filled
   document.getElementById('subscribeForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const email = document.getElementById('sub-email').value.trim();
     if (!email) return;
-
-    const btn = this.querySelector('button[type="submit"]');
-    const originalText = btn.innerHTML;
-    btn.textContent = 'Subscribing...';
-    btn.disabled = true;
-
-    // Submit via hidden form to Beehiiv
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = BH_SUBSCRIBE;
-    form.target = 'bh_signup';
-    form.style.display = 'none';
-    const input = document.createElement('input');
-    input.name = 'email';
-    input.value = email;
-    form.appendChild(input);
-    const src = document.createElement('input');
-    src.name = 'utm_source';
-    src.value = 'website_subscribe';
-    form.appendChild(src);
-    document.body.appendChild(form);
-
-    // Create hidden iframe target
-    let iframe = document.getElementById('bh_iframe');
-    if (!iframe) {
-      iframe = document.createElement('iframe');
-      iframe.id = 'bh_iframe';
-      iframe.name = 'bh_signup';
-      iframe.style.display = 'none';
-      document.body.appendChild(iframe);
-    }
-
-    form.submit();
-    document.body.removeChild(form);
-
-    // Show success
-    btn.innerHTML = '&#10003; You\'re in!';
-    btn.style.background = '#2E7D4F';
-    btn.style.color = '#fff';
-    this.reset();
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.style.background = '';
-      btn.style.color = '';
-      btn.disabled = false;
-    }, 3000);
+    window.location.href = BH_URL + '?email=' + encodeURIComponent(email) + '&utm_source=website_subscribe';
   });
 </script>
 
