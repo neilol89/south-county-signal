@@ -1604,7 +1604,7 @@
     <div class="hero-label">Free Weekly Newsletter</div>
     <h1 class="hero-title">Know what's happening in South County.</h1>
     <p class="hero-tagline">Everything worth doing in South County. One email a week.</p>
-    <form class="hero-form" action="https://buttondown.com/api/emails/embed-subscribe/neilbryt" method="post" target="_blank" style="animation: fadeInUp 0.8s ease-out 0.4s both;">
+    <form class="hero-form" action="https://buttondown.com/api/emails/embed-subscribe/neilbryt" method="post" target="bd_iframe" style="animation: fadeInUp 0.8s ease-out 0.4s both;">
       <input type="hidden" name="embed" value="1">
       <input type="hidden" name="tag" value="website_hero">
       <input type="email" name="email" placeholder="Your email address" required>
@@ -1986,7 +1986,7 @@
         <div class="subscribe-form-card">
           <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:8px;text-align:center;">Join the Signal</h3>
           <p style="text-align:center;color:var(--text-light);font-size:14px;margin-bottom:28px;">Takes 10 seconds. Unsubscribe anytime.</p>
-          <form action="https://buttondown.com/api/emails/embed-subscribe/neilbryt" method="post" target="_blank">
+          <form action="https://buttondown.com/api/emails/embed-subscribe/neilbryt" method="post" target="bd_iframe">
             <input type="hidden" name="embed" value="1">
             <input type="hidden" name="tag" value="website_subscribe">
             <div class="form-group">
@@ -2097,6 +2097,30 @@
   });
 
 
+  // Hidden iframe for Buttondown form submission
+  const bdIframe = document.createElement('iframe');
+  bdIframe.name = 'bd_iframe';
+  bdIframe.style.display = 'none';
+  document.body.appendChild(bdIframe);
+
+  // Show success on form submit
+  document.querySelectorAll('form[action*="buttondown"]').forEach(form => {
+    form.addEventListener('submit', function() {
+      const btn = this.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      setTimeout(() => {
+        btn.innerHTML = '&#10003; You\'re in!';
+        btn.style.background = '#2E7D4F';
+        btn.style.color = '#fff';
+        this.reset();
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.background = '';
+          btn.style.color = '';
+        }, 3000);
+      }, 500);
+    });
+  });
 </script>
 
 </body>
