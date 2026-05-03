@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The South County Signal</title>
+<!--[if mso]>
+<style>table,td,div,p,span{font-family:Arial,sans-serif !important;}</style>
+<![endif]-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: #F2EDE6;
+    font-family: 'Source Sans 3', Arial, Helvetica, sans-serif;
+    color: #2D2D2D;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .email-wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #FAF8F5;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: #1B4965;
+    padding: 32px 32px 28px;
+    text-align: center;
+    border-bottom: 4px solid #D4A843;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 900;
+    font-size: 36px;
+    color: #FAF8F5;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .header .tagline {
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    font-size: 13px;
+    color: #D4A843;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .header .date-line {
+    font-size: 13px;
+    color: rgba(250, 248, 245, 0.6);
+    margin-top: 12px;
+    font-weight: 400;
+  }
+
+  /* ── OPENER ── */
+  .opener {
+    padding: 28px 32px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #3A3A3A;
+    border-bottom: 1px solid #E8E2D9;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #D4A843;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #1B4965;
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+
+  /* ── HEADLINER ── */
+  .headliner {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .headliner .sponsor-tag {
+    font-size: 11px;
+    color: #999;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .headliner-card {
+    background: #1B4965;
+    border-radius: 8px;
+    padding: 28px;
+    color: #FAF8F5;
+  }
+  .headliner-card .section-label { color: #D4A843; }
+  .headliner-card .event-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .headliner-card .event-meta {
+    font-size: 14px;
+    color: #D4A843;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .headliner-card .event-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(250,248,245,0.9);
+    margin-bottom: 18px;
+  }
+  .headliner-card .cta-btn {
+    display: inline-block;
+    background: #D4A843;
+    color: #1B4965;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 4px;
+  }
+
+  /* ── LINEUP / ROUNDUP ── */
+  .lineup {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .lineup-item {
+    padding: 18px 0;
+    border-bottom: 1px dashed #DDD7CE;
+  }
+  .lineup-item:last-child { border-bottom: none; }
+  .lineup-item .category-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FAF8F5;
+    background: #1B4965;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  .lineup-item .category-tag.music { background: #6B3FA0; }
+  .lineup-item .category-tag.food { background: #C4572A; }
+  .lineup-item .category-tag.outdoor { background: #2E7D4F; }
+  .lineup-item .category-tag.arts { background: #B8860B; }
+  .lineup-item .category-tag.nightlife { background: #8B2252; }
+  .lineup-item .category-tag.family { background: #3A7CA5; }
+  .lineup-item .category-tag.wellness { background: #5F8575; }
+  .lineup-item .category-tag.sponsored {
+    background: transparent;
+    color: #999;
+    border: 1px solid #CCC;
+    font-size: 9px;
+    margin-left: 6px;
+  }
+  .lineup-item .item-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1B4965;
+    margin-bottom: 4px;
+  }
+  .lineup-item .item-name a {
+    color: #1B4965;
+    text-decoration: none;
+  }
+  .lineup-item .item-name a:hover { text-decoration: underline; }
+  .lineup-item .item-meta {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .lineup-item .item-desc {
+    font-size: 15px;
+    color: #4A4A4A;
+    line-height: 1.55;
+  }
+
+  /* ── FOOD & DRINK SPOTLIGHT ── */
+  .spotlight {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .spotlight-card {
+    background: linear-gradient(135deg, #FAF3E8 0%, #F5EDE0 100%);
+    border-radius: 8px;
+    padding: 24px;
+    border-left: 4px solid #D4A843;
+  }
+  .spotlight-card .spot-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1B4965;
+    margin-bottom: 4px;
+  }
+  .spotlight-card .spot-location {
+    font-size: 13px;
+    color: #D4A843;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .spotlight-card .spot-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #4A4A4A;
+  }
+
+  /* ── WORTH THE DRIVE ── */
+  .worth-drive {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .pvd-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FAF8F5;
+    background: #333;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  .pvd-item {
+    margin-bottom: 14px;
+  }
+  .pvd-item:last-child { margin-bottom: 0; }
+  .pvd-item .item-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1B4965;
+  }
+  .pvd-item .item-meta {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .pvd-item .item-desc {
+    font-size: 14px;
+    color: #4A4A4A;
+    line-height: 1.55;
+  }
+
+  /* ── INSIDER DEAL ── */
+  .deal {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .deal-card {
+    background: #1B4965;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .deal-card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    background: #D4A843;
+    border-radius: 50%;
+    opacity: 0.15;
+  }
+  .deal-card .deal-business {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #D4A843;
+    margin-bottom: 8px;
+  }
+  .deal-card .deal-offer {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FAF8F5;
+    margin-bottom: 8px;
+  }
+  .deal-card .deal-details {
+    font-size: 14px;
+    color: rgba(250,248,245,0.7);
+    margin-bottom: 16px;
+  }
+  .deal-card .deal-code {
+    display: inline-block;
+    background: rgba(212,168,67,0.2);
+    border: 1px dashed #D4A843;
+    color: #D4A843;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 8px 20px;
+    border-radius: 4px;
+  }
+
+  /* ── SIGNAL NOISE / HOT TAKE ── */
+  .signal-noise {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .noise-card {
+    background: #F5F0E8;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+  }
+  .noise-card .noise-q {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1B4965;
+    margin-bottom: 16px;
+    line-height: 1.35;
+  }
+  .noise-card .poll-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .noise-card .poll-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 2px solid #1B4965;
+    border-radius: 6px;
+    color: #1B4965;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .noise-card .poll-btn:hover {
+    background: #1B4965;
+    color: #FAF8F5;
+  }
+
+  /* ── MID-NEWSLETTER AD ── */
+  .mid-ad {
+    padding: 20px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .mid-ad-card {
+    background: #F8F5EE;
+    border: 1px solid #E8E2D9;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+  }
+  .mid-ad-card .ad-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #BBB;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .mid-ad-card .ad-content {
+    font-size: 15px;
+    color: #4A4A4A;
+    line-height: 1.5;
+  }
+  .mid-ad-card .ad-content a {
+    color: #1B4965;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #1B4965;
+    padding: 28px 32px;
+    text-align: center;
+    color: rgba(250,248,245,0.6);
+    font-size: 13px;
+  }
+  .footer .footer-cta {
+    color: #D4A843;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .footer .footer-prompt {
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  .footer .social-links {
+    margin-bottom: 18px;
+  }
+  .footer .social-links a {
+    color: #D4A843;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  .footer .footer-sponsor {
+    border-top: 1px solid rgba(250,248,245,0.1);
+    padding-top: 16px;
+    margin-top: 16px;
+  }
+  .footer .footer-sponsor .ad-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(250,248,245,0.3);
+    margin-bottom: 6px;
+  }
+  .footer .footer-sponsor .sponsor-name {
+    color: #D4A843;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .footer .footer-links {
+    margin-top: 18px;
+    font-size: 12px;
+  }
+  .footer .footer-links a {
+    color: rgba(250,248,245,0.5);
+    text-decoration: underline;
+    margin: 0 8px;
+  }
+  .footer .advertise-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 12px;
+    color: #D4A843;
+    text-decoration: none;
+    border: 1px solid rgba(212,168,67,0.4);
+    padding: 6px 16px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 28px; }
+    .headliner-card .event-name { font-size: 20px; }
+    .opener, .headliner, .lineup, .spotlight, .worth-drive, .deal, .signal-noise, .mid-ad { padding: 24px 20px; }
+    .footer { padding: 24px 20px; }
+    .noise-card .poll-options { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<div class="email-wrapper">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <div class="header">
+    <h1>THE SOUTH COUNTY SIGNAL</h1>
+    <div class="tagline">Your Weekly Cheat Sheet for Southern RI</div>
+    <div class="date-line">Week of May 7, 2026 · Issue #3</div>
+  </div>
+
+  <!-- ═══════════ OPENER ═══════════ -->
+  <div class="opener">
+    Mother's Day lands Sunday and the spring season is officially open for business. The Knick's birthday calendar keeps rolling, the gardens are at peak bloom, and Friday night has three shows worth fighting traffic for. If you've been waiting for the week that stops feeling like winter — congratulations, you found it.
+  </div>
+
+  <!-- ═══════════ THIS WEEK'S MOVE (HEADLINER) ═══════════ -->
+  <div class="headliner">
+    <span class="sponsor-tag"></span>
+    <div class="headliner-card">
+      <span class="section-label">THIS WEEK'S MOVE</span>
+      <div class="event-name">Greg Piccolo &amp; Heavy Juice — 75th Birthday at the Knick</div>
+      <div class="event-meta">Friday, May 8 · 8:00 PM · Knickerbocker Music Center, Westerly</div>
+      <div class="event-desc">
+        Greg Piccolo helped build the Rhode Island R&amp;B sound with Roomful of Blues, and he's hitting 75 the right way — playing the Knick with Heavy Juice and pre-releasing a brand-new album the same night. This is the kind of birthday party where the gift is the room. The 91-year-old dance floor doesn't fit everybody — get there early. Milestones like this are exactly why the Knick was worth saving.
+      </div>
+      <a href="https://unitedtheatre.org/shows/greg-piccolo-heavy-juice-75th-birthday-celebration/" class="cta-btn">Get Details →</a>
+    </div>
+  </div>
+
+  <!-- ═══════════ THE LINEUP (ROUNDUP) ═══════════ -->
+  <div class="lineup">
+    <span class="section-label">THE LINEUP</span>
+    <div class="section-title">This Week in South County</div>
+
+    
+    <div class="lineup-item">
+      <span class="category-tag arts">Arts &amp; Culture</span>
+      <div class="item-name"><a href="https://unitedtheatre.org/shows/salt-marsh-opera-presents-cinderella/">Salt Marsh Opera presents Cinderella</a></div>
+      <div class="item-meta">Thursday, May 7 · 7:00 PM · United Theatre — Black Box, Westerly</div>
+      <div class="item-desc">Rossini's Cinderella in the Black Box, performed by South County's own opera company. If you've ever rolled your eyes at opera, this is the size of room that changes minds — every seat is whispering distance from the singers.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag music">Live Music</span>
+      <div class="item-name"><a href="https://www.greenwichodeum.com/calendar/">Paul Gilbert with Greg Koch</a></div>
+      <div class="item-meta">Friday, May 8 · Evening · Greenwich Odeum, East Greenwich</div>
+      <div class="item-desc">Mr. Big's guitar god in a 400-seat room with another guitar god — the kind of night where you remember why people fell in love with the electric guitar in the first place. The VIP add-on is reportedly almost gone.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag arts">Arts &amp; Culture</span>
+      <div class="item-name"><a href="https://unitedtheatre.org/shows/the-psychology-of-serial-killers/">The Psychology of Serial Killers</a></div>
+      <div class="item-meta">Friday, May 8 · 8:00 PM · United Theatre — Black Box, Westerly</div>
+      <div class="item-desc">A clinical psychologist on a stage talking about the brains of America's worst people. Macabre, weirdly compelling, and probably the most-asked-about ticket at the United this season. Pick your Friday — this one will be talked about Monday.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag music">Live Music</span>
+      <div class="item-name"><a href="https://courthousearts.org">Led Zeppelin — Houses of the Holy (Tribute)</a></div>
+      <div class="item-meta">Saturday, May 9 · 7:30 PM · Courthouse Center for the Arts, South Kingstown</div>
+      <div class="item-desc">The Courthouse is doing classic albums note-for-note all spring, and Houses of the Holy is the one Zep fans actually want. Tribute night done with reverence — and within 15 minutes of every diner in the county.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag music">Live Music</span>
+      <div class="item-name"><a href="https://www.pumphousemusicworks.com/event-calendar">In Lieu of Flowers</a></div>
+      <div class="item-meta">Saturday, May 9 · 8:00 PM (Doors 7:00 PM) · Pump House Music Works, Wakefield</div>
+      <div class="item-desc">$15 advance for an indie show at the Pump House — the venue keeps quietly being one of the best music rooms in the state. You don't have to know the band. That's kind of the point.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag outdoor">Beach &amp; Outdoor</span>
+      <div class="item-name"><a href="https://patch.com/rhode-island/narragansett/calendar">Kingston Hill Gardeners Annual Plant Sale</a></div>
+      <div class="item-meta">Saturday, May 9 · 9:00 AM – 1:00 PM · 1859 Mooresfield Rd, South Kingstown</div>
+      <div class="item-desc">Mother's Day-eve perennial sale, run by the people who actually grew the plants. Smarter than rushing through Sunday brunch — give her something that lives. Get there at nine; the good stuff goes fast.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag outdoor">Beach &amp; Outdoor</span>
+      <div class="item-name"><a href="https://www.farmfreshri.org/programs/farmers-markets/rimarketguide/">RI Grown Farmers Market at Fishermen's Memorial</a></div>
+      <div class="item-meta">Sunday, May 10 · 8:30 AM – 12:00 PM · Fishermen's Memorial State Park, Narragansett</div>
+      <div class="item-desc">Sunday morning farmers market on Mother's Day — flowers, RI seafood, maple syrup, the whole spring opener. The pre-brunch move, or the entire plan if you read the room right.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag nightlife">Nightlife</span>
+      <div class="item-name"><a href="https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/">Dudemanbro w/ Professor Roots at the Ocean Mist</a></div>
+      <div class="item-meta">Saturday, May 9 · 9:00 PM · Ocean Mist, Matunuck</div>
+      <div class="item-desc">Late Saturday at the Mist with Dudemanbro and Professor Roots. Beach bar, deck over the water, bands you didn't plan on liking but will. Ocean Mist season is back.</div>
+    </div>
+  </div>
+
+  
+
+  <!-- ═══════════ FOOD & DRINK SPOTLIGHT ═══════════ -->
+  <div class="spotlight">
+    <span class="section-label">WHERE TO EAT &amp; DRINK THIS WEEK</span>
+    <div class="spotlight-card">
+      <div class="spot-name">Weekapaug Inn</div>
+      <div class="spot-location">Westerly · 25 Spray Rock Rd, on Quonochontaug Pond</div>
+      <div class="spot-desc">
+        Yes, $95 a person is real money. But Weekapaug Inn on Mother's Day morning — dining room opening onto Quonochontaug Pond, tide doing what the tide does, family-style spread that rotates with the season — is the kind of brunch that makes mom forget the rest of the year. Seatings run 10:30 to 2:30, and they book up early. If you can swing it: reserve now, sit by the windows, take the long way home through Watch Hill.
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ INSIDER DEAL ═══════════ -->
+  <div class="deal">
+    <span class="section-label">INSIDER DEAL</span>
+    <div class="deal-card">
+      <div class="deal-business">Pump House Music Works</div>
+      <div class="deal-offer">$5 Off Any Advance Ticket This Week</div>
+      <div class="deal-details">Mention 'South County Signal' when buying advance tickets for any May show. Use it on In Lieu of Flowers (Sat 5/9) or save it for Clatta Bumboo (Fri 5/15) and Stacy Kendro Comedy (Sat 5/16).</div>
+      <div class="deal-code">CODE: SIGNALPUMP</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SIGNAL NOISE (HOT TAKE / POLL) ═══════════ -->
+  <div class="signal-noise">
+    <span class="section-label">SIGNAL NOISE</span>
+    <div class="noise-card">
+      <div class="noise-q">Mother's Day Mom Test — where do you actually take her?</div>
+      <div class="poll-options">
+        <a href="mailto:signal@southcountysignal.com?subject=Weekapaug%20Inn%20(the%20splurge)" class="poll-btn">Weekapaug Inn (the splurge)</a>
+        <a href="mailto:signal@southcountysignal.com?subject=Matunuck%20Oyster%20Bar%20(the%20local%20move)" class="poll-btn">Matunuck Oyster Bar (the local move)</a>
+        <a href="mailto:signal@southcountysignal.com?subject=Coast%20Guard%20House%20(the%20classic)" class="poll-btn">Coast Guard House (the classic)</a>
+        <a href="mailto:signal@southcountysignal.com?subject=Just%20the%20farmers%20market" class="poll-btn">Just the farmers market</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <div class="footer">
+    <div class="footer-cta">Know something we should feature?</div>
+    <div class="footer-prompt">Hit reply — we read every email.</div>
+
+    <div class="social-links">
+      <a href="https://instagram.com/southcountysignal">Instagram</a>
+      <a href="https://facebook.com/southcountysignal">Facebook</a>
+      <a href="https://tiktok.com/@southcountysignal">TikTok</a>
+    </div>
+
+    <a href="#" class="advertise-link">Advertise With Us</a>
+
+    <div class="footer-sponsor">
+      <div class="ad-label">Presented By</div>
+      <div class="sponsor-name"></div>
+    </div>
+
+    <div class="footer-links">
+      <a href="{{manage_preferences}}">Preferences</a>
+      <a href="{{unsubscribe}}">Unsubscribe</a>
+      <a href="{{view_in_browser}}">View in Browser</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

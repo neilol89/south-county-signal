@@ -1,0 +1,178 @@
+{
+  "issue_week": "May 7-13, 2026",
+  "issue_number": 3,
+  "curated_at": "2026-05-03T18:00:00Z",
+  "editorial_theme": "Mother's Day weekend + a stacked Friday night. The Knick keeps rolling.",
+
+  "headliner": {
+    "name": "Greg Piccolo & Heavy Juice — 75th Birthday Celebration",
+    "date": "Friday, May 8",
+    "time": "8:00 PM",
+    "venue": "Knickerbocker Music Center",
+    "town": "Westerly",
+    "category": "music",
+    "link": "https://unitedtheatre.org/shows/greg-piccolo-heavy-juice-75th-birthday-celebration/",
+    "score": 9.4,
+    "selection_reason": "Local saxophone legend (Roomful of Blues) celebrates his 75th with a brand-new album pre-release. The Knick post-renovation narrative continues. Ticks every Signal box: local hero, milestone moment, story to tell, real venue history."
+  },
+
+  "lineup": [
+    {
+      "name": "Salt Marsh Opera presents Cinderella",
+      "date": "Thursday, May 7",
+      "time": "7:00 PM",
+      "venue": "United Theatre — Black Box Auditorium",
+      "town": "Westerly",
+      "category": "arts",
+      "link": "https://unitedtheatre.org/shows/salt-marsh-opera-presents-cinderella/",
+      "score": 7.6,
+      "raw_description": "Salt Marsh Opera performs Gioachino Rossini's classic — operatic enchantment in the intimate Black Box."
+    },
+    {
+      "name": "Paul Gilbert with Greg Koch",
+      "date": "Friday, May 8",
+      "time": "Evening (check ticket for showtime)",
+      "venue": "Greenwich Odeum",
+      "town": "East Greenwich",
+      "category": "music",
+      "link": "https://www.greenwichodeum.com/calendar/",
+      "score": 9.0,
+      "raw_description": "Mr. Big guitarist Paul Gilbert announces a new album WROC, joined by guitar virtuoso Greg Koch. VIP experience sales ending soon."
+    },
+    {
+      "name": "The Psychology of Serial Killers — Dr. Rachel Toles",
+      "date": "Friday, May 8",
+      "time": "8:00 PM",
+      "venue": "United Theatre — Black Box",
+      "town": "Westerly",
+      "category": "arts",
+      "link": "https://unitedtheatre.org/shows/the-psychology-of-serial-killers/",
+      "score": 8.4,
+      "raw_description": "Live show by clinical psychologist Dr. Rachel Toles unpacking the psychology of serial killers."
+    },
+    {
+      "name": "Led Zeppelin — Houses of the Holy (Tribute)",
+      "date": "Saturday, May 9",
+      "time": "7:30 PM",
+      "venue": "Courthouse Center for the Arts",
+      "town": "South Kingstown",
+      "category": "music",
+      "link": "https://courthousearts.org",
+      "score": 7.8,
+      "raw_description": "Note-for-note recreation of Houses of the Holy at the Courthouse Center."
+    },
+    {
+      "name": "In Lieu of Flowers",
+      "date": "Saturday, May 9",
+      "time": "8:00 PM (Doors 7:00 PM)",
+      "venue": "Pump House Music Works",
+      "town": "Wakefield",
+      "category": "music",
+      "link": "https://www.pumphousemusicworks.com/event-calendar",
+      "score": 7.0,
+      "raw_description": "Indie band at the all-ages Pump House. $15 advance / $20 at the door."
+    },
+    {
+      "name": "Kingston Hill Gardeners Annual Plant Sale",
+      "date": "Saturday, May 9",
+      "time": "9:00 AM – 1:00 PM",
+      "venue": "1859 Mooresfield Rd",
+      "town": "South Kingstown",
+      "category": "outdoor",
+      "link": "https://patch.com/rhode-island/narragansett/calendar",
+      "score": 7.4,
+      "raw_description": "Perennials cultivated by members. Mother's Day-weekend tradition."
+    },
+    {
+      "name": "RI Grown Farmers Market — Fishermen's Memorial",
+      "date": "Sunday, May 10",
+      "time": "8:30 AM – 12:00 PM",
+      "venue": "Fishermen's Memorial State Park",
+      "town": "Narragansett",
+      "category": "outdoor",
+      "link": "https://www.farmfreshri.org/programs/farmers-markets/rimarketguide/",
+      "score": 7.2,
+      "raw_description": "Sunday farmers market — early-season plants, flowers, RI seafood, spring vegetables, honey, maple syrup. Mother's Day morning."
+    },
+    {
+      "name": "Dudemanbro w/ Professor Roots",
+      "date": "Saturday, May 9",
+      "time": "9:00 PM",
+      "venue": "Ocean Mist",
+      "town": "Matunuck",
+      "category": "nightlife",
+      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
+      "score": 6.8,
+      "raw_description": "Late-night show at the Mist."
+    }
+  ],
+
+  "spotlight": {
+    "name": "Weekapaug Inn",
+    "town": "Westerly",
+    "location_detail": "25 Spray Rock Rd, on Quonochontaug Pond",
+    "occasion": "Mother's Day Brunch — Sunday, May 10, 10:30 AM – 2:30 PM, $95/person",
+    "link": "https://weekapauginn.com",
+    "raw_description": "Family-style brunch with waterfront views at the iconic Weekapaug Inn. $95/person, reservations required.",
+    "selection_reason": "Mother's Day is the dominant seasonal beat this issue; Weekapaug is the most South-County-y option for the day. Pricey but the iconic local pick."
+  },
+
+  "pvd_events": [],
+
+  "deal_candidate": null,
+
+  "signal_noise_candidates": [
+    {
+      "question": "Mother's Day Mom Test — where do you actually take her?",
+      "options": [
+        "Weekapaug Inn (the splurge)",
+        "Matunuck Oyster Bar (the local-y move)",
+        "Coast Guard House (the classic)",
+        "Honestly, just the farmers market"
+      ],
+      "rationale": "Mother's Day brunch is a Rhode Island sport. Strong local debate fuel."
+    },
+    {
+      "question": "Friday May 8 dilemma: which one are you actually going to?",
+      "options": [
+        "Greg Piccolo at the Knick",
+        "Paul Gilbert at the Odeum",
+        "Psychology of Serial Killers at United"
+      ],
+      "rationale": "Three legitimately strong shows on the same night. Genuine FOMO."
+    }
+  ],
+
+  "dropped": [
+    { "name": "Annie Hartnett Author Talk (Thu)", "reason": "Solid weeknight pick but Salt Marsh Opera is the stronger Thursday entry; can't have two arts events on the same weeknight" },
+    { "name": "Surf & Sand Pottery Painting Workshop (Fri)", "reason": "Friday is already overloaded; saved for a slower week" },
+    { "name": "Leonie Swann Author Talk (Sat)", "reason": "Quirky and we want it back later, but Saturday is full and we needed outdoor/nightlife instead" },
+    { "name": "A Band Called PoP (Sat)", "reason": "Already at 2 events per venue at the Knick (counting Greg Piccolo)" },
+    { "name": "Speakeasy Choir (Sat)", "reason": "Charming community angle but third arts event from United on Saturday — diversity cap" },
+    { "name": "Plein Air Painting at Kinney Azalea Gardens (Sat)", "reason": "Beautiful but overlaps with the plant sale; chose plant sale for the Mother's Day-gift angle" },
+    { "name": "CVRRENT Film Fest at Surf Exchange (Sat)", "reason": "Newer venue, low confidence on draw, lineup already full" },
+    { "name": "Wickford on the Water Mother's Day Brunch (Sun)", "reason": "Solid alternative; mention in spotlight body if needed but Weekapaug is the splurge pick" },
+    { "name": "Speaker Series: Gilbert Stuart (Tue)", "reason": "Niche local-history; weeknight slot used elsewhere. Worth its own deep cut later." }
+  ],
+
+  "diversity_check": {
+    "categories_used": ["music", "arts", "outdoor", "nightlife"],
+    "category_counts": { "music": 4, "arts": 2, "outdoor": 2, "nightlife": 1 },
+    "towns_represented": ["Westerly", "East Greenwich", "South Kingstown", "Wakefield", "Narragansett", "Matunuck"],
+    "town_counts": { "Westerly": 3, "South Kingstown": 2, "East Greenwich": 1, "Wakefield": 1, "Narragansett": 1, "Matunuck": 1 },
+    "weekend_vs_weekday": "1 Thu / 3 Fri / 4 Sat / 1 Sun (incl. headliner)",
+    "venue_counts": { "Knickerbocker": 1, "United Theatre": 2, "Greenwich Odeum": 1, "Courthouse Center": 1, "Pump House": 1, "Kingston Hill location": 1, "Fishermen's Memorial": 1, "Ocean Mist": 1 },
+    "cap_compliance": {
+      "max_3_per_town": "OK (Westerly = 3)",
+      "max_2_per_venue": "OK (United Theatre = 2)",
+      "min_4_categories": "OK (4)",
+      "family_friendly_present": "OK (Plant Sale, Farmers Market)"
+    }
+  },
+
+  "tease_next_week": [
+    "Misquamicut Drive-In opens Friday May 15 with Jaws — pure Signal material",
+    "Dance Night at the Knick with Eight to the Bar (album release) — May 15",
+    "Dirty Dozen Brass Band at Greenwich Odeum — May 14"
+  ]
+}

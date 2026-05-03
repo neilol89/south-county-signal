@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-16",
+  "last_updated": "2026-03-18",
   "notes": "Add or remove sources anytime. The scout skill reads this file dynamically each run.",
 
   "web_sources": [
@@ -93,6 +93,26 @@
       "prompt": "Extract all upcoming events with dates, times, locations, and descriptions. Return as a structured list.",
       "priority": "medium",
       "categories": ["food", "outdoor", "family", "arts"]
+    },
+    {
+      "name": "Pump House Music Works",
+      "url": "https://www.pumphousemusicworks.com/event-calendar",
+      "type": "venue_calendar",
+      "town": "Wakefield",
+      "prompt": "Extract all upcoming events with dates, times, performer names, ticket prices, and descriptions. Return as a structured list.",
+      "priority": "high",
+      "categories": ["music"],
+      "notes": "All ages, full bar. Active venue with regular concerts. Discovered 2026-03-18."
+    },
+    {
+      "name": "Greenwich Odeum",
+      "url": "https://www.greenwichodeum.com/calendar/",
+      "type": "venue_calendar",
+      "town": "East Greenwich",
+      "prompt": "Extract all upcoming concerts, comedy shows, film screenings, and events with dates, times, descriptions, and ticket prices. Return as a structured list.",
+      "priority": "high",
+      "categories": ["music", "arts", "nightlife"],
+      "notes": "Historic theatre. Major national acts, classic film series, comedy. Discovered 2026-03-18."
     },
     {
       "name": "GoProvidence — Events",

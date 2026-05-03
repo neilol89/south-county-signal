@@ -156,9 +156,9 @@ if (content.pvd_events && content.pvd_events.length > 0) {
     pvdItems
   );
 } else {
-  // Remove entire Worth the Drive section
+  // Remove entire Worth the Drive section (up to the next section comment)
   html = html.replace(
-    /<!-- ═+ WORTH THE DRIVE[^>]*-->[\s\S]*?<\/div>\s*<\/div>/,
+    /<!-- ═+ WORTH THE DRIVE[\s\S]*?(?=<!-- ═+ INSIDER DEAL)/,
     ''
   );
 }

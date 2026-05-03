@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The South County Signal</title>
+<!--[if mso]>
+<style>table,td,div,p,span{font-family:Arial,sans-serif !important;}</style>
+<![endif]-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: #F2EDE6;
+    font-family: 'Source Sans 3', Arial, Helvetica, sans-serif;
+    color: #2D2D2D;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .email-wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #FAF8F5;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: #1B4965;
+    padding: 32px 32px 28px;
+    text-align: center;
+    border-bottom: 4px solid #D4A843;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 900;
+    font-size: 36px;
+    color: #FAF8F5;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .header .tagline {
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    font-size: 13px;
+    color: #D4A843;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .header .date-line {
+    font-size: 13px;
+    color: rgba(250, 248, 245, 0.6);
+    margin-top: 12px;
+    font-weight: 400;
+  }
+
+  /* ── OPENER ── */
+  .opener {
+    padding: 28px 32px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #3A3A3A;
+    border-bottom: 1px solid #E8E2D9;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #D4A843;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #1B4965;
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+
+  /* ── HEADLINER ── */
+  .headliner {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .headliner .sponsor-tag {
+    font-size: 11px;
+    color: #999;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .headliner-card {
+    background: #1B4965;
+    border-radius: 8px;
+    padding: 28px;
+    color: #FAF8F5;
+  }
+  .headliner-card .section-label { color: #D4A843; }
+  .headliner-card .event-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .headliner-card .event-meta {
+    font-size: 14px;
+    color: #D4A843;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .headliner-card .event-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(250,248,245,0.9);
+    margin-bottom: 18px;
+  }
+  .headliner-card .cta-btn {
+    display: inline-block;
+    background: #D4A843;
+    color: #1B4965;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 4px;
+  }
+
+  /* ── LINEUP / ROUNDUP ── */
+  .lineup {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .lineup-item {
+    padding: 18px 0;
+    border-bottom: 1px dashed #DDD7CE;
+  }
+  .lineup-item:last-child { border-bottom: none; }
+  .lineup-item .category-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FAF8F5;
+    background: #1B4965;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  .lineup-item .category-tag.music { background: #6B3FA0; }
+  .lineup-item .category-tag.food { background: #C4572A; }
+  .lineup-item .category-tag.outdoor { background: #2E7D4F; }
+  .lineup-item .category-tag.arts { background: #B8860B; }
+  .lineup-item .category-tag.nightlife { background: #8B2252; }
+  .lineup-item .category-tag.family { background: #3A7CA5; }
+  .lineup-item .category-tag.wellness { background: #5F8575; }
+  .lineup-item .category-tag.sponsored {
+    background: transparent;
+    color: #999;
+    border: 1px solid #CCC;
+    font-size: 9px;
+    margin-left: 6px;
+  }
+  .lineup-item .item-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1B4965;
+    margin-bottom: 4px;
+  }
+  .lineup-item .item-name a {
+    color: #1B4965;
+    text-decoration: none;
+  }
+  .lineup-item .item-name a:hover { text-decoration: underline; }
+  .lineup-item .item-meta {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .lineup-item .item-desc {
+    font-size: 15px;
+    color: #4A4A4A;
+    line-height: 1.55;
+  }
+
+  /* ── FOOD & DRINK SPOTLIGHT ── */
+  .spotlight {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .spotlight-card {
+    background: linear-gradient(135deg, #FAF3E8 0%, #F5EDE0 100%);
+    border-radius: 8px;
+    padding: 24px;
+    border-left: 4px solid #D4A843;
+  }
+  .spotlight-card .spot-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1B4965;
+    margin-bottom: 4px;
+  }
+  .spotlight-card .spot-location {
+    font-size: 13px;
+    color: #D4A843;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .spotlight-card .spot-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #4A4A4A;
+  }
+
+  /* ── WORTH THE DRIVE ── */
+  .worth-drive {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .pvd-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FAF8F5;
+    background: #333;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  .pvd-item {
+    margin-bottom: 14px;
+  }
+  .pvd-item:last-child { margin-bottom: 0; }
+  .pvd-item .item-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1B4965;
+  }
+  .pvd-item .item-meta {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .pvd-item .item-desc {
+    font-size: 14px;
+    color: #4A4A4A;
+    line-height: 1.55;
+  }
+
+  /* ── INSIDER DEAL ── */
+  .deal {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .deal-card {
+    background: #1B4965;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .deal-card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    background: #D4A843;
+    border-radius: 50%;
+    opacity: 0.15;
+  }
+  .deal-card .deal-business {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #D4A843;
+    margin-bottom: 8px;
+  }
+  .deal-card .deal-offer {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FAF8F5;
+    margin-bottom: 8px;
+  }
+  .deal-card .deal-details {
+    font-size: 14px;
+    color: rgba(250,248,245,0.7);
+    margin-bottom: 16px;
+  }
+  .deal-card .deal-code {
+    display: inline-block;
+    background: rgba(212,168,67,0.2);
+    border: 1px dashed #D4A843;
+    color: #D4A843;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 8px 20px;
+    border-radius: 4px;
+  }
+
+  /* ── SIGNAL NOISE / HOT TAKE ── */
+  .signal-noise {
+    padding: 28px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .noise-card {
+    background: #F5F0E8;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+  }
+  .noise-card .noise-q {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1B4965;
+    margin-bottom: 16px;
+    line-height: 1.35;
+  }
+  .noise-card .poll-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .noise-card .poll-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 2px solid #1B4965;
+    border-radius: 6px;
+    color: #1B4965;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .noise-card .poll-btn:hover {
+    background: #1B4965;
+    color: #FAF8F5;
+  }
+
+  /* ── MID-NEWSLETTER AD ── */
+  .mid-ad {
+    padding: 20px 32px;
+    border-bottom: 1px solid #E8E2D9;
+  }
+  .mid-ad-card {
+    background: #F8F5EE;
+    border: 1px solid #E8E2D9;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+  }
+  .mid-ad-card .ad-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #BBB;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .mid-ad-card .ad-content {
+    font-size: 15px;
+    color: #4A4A4A;
+    line-height: 1.5;
+  }
+  .mid-ad-card .ad-content a {
+    color: #1B4965;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #1B4965;
+    padding: 28px 32px;
+    text-align: center;
+    color: rgba(250,248,245,0.6);
+    font-size: 13px;
+  }
+  .footer .footer-cta {
+    color: #D4A843;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .footer .footer-prompt {
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  .footer .social-links {
+    margin-bottom: 18px;
+  }
+  .footer .social-links a {
+    color: #D4A843;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  .footer .footer-sponsor {
+    border-top: 1px solid rgba(250,248,245,0.1);
+    padding-top: 16px;
+    margin-top: 16px;
+  }
+  .footer .footer-sponsor .ad-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(250,248,245,0.3);
+    margin-bottom: 6px;
+  }
+  .footer .footer-sponsor .sponsor-name {
+    color: #D4A843;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .footer .footer-links {
+    margin-top: 18px;
+    font-size: 12px;
+  }
+  .footer .footer-links a {
+    color: rgba(250,248,245,0.5);
+    text-decoration: underline;
+    margin: 0 8px;
+  }
+  .footer .advertise-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 12px;
+    color: #D4A843;
+    text-decoration: none;
+    border: 1px solid rgba(212,168,67,0.4);
+    padding: 6px 16px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 28px; }
+    .headliner-card .event-name { font-size: 20px; }
+    .opener, .headliner, .lineup, .spotlight, .worth-drive, .deal, .signal-noise, .mid-ad { padding: 24px 20px; }
+    .footer { padding: 24px 20px; }
+    .noise-card .poll-options { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<div class="email-wrapper">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <div class="header">
+    <h1>THE SOUTH COUNTY SIGNAL</h1>
+    <div class="tagline">Your Weekly Cheat Sheet for Southern RI</div>
+    <div class="date-line">Week of March 18, 2026 · Issue #2</div>
+  </div>
+
+  <!-- ═══════════ OPENER ═══════════ -->
+  <div class="opener">
+    The equinox lands Friday, and South County isn't waiting for permission to act like it's spring. There's live music in every direction this week — from a legendary Italian acoustic guitarist in Wakefield to a platinum-selling band up in East Greenwich — and the Knick keeps its comeback rolling with another dance night. If your weekend plan is still blank, fix that now.
+  </div>
+
+  <!-- ═══════════ THIS WEEK'S MOVE (HEADLINER) ═══════════ -->
+  <div class="headliner">
+    <span class="sponsor-tag"></span>
+    <div class="headliner-card">
+      <span class="section-label">THIS WEEK'S MOVE</span>
+      <div class="event-name">Better Than Ezra at the Greenwich Odeum</div>
+      <div class="event-meta">Saturday, March 21 · Evening · Greenwich Odeum, East Greenwich</div>
+      <div class="event-desc">
+        A platinum-selling, 35-year-running New Orleans rock band in a 400-seat historic theatre? That's not a concert — that's a story you'll be telling at brunch. Better Than Ezra built the '90s alt-rock playbook and they're still sharpening it. The Odeum is one of those rooms where every seat feels like front row. If you've ever hummed 'Good' without knowing who sang it, now you know — and now you can see them do it live, up close.
+      </div>
+      <a href="https://www.greenwichodeum.com/calendar/" class="cta-btn">Get Details →</a>
+    </div>
+  </div>
+
+  <!-- ═══════════ THE LINEUP (ROUNDUP) ═══════════ -->
+  <div class="lineup">
+    <span class="section-label">THE LINEUP</span>
+    <div class="section-title">This Week in South County</div>
+
+    
+    <div class="lineup-item">
+      <span class="category-tag music">Live Music</span>
+      <div class="item-name"><a href="https://www.pumphousemusicworks.com/event-calendar">Beppe Gambetta with Victor Main</a></div>
+      <div class="item-meta">Saturday, March 21 · 7:00 PM (Doors 6:00 PM) · Pump House Music Works, Wakefield</div>
+      <div class="item-desc">Internationally acclaimed Italian acoustic guitarist playing an intimate room in Wakefield — the kind of show that makes you wonder how you're seeing a world-class musician for $30. Full bar, all ages, real deal.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag nightlife">Nightlife</span>
+      <div class="item-name"><a href="https://unitedtheatre.org/coming-soon-events/">Dance Night at The Knick with The Hoolios</a></div>
+      <div class="item-meta">Saturday, March 21 · 7:30 PM · Knickerbocker Music Center, Westerly</div>
+      <div class="item-desc">The Knick's comeback tour continues. Swing music, a 91-year-old dance floor, and The Hoolios doing what they do best. If you missed the reopening — this is your second shot. Don't miss the third.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag arts">Arts &amp; Culture</span>
+      <div class="item-name"><a href="https://unitedtheatre.org/coming-soon-events/">Spring Equinox: Vivaldi &amp; Beethoven</a></div>
+      <div class="item-meta">Friday, March 20 · 7:00 PM · UNITED Gallery Event Space, Westerly</div>
+      <div class="item-desc">Beethoven's Spring Sonata performed on the actual spring equinox — in an intimate gallery space, by two musicians who've played the world's biggest stages. Benefit for the UNITED and Music School. This is the kind of thing South County does quietly and brilliantly.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag nightlife">Nightlife</span>
+      <div class="item-name"><a href="https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/">The Ravers w/ Nena Belén at the Ocean Mist</a></div>
+      <div class="item-meta">Friday, March 20 · 9:00 PM · Ocean Mist, Matunuck</div>
+      <div class="item-desc">Friday night at the Mist with The Ravers and guest Nena Belén. You know the drill — get there before the parking lot fills up and the dance floor takes over.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag wellness">Fitness &amp; Wellness</span>
+      <div class="item-name"><a href="https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/">Root to Rise: Spring Equinox Sound Bath</a></div>
+      <div class="item-meta">Friday, March 20 · 6:00 PM · NURTURE Holistic Wellness, East Greenwich</div>
+      <div class="item-desc">Ring in the equinox lying down instead of going out. Sound bath, guided relaxation, and a room full of people choosing peace over happy hour. Almost full — book now or wait until summer solstice.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag family">Family Friendly</span>
+      <div class="item-name"><a href="https://unitedtheatre.org/coming-soon-events/">SoupyFest Bocce | Drop-In</a></div>
+      <div class="item-meta">Saturday, March 21 · 12:00 PM - 5:00 PM · UNITED Black Box, Westerly</div>
+      <div class="item-desc">Drop-in bocce all afternoon at the UNITED. No reservation, no skill required, no excuse not to stop by if you're in Westerly. Part of the ongoing SoupyFest series — which is turning into one of the best things happening down here.</div>
+    </div>
+
+    <div class="lineup-item">
+      <span class="category-tag arts">Arts &amp; Culture</span>
+      <div class="item-name"><a href="https://www.greenwichodeum.com/calendar/">Goldfinger — Classic Film at the Odeum</a></div>
+      <div class="item-meta">Thursday, March 19 · Evening · Greenwich Odeum, East Greenwich</div>
+      <div class="item-desc">Bond on the big screen, hosted by the head of the RI TV &amp; Film office. Midweek culture hit for anyone who thinks movies are better when the seats have history.</div>
+    </div>
+  </div>
+
+  
+
+  <!-- ═══════════ FOOD & DRINK SPOTLIGHT ═══════════ -->
+  <div class="spotlight">
+    <span class="section-label">WHERE TO EAT &amp; DRINK THIS WEEK</span>
+    <div class="spotlight-card">
+      <div class="spot-name">Pump House Music Works</div>
+      <div class="spot-location">Wakefield · 1464 Kingstown Road, right on Route 1</div>
+      <div class="spot-desc">
+        If you haven't been to the Pump House yet, this week's your week. It's a proper listening room tucked into Wakefield — all ages, full bar, and a calendar that punches way above its weight class. The vibe is somewhere between your friend's really nice living room and a folk club in Austin. They book everything from world-class acoustic acts to Sunday jazz to open mics where locals actually show up and play. Beppe Gambetta this Saturday is the move, but honestly — save this one in your phone and check the calendar weekly. You'll be back.
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ WORTH THE DRIVE (PROVIDENCE) ═══════════ -->
+  <!-- INCLUDE THIS SECTION ONLY WHEN THERE'S SOMETHING GENUINELY WORTH IT -->
+  <div class="worth-drive">
+    <span class="section-label">WORTH THE DRIVE</span>
+    <span class="pvd-badge">Providence</span>
+
+    
+    <div class="pvd-item">
+      <div class="item-name">John Scofield Trio</div>
+      <div class="item-meta">Sunday, March 22 · Evening · Greenwich Odeum, East Greenwich</div>
+      <div class="item-desc">Grammy-winning jazz guitarist, one of the principal innovators of modern jazz, playing an intimate room 20 minutes up the road. If you care about live music at all, this is the Sunday plan.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ INSIDER DEAL ═══════════ -->
+  <div class="deal">
+    <span class="section-label">INSIDER DEAL</span>
+    <div class="deal-card">
+      <div class="deal-business">Pump House Music Works</div>
+      <div class="deal-offer">$5 Off Any Advance Ticket This Week</div>
+      <div class="deal-details">Mention 'South County Signal' when purchasing advance tickets for any show this week (March 20-22). Valid for Princess June (Fri), Beppe Gambetta (Sat), or Joe Parillo (Sun).</div>
+      <div class="deal-code">CODE: SIGNALPUMP</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SIGNAL NOISE (HOT TAKE / POLL) ═══════════ -->
+  <div class="signal-noise">
+    <span class="section-label">SIGNAL NOISE</span>
+    <div class="noise-card">
+      <div class="noise-q">Best live music venue in South County right now — and yes, we're counting East Greenwich. Where are you going?</div>
+      <div class="poll-options">
+        <a href="mailto:signal@southcountysignal.com?subject=Ocean%20Mist" class="poll-btn">Ocean Mist</a>
+        <a href="mailto:signal@southcountysignal.com?subject=The%20Knick" class="poll-btn">The Knick</a>
+        <a href="mailto:signal@southcountysignal.com?subject=Pump%20House%20Music%20Works" class="poll-btn">Pump House Music Works</a>
+        <a href="mailto:signal@southcountysignal.com?subject=Greenwich%20Odeum" class="poll-btn">Greenwich Odeum</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <div class="footer">
+    <div class="footer-cta">Know something we should feature?</div>
+    <div class="footer-prompt">Hit reply — we read every email.</div>
+
+    <div class="social-links">
+      <a href="https://instagram.com/southcountysignal">Instagram</a>
+      <a href="https://facebook.com/southcountysignal">Facebook</a>
+      <a href="https://tiktok.com/@southcountysignal">TikTok</a>
+    </div>
+
+    <a href="#" class="advertise-link">Advertise With Us</a>
+
+    <div class="footer-sponsor">
+      <div class="ad-label">Presented By</div>
+      <div class="sponsor-name"></div>
+    </div>
+
+    <div class="footer-links">
+      <a href="{{manage_preferences}}">Preferences</a>
+      <a href="{{unsubscribe}}">Unsubscribe</a>
+      <a href="{{view_in_browser}}">View in Browser</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

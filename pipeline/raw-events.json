@@ -1,237 +1,467 @@
 {
-  "scout_date": "2026-03-16",
-  "scout_week": "March 16-22, 2026",
+  "scout_date": "2026-05-03",
+  "scout_week": "May 7-13, 2026",
+  "issue_target": 3,
   "sources_checked": [
-    "unitedtheatre.org/coming-soon-events",
-    "unitedtheatre.org/now-playing",
-    "oceanmist.net",
-    "eventbrite.com (Narragansett/South Kingstown)",
-    "narragansettcoc.com/event-calendar",
-    "southcountyri.com/events",
-    "knickmusic.com (404 — site not live yet)",
-    "WebSearch: South County RI events",
-    "WebSearch: Westerly RI events",
-    "WebSearch: Narragansett RI events"
+    { "name": "United Theatre — Coming Soon", "status": "success", "events_found": 9 },
+    { "name": "United Theatre — Now Playing", "status": "partial", "events_found": 0, "reason": "Only May 3 showtimes visible; no May 7-13 schedule yet posted" },
+    { "name": "Pump House Music Works", "status": "success", "events_found": 5 },
+    { "name": "Greenwich Odeum", "status": "success", "events_found": 5 },
+    { "name": "Ocean Mist — Events", "status": "failed", "reason": "Calendar didn't render — known issue. Cross-checked via Eventbrite (1 event picked up)." },
+    { "name": "Ocean Mist — Box Office (fallback)", "status": "failed", "reason": "Also didn't render. Need Instagram check." },
+    { "name": "Eventbrite — Narragansett/SK This Week", "status": "success", "events_found": 4, "notes": "3 of 7 results were Newport/Bristol — filtered out" },
+    { "name": "Eventbrite — South Kingstown This Weekend", "status": "partial", "events_found": 1, "notes": "Mostly already covered by Pump House and venue sites" },
+    { "name": "Narragansett Chamber", "status": "failed", "reason": "Page returned no events for the date range" },
+    { "name": "South County Tourism", "status": "failed", "reason": "Returned only template/navigation; known intermittent issue" },
+    { "name": "Courthouse Center for the Arts", "status": "success", "events_found": 3 },
+    { "name": "Ocean Chamber (Westerly)", "status": "partial", "events_found": 0, "reason": "Visible listings only through May 4; likely needs date filter" },
+    { "name": "GoProvidence", "status": "success", "events_found": 5, "notes": "Most are food trucks / weekly series — not headliner-grade" },
+    { "name": "Visit Rhode Island", "status": "skipped", "reason": "Low priority — covered by other aggregators" },
+    { "name": "Patch (Narragansett-SK)", "status": "success", "events_found": 4, "notes": "Discovered: caught community-level events the venue sites miss" },
+    { "name": "Narragansett.gov Town Events", "status": "failed", "reason": "Calendar in PDF only — needs download" },
+    { "name": "Web search — South County / Westerly / Narragansett / Wakefield / Charlestown / East Greenwich", "status": "success", "events_found": 6, "notes": "Found Mother's Day brunches, farmers markets, town speaker series" }
   ],
 
   "raw_events": [
     {
-      "name": "Dance Night with The Hoolios",
-      "date": "Saturday, March 21",
-      "time": "7:30 PM",
+      "name": "Salt Marsh Opera presents Cinderella",
+      "date": "Thursday, May 7",
+      "time": "7:00 PM",
+      "venue": "United Theatre — Black Box Auditorium",
+      "town": "Westerly",
+      "description": "Salt Marsh Opera performs Gioachino Rossini's classic — operatic enchantment in the intimate Black Box.",
+      "source": "unitedtheatre.org/coming-soon-events",
+      "link": "https://unitedtheatre.org/shows/salt-marsh-opera-presents-cinderella/",
+      "category_suggestion": "arts",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Local opera company, intimate venue. Strong arts pick."
+    },
+    {
+      "name": "Annie Hartnett Author Talk",
+      "date": "Thursday, May 7",
+      "time": "6:00 PM",
+      "venue": "Contemporary Theater Company",
+      "town": "South Kingstown",
+      "description": "Author talk at the Contemporary Theater Company, 327 Main St.",
+      "source": "patch.com",
+      "link": "https://patch.com/rhode-island/narragansett/calendar",
+      "category_suggestion": "arts",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Annie Hartnett is a published novelist (Rabbit Cake, Unlikely Animals). Decent weeknight draw."
+    },
+    {
+      "name": "Greg Piccolo & Heavy Juice — 75th Birthday Celebration",
+      "date": "Friday, May 8",
+      "time": "8:00 PM",
       "venue": "Knickerbocker Music Center",
       "town": "Westerly",
-      "description": "Evening of swing on the storied Knick dance floor. First public dance event under new United Theatre partnership.",
+      "description": "Saxophonist Greg Piccolo (Roomful of Blues alum) celebrates his 75th with Heavy Juice and a pre-release of his new album. The Knick is in full programming form post-renovation.",
       "source": "unitedtheatre.org/coming-soon-events",
-      "link": "https://unitedtheatre.org/coming-soon-events/",
+      "link": "https://unitedtheatre.org/shows/greg-piccolo-heavy-juice-75th-birthday-celebration/",
       "category_suggestion": "music",
       "headliner_candidate": true,
-      "notes": "The Knick reopening is big local news"
+      "forced": false,
+      "sponsored": false,
+      "notes": "Headliner candidate: milestone birthday + album pre-release + The Knick narrative continues."
     },
     {
-      "name": "Spring Equinox: Musical Spring — Beethoven & Vivaldi",
-      "date": "Friday, March 20",
-      "time": "7:00 PM",
-      "venue": "United Theatre Gallery Event Space",
+      "name": "The Psychology of Serial Killers — Dr. Rachel Toles",
+      "date": "Friday, May 8",
+      "time": "8:00 PM",
+      "venue": "United Theatre — Black Box",
       "town": "Westerly",
-      "description": "Beethoven and Vivaldi performance featuring violin and piano.",
+      "description": "A live show by clinical psychologist Dr. Rachel Toles unpacking the psychology of serial killers. Macabre and weirdly compelling.",
       "source": "unitedtheatre.org/coming-soon-events",
-      "link": "https://unitedtheatre.org/coming-soon-events/",
+      "link": "https://unitedtheatre.org/shows/the-psychology-of-serial-killers/",
       "category_suggestion": "arts",
-      "headliner_candidate": false
+      "headliner_candidate": true,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Headliner candidate: highly unusual programming, good narrative hook."
     },
     {
-      "name": "SoupyFest Bocce Drop-In",
-      "date": "Saturday, March 21",
-      "time": "12:00 PM - 5:00 PM",
-      "venue": "United Theatre Black Box",
-      "town": "Westerly",
-      "description": "Drop-in bocce tournament with local supervision. Part of the 2026 SoupyFest series.",
-      "source": "unitedtheatre.org/coming-soon-events",
-      "link": "https://unitedtheatre.org/coming-soon-events/",
-      "category_suggestion": "outdoor",
-      "headliner_candidate": false
-    },
-    {
-      "name": "The Ravers w/ Special Guest Nena Belén",
-      "date": "Friday, March 20",
-      "time": "9:00 PM",
-      "venue": "The Ocean Mist",
-      "town": "Matunuck",
-      "description": "Live music — get ready to dance the night away. Sales ending soon.",
-      "source": "eventbrite.com",
-      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
+      "name": "Paul Gilbert with Greg Koch",
+      "date": "Friday, May 8",
+      "time": "Evening",
+      "venue": "Greenwich Odeum",
+      "town": "East Greenwich",
+      "description": "Mr. Big guitarist Paul Gilbert announces a new album WROC, joined by guitar virtuoso Greg Koch. Outlandish instrumental fireworks in a 400-seat historic theatre.",
+      "source": "greenwichodeum.com",
+      "link": "https://www.greenwichodeum.com/calendar/",
       "category_suggestion": "music",
-      "headliner_candidate": false
+      "headliner_candidate": true,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Headliner candidate: nationally known guitarist, intimate room. VIP experience also listed (sales ending soon — urgency hook)."
     },
     {
-      "name": "Sugar",
-      "date": "Saturday, March 21",
-      "time": "9:00 PM",
-      "venue": "The Ocean Mist",
-      "town": "Matunuck",
-      "description": "A sweet night of music, drinks, and good vibes.",
-      "source": "eventbrite.com",
-      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
-      "category_suggestion": "nightlife",
-      "headliner_candidate": false
+      "name": "Surf & Sand Stoneware Pottery Painting Workshop",
+      "date": "Friday, May 8",
+      "time": "5:30 PM",
+      "venue": "Wakefield Studio (344 Main St)",
+      "town": "South Kingstown",
+      "description": "Stoneware pottery painting workshop. Themed Surf & Sand.",
+      "source": "patch.com",
+      "link": "https://patch.com/rhode-island/narragansett/calendar",
+      "category_suggestion": "arts",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Family/date-night option. Mother's Day adjacent."
     },
     {
-      "name": "Beppe Gambetta with Victor Main",
-      "date": "Saturday, March 21",
-      "time": "6:00 PM",
+      "name": "Leonie Swann Author Talk — Three Bags Full",
+      "date": "Saturday, May 9",
+      "time": "3:00 PM",
+      "venue": "United Theatre — Gallery Events Space",
+      "town": "Westerly",
+      "description": "Book discussion and movie screening for the cult sheep-detective novel Three Bags Full.",
+      "source": "unitedtheatre.org/coming-soon-events",
+      "link": "https://unitedtheatre.org/shows/leonie-swann-author-talk/",
+      "category_suggestion": "arts",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Quirky afternoon arts pick. Pairs well with a long lunch."
+    },
+    {
+      "name": "A Band Called PoP",
+      "date": "Saturday, May 9",
+      "time": "6:30 PM",
+      "venue": "Knickerbocker Music Center",
+      "town": "Westerly",
+      "description": "Multi-decade pop and rock favorites — early-evening dance-floor energy at the newly reopened Knick.",
+      "source": "unitedtheatre.org/coming-soon-events",
+      "link": "https://unitedtheatre.org/shows/a-band-called-pop/",
+      "category_suggestion": "music",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Solid Saturday-night option, good for groups."
+    },
+    {
+      "name": "Speakeasy Choir — You're the One That I Want",
+      "date": "Saturday, May 9",
+      "time": "7:00 PM",
+      "venue": "United Theatre — Gallery Events Space",
+      "town": "Westerly",
+      "description": "Collaborative chorus learns and performs a song from Grease — the kind of community sing that makes people remember why they like people.",
+      "source": "unitedtheatre.org/coming-soon-events",
+      "link": "https://unitedtheatre.org/shows/speakeasy-choir-youre-the-one-that-i-want/",
+      "category_suggestion": "arts",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Family-friendly community angle."
+    },
+    {
+      "name": "In Lieu of Flowers",
+      "date": "Saturday, May 9",
+      "time": "8:00 PM (Doors 7:00 PM)",
       "venue": "Pump House Music Works",
       "town": "Wakefield",
-      "description": "All ages concert featuring guitar performances. Italian flatpicking legend.",
-      "source": "eventbrite.com",
-      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
+      "description": "Indie band In Lieu of Flowers at the all-ages Pump House. $15 advance / $20 at the door.",
+      "source": "pumphousemusicworks.com",
+      "link": "https://www.pumphousemusicworks.com/event-calendar",
       "category_suggestion": "music",
-      "headliner_candidate": true,
-      "notes": "Beppe Gambetta is internationally known — could be headliner material"
-    },
-    {
-      "name": "Sourdough & Brews",
-      "date": "Monday, March 16",
-      "time": "5:30 PM",
-      "venue": "Tower Hill Brewing Co.",
-      "town": "South Kingstown",
-      "description": "2.5 hour hands-on sourdough class with brewing pairing. Use code KNEAD for $20 off.",
-      "source": "eventbrite.com",
-      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
-      "category_suggestion": "food",
       "headliner_candidate": false,
-      "notes": "Great food & drink pick, local brewery + hands-on"
+      "forced": false,
+      "sponsored": false,
+      "notes": "$15 advance — affordable Saturday show."
     },
     {
-      "name": "Root to Rise: Spring Equinox Sound Bath",
-      "date": "Friday, March 20",
-      "time": "6:00 PM",
-      "venue": "NURTURE Holistic Wellness",
-      "town": "East Greenwich",
-      "description": "Sound healing and relaxation experience. Almost full.",
-      "source": "eventbrite.com",
-      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
-      "category_suggestion": "wellness",
-      "headliner_candidate": false
-    },
-    {
-      "name": "'Awash' in Watercolor — Art Workshop",
-      "date": "Saturday, March 21",
-      "time": "12:30 PM",
-      "venue": "140 Boon St",
-      "town": "Narragansett",
-      "description": "Watercolor painting workshop.",
-      "source": "eventbrite.com",
-      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
-      "category_suggestion": "arts",
-      "headliner_candidate": false
-    },
-    {
-      "name": "The Bride! (Film)",
-      "date": "Now Playing",
-      "time": "12:00 PM, 4:00 PM, 7:15 PM",
-      "venue": "United Theatre",
-      "town": "Westerly",
-      "description": "A lonely Frankenstein seeks a scientist in 1930s Chicago to create a companion. 126 minutes.",
-      "source": "unitedtheatre.org/now-playing",
-      "link": "https://unitedtheatre.org/now-playing/",
-      "category_suggestion": "arts",
-      "headliner_candidate": false,
-      "notes": "Film — could be worth mentioning if it's a notable release"
-    },
-    {
-      "name": "Hoppers (Film)",
-      "date": "Now Playing",
-      "time": "12:00 PM, 2:30 PM, 5:00 PM, 7:15 PM",
-      "venue": "United Theatre",
-      "town": "Westerly",
-      "description": "Animal lover uses consciousness-transfer technology to communicate with animals. 105 minutes.",
-      "source": "unitedtheatre.org/now-playing",
-      "link": "https://unitedtheatre.org/now-playing/",
-      "category_suggestion": "family",
-      "headliner_candidate": false
-    },
-    {
-      "name": "The Apartment (1960) — Classic Film Screening",
-      "date": "Now Playing",
-      "time": "12:00 PM, 7:00 PM",
-      "venue": "United Theatre",
-      "town": "Westerly",
-      "description": "Classic Billy Wilder film about a clerk using his apartment to advance his career. Jack Lemmon, Shirley MacLaine. 125 minutes.",
-      "source": "unitedtheatre.org/now-playing",
-      "link": "https://unitedtheatre.org/now-playing/",
-      "category_suggestion": "arts",
-      "headliner_candidate": false,
-      "notes": "Classic film screening at an indie theater — fits the Signal vibe"
-    },
-    {
-      "name": "Restaurant Week Kick-Off Party",
-      "date": "Thursday, March 26",
-      "time": "5:30 PM - 8:00 PM",
-      "venue": "Narragansett Towers",
-      "town": "Narragansett",
-      "description": "Kick-off event for Restaurant Week 2026.",
-      "source": "narragansettcoc.com",
-      "link": "https://narragansettcoc.com/event-calendar/",
-      "category_suggestion": "food",
-      "headliner_candidate": false,
-      "notes": "Next week — but worth teasing this week"
-    },
-    {
-      "name": "Monday Night Trivia",
-      "date": "Monday, March 16",
-      "time": "8:00 PM",
-      "venue": "The Ocean Mist",
+      "name": "Dudemanbro w/ Professor Roots",
+      "date": "Saturday, May 9",
+      "time": "9:00 PM",
+      "venue": "Ocean Mist",
       "town": "Matunuck",
-      "description": "Free to play, 21+. Weekly trivia night.",
-      "source": "known recurring event",
-      "link": "https://www.oceanmist.net/live-music-and-events/",
+      "description": "Late-night show at the Mist with Dudemanbro and Professor Roots.",
+      "source": "eventbrite.com",
+      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
       "category_suggestion": "nightlife",
-      "headliner_candidate": false
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Picked up via Eventbrite since Ocean Mist's own calendar didn't render. Confirms the Mist is back up and running for the season."
     },
     {
-      "name": "Narragansett Community Ice Rink — Open Skating",
-      "date": "Daily",
-      "time": "Dawn to Dusk",
-      "venue": "Clarke Road Ice Rink",
+      "name": "Led Zeppelin — Houses of the Holy (Tribute)",
+      "date": "Saturday, May 9",
+      "time": "7:30 PM",
+      "venue": "Courthouse Center for the Arts",
+      "town": "South Kingstown",
+      "description": "A note-for-note recreation of Led Zeppelin's Houses of the Holy at the Courthouse Center.",
+      "source": "courthousearts.org",
+      "link": "https://courthousearts.org",
+      "category_suggestion": "music",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Classic-album tribute series — Courthouse has Van Morrison and Springsteen tributes following weeks."
+    },
+    {
+      "name": "Kingston Hill Gardeners Annual Plant Sale",
+      "date": "Saturday, May 9",
+      "time": "9:00 AM – 1:00 PM",
+      "venue": "1859 Mooresfield Rd",
+      "town": "South Kingstown",
+      "description": "Perennials lovingly cultivated in members' gardens. The classic Mother's Day-weekend plant sale.",
+      "source": "patch.com",
+      "link": "https://patch.com/rhode-island/narragansett/calendar",
+      "category_suggestion": "outdoor",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Mother's Day gift angle. Outdoor/family."
+    },
+    {
+      "name": "Plein Air Painting in the Gardens",
+      "date": "Saturday, May 9",
+      "time": "2:00 PM",
+      "venue": "Kinney Azalea Gardens",
+      "town": "South Kingstown",
+      "description": "Outdoor painting at the Azalea Gardens — peak bloom is happening right now.",
+      "source": "patch.com",
+      "link": "https://patch.com/rhode-island/narragansett/calendar",
+      "category_suggestion": "outdoor",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Azalea Days are running — peak bloom timing. Mother's Day weekend angle."
+    },
+    {
+      "name": "CVRRENT Film Fest",
+      "date": "Saturday, May 9",
+      "time": "5:00 PM",
+      "venue": "Surf Exchange Cafe",
       "town": "Narragansett",
-      "description": "Free year-round outdoor rink. Bring your own skates.",
-      "source": "narragansettcoc.com / known",
-      "link": "https://narragansettcoc.com/event-calendar/",
-      "category_suggestion": "family",
-      "headliner_candidate": false
+      "description": "Film festival with band performance at Surf Exchange Cafe.",
+      "source": "eventbrite.com",
+      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
+      "category_suggestion": "arts",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Surf Exchange is a newer venue — worth tracking."
+    },
+    {
+      "name": "Mother's Day Brunch at Weekapaug Inn",
+      "date": "Sunday, May 10",
+      "time": "10:30 AM – 2:30 PM",
+      "venue": "Weekapaug Inn",
+      "town": "Westerly",
+      "description": "Family-style brunch with waterfront views. $95/person. Reservations required.",
+      "source": "rimonthly.com",
+      "link": "https://weekapauginn.com",
+      "category_suggestion": "food",
+      "headliner_candidate": true,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Spotlight candidate — best Mother's Day option in South County. Pricey but the iconic local choice."
+    },
+    {
+      "name": "Mother's Day Brunch at Wickford on the Water",
+      "date": "Sunday, May 10",
+      "time": "Brunch hours",
+      "venue": "Wickford on the Water",
+      "town": "North Kingstown",
+      "description": "Mother's Day brunch menu at the waterfront Wickford spot.",
+      "source": "wickfordonthewater.com",
+      "link": "https://www.wickfordonthewater.com/menus/mothers-day-brunch",
+      "category_suggestion": "food",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Alternate Mother's Day pick — more accessible price point than Weekapaug."
+    },
+    {
+      "name": "RI Grown Farmers Market — Fishermen's Memorial",
+      "date": "Sunday, May 10",
+      "time": "8:30 AM – 12:00 PM",
+      "venue": "Fishermen's Memorial State Park",
+      "town": "Narragansett",
+      "description": "Weekly Sunday farmers market — early-season offerings: plants, flowers, RI seafood, spring vegetables, honey, maple syrup. Mother's Day morning at the market is a tradition.",
+      "source": "farmfreshri.org / progressive-charlestown.com",
+      "link": "https://www.farmfreshri.org/programs/farmers-markets/rimarketguide/",
+      "category_suggestion": "outdoor",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Recurring Sunday market through Oct 11. Pair with Mother's Day brunch coverage."
+    },
+    {
+      "name": "Speaker Series: The Face of a Nation — How Gilbert Stuart Shaped America's Image",
+      "date": "Tuesday, May 12",
+      "time": "7:00 PM",
+      "venue": "South Kingstown High School Auditorium",
+      "town": "South Kingstown",
+      "description": "South Kingstown USA250 Committee speaker on Gilbert Stuart and early American portraiture. Free.",
+      "source": "Web search — patch.com",
+      "link": "https://patch.com/rhode-island/narragansett/calendar",
+      "category_suggestion": "arts",
+      "headliner_candidate": false,
+      "forced": false,
+      "sponsored": false,
+      "notes": "Local-history weeknight pick. Gilbert Stuart was born in North Kingstown — direct South County tie."
     }
   ],
 
+  "manual_additions_merged": false,
+  "editorial_notes": [
+    "manual-additions.json is stale (still dated March 19, 2026) and the only forced item is a literal 'Example:' placeholder for Shelter Harbor Inn. NOT included in raw events. Editor should refresh this file with real placements before next scout, or confirm there are no advertiser placements for issue #3.",
+    "Mother's Day (Sunday May 10) is the dominant seasonal hook this week — lean into brunches, plant sales, garden events.",
+    "The Knick is in full post-renovation programming swing — Greg Piccolo (Fri) and A Band Called PoP (Sat) back-to-back. Continued narrative.",
+    "Friday May 8 is unusually loaded: Greg Piccolo, Paul Gilbert, AND The Psychology of Serial Killers all compete. Headliner pick will be hard.",
+    "United Theatre's Now Playing only shows May 3 — no May 7-13 film schedule yet posted. Skip film picks unless we find one elsewhere.",
+    "Ocean Mist calendar still not rendering. Picked up Dudemanbro via Eventbrite. Editor should verify the rest of their week via @oceanmistbar Instagram."
+  ],
+  "forced_spotlight": null,
+  "forced_deal": null,
+  "forced_signal_noise": null,
+
   "upcoming_notable": [
     {
-      "name": "Lucius: Songs & Stories",
-      "date": "March 25",
-      "venue": "United Theatre Black Box",
-      "town": "Westerly",
-      "notes": "Could tease next week"
+      "name": "Dirty Dozen Brass Band",
+      "date": "Thursday, May 14",
+      "venue": "Greenwich Odeum",
+      "town": "East Greenwich",
+      "notes": "Grammy-winning New Orleans brass legends. Tease for next week."
     },
     {
-      "name": "Rick Wakeman and Son (of YES)",
-      "date": "March 28",
-      "venue": "United Theatre Black Box",
-      "town": "Westerly",
-      "notes": "Legendary — worth a tease"
+      "name": "Pet Sounds Live!",
+      "date": "Friday, May 15",
+      "venue": "Greenwich Odeum",
+      "town": "East Greenwich",
+      "notes": "Beach Boys album recreation. Tease."
     },
     {
-      "name": "Restaurant Week Kick-Off Party",
-      "date": "March 26",
-      "venue": "Narragansett Towers",
-      "notes": "Tease for next week"
+      "name": "Dance Night at The Knick — Eight to the Bar + UNITED Big Band",
+      "date": "Friday, May 15",
+      "venue": "Knickerbocker Music Center",
+      "town": "Westerly",
+      "notes": "Album release for 'Jazz on a School Night.' Big tease — this is a Knick narrative beat."
+    },
+    {
+      "name": "Misquamicut Drive-In Season Opener — Jaws",
+      "date": "Friday, May 15",
+      "venue": "Wuskenau Beach Pondside",
+      "town": "Westerly",
+      "notes": "First night of drive-in season. Pure Signal material — tease hard."
+    },
+    {
+      "name": "Clatta Bumboo",
+      "date": "Friday, May 15",
+      "venue": "Pump House Music Works",
+      "town": "Wakefield",
+      "notes": "$20 advance reggae/funk band."
+    },
+    {
+      "name": "Van Morrison Moondance Tribute",
+      "date": "Friday, May 15",
+      "venue": "Courthouse Center for the Arts",
+      "town": "South Kingstown",
+      "notes": "Continuation of Courthouse classic-album series."
+    },
+    {
+      "name": "Poppy Champlin's Hot Mic Comedy ft. Stacy Kendro",
+      "date": "Saturday, May 16",
+      "venue": "Pump House Music Works",
+      "town": "Wakefield",
+      "notes": "Comedy night — variety for the lineup."
+    },
+    {
+      "name": "The Wallflowers — 30th Anniversary (SOLD OUT)",
+      "date": "Sunday, May 17",
+      "venue": "Greenwich Odeum",
+      "town": "East Greenwich",
+      "notes": "Sold out — mention only as proof of regional demand or skip."
+    }
+  ],
+
+  "new_sources_discovered": [
+    {
+      "name": "Surf Exchange Cafe",
+      "url": "unknown — found via Eventbrite",
+      "town": "Narragansett",
+      "suggestion": "Newer venue hosting CVRRENT Film Fest and similar. Worth adding if they have a real calendar."
+    },
+    {
+      "name": "Contemporary Theater Company",
+      "url": "unknown — verify",
+      "town": "South Kingstown",
+      "suggestion": "327 Main St — hosting author events. Reliable South County arts venue, should be in sources.json."
+    },
+    {
+      "name": "Misquamicut Drive-In",
+      "url": "unknown — search needed",
+      "town": "Westerly",
+      "suggestion": "Seasonal (May-Sept). Add for summer season — drive-in opens May 15."
+    },
+    {
+      "name": "Patch — Narragansett-South Kingstown",
+      "url": "https://patch.com/rhode-island/narragansett/calendar",
+      "town": "Various",
+      "suggestion": "Excellent community-event aggregator. ADD AS HIGH PRIORITY SOURCE — caught events no other source had."
+    },
+    {
+      "name": "Kinney Azalea Gardens",
+      "url": "unknown",
+      "town": "South Kingstown",
+      "suggestion": "Seasonal (April-June peak). Azalea Days are an annual draw. Add for spring."
     }
   ],
 
   "sources_that_need_manual_check": [
-    "Ocean Mist Instagram (@oceanmistbar) — their website calendar didn't render, but Eventbrite had 2 shows",
-    "Facebook groups (South County RI Community, Narragansett Neighbors, etc.) — requires login",
-    "Perks & Corks, Matunuck Oyster Bar, Coast Guard House — no events scraped, check Instagram",
-    "Courthouse Center for the Arts (courthousearts.org) — not checked",
-    "Fantastic Umbrella Factory — not checked",
-    "Shelter Harbor Inn — not checked"
-  ]
+    {
+      "name": "Ocean Mist Instagram",
+      "handle": "@oceanmistbar",
+      "reason": "Website calendar didn't render — only one event (Dudemanbro Sat 5/9) confirmed via Eventbrite. Almost certainly more this week."
+    },
+    {
+      "name": "Matunuck Oyster Bar Instagram",
+      "handle": "@matunuckoysterbar",
+      "reason": "Mother's Day weekend — likely running specials worth featuring"
+    },
+    {
+      "name": "Coast Guard House Instagram",
+      "handle": "@coastguardhouseri",
+      "reason": "Editorial note from prior week said 'between chefs' — verify status before featuring"
+    },
+    {
+      "name": "Perks & Corks Instagram",
+      "handle": "@perksandcorks",
+      "reason": "Wine events — Mother's Day pairing potential"
+    },
+    {
+      "name": "Fantastic Umbrella Factory Instagram",
+      "handle": "@fantasticumbrellafactory",
+      "reason": "Mother's Day market activity likely"
+    },
+    {
+      "name": "The Malted Barley Instagram",
+      "handle": "@themaltedbarleys",
+      "reason": "Trivia / live music"
+    },
+    {
+      "name": "Facebook Groups",
+      "handle": "South County RI Community / Narragansett Neighbors / Westerly-Pawcatuck Area",
+      "reason": "Community Mother's Day events likely posted here only"
+    }
+  ],
+
+  "scout_summary": {
+    "total_events_found": 19,
+    "in_target_window": 19,
+    "sources_succeeded": 8,
+    "sources_failed": 5,
+    "sources_partial": 3,
+    "manual_additions_merged": 0,
+    "headliner_candidates": 4,
+    "needs_human_check": 7,
+    "upcoming_notable_for_teasing": 8
+  }
 }

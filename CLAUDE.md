@@ -16,7 +16,14 @@ assets/            — Templates and reference files
 scripts/           — Generation and API scripts
   generate-newsletter.js — Assembles JSON content into HTML
   beehiiv-client.py — Beehiiv API wrapper
-output/            — Generated newsletter HTML (issue-X.html)
+output/            — Generated newsletter HTML (issue-X.html) — for Beehiiv
+site/              — Public website (deployed to southcountysignal.com)
+  index.html       — Marketing/signup landing page
+  issues/          — Web archive (auto-generated)
+    index.html     — Archive list page
+    issue-N.html   — Each issue wrapped in site chrome
+    issues.json    — Manifest used to build the archive list
+  latest.html      — Redirect to newest issue
 archive/           — Past issues
 Resources/         — Planning docs, skill files, brand bible
 ```
@@ -26,16 +33,18 @@ Resources/         — Planning docs, skill files, brand bible
 1. **Scout**: Scrape event sources → `pipeline/raw-events.json`
 2. **Manual additions**: Editor adds advertiser placements and editorial overrides to `pipeline/manual-additions.json`
 3. **Curate**: Rank and filter events → `pipeline/curated-events.json`
-4. **Draft**: Write all newsletter sections → `pipeline/draft-content.json`
+4. **Draft**: Write all newsletter sections → `pipeline/this-week.json`
 5. **Assemble**: `node scripts/generate-newsletter.js` → `output/issue-X.html`
-6. **Send**: Paste HTML into Beehiiv, schedule for Thursday 8:30 AM
+6. **Publish to web**: `node scripts/publish-to-site.js` → wraps issue in site chrome, copies to `site/issues/`, rebuilds archive page, updates `latest.html`. Then `git add site/ && git commit -m "Publish issue #N" && git push` — GitHub Actions auto-deploys to southcountysignal.com.
+7. **Send**: Paste `output/issue-X.html` into Beehiiv. In Beehiiv's "View in Browser" link setting, point to `https://southcountysignal.com/issues/issue-N`. Schedule for Thursday 8:30 AM.
 
 ## Key Commands
 
-- **Scout events**: Read `pipeline/sources.json`, fetch all web sources, run search queries, merge with manual-additions.json, output raw-events.json
+- **Scout events**: Follow `Resources/SCOUTING-RUNBOOK.md` step by step. Read `pipeline/sources.json`, fetch all web sources, run search queries, merge with manual-additions.json, output raw-events.json. The runbook is the authoritative guide — it contains all known sources, workarounds, and tips.
 - **Curate this week**: Read raw-events.json, apply curator skill logic, output curated-events.json
 - **Draft the newsletter**: Read curated-events.json, apply drafter skill logic, output draft-content.json
-- **Generate HTML**: `node scripts/generate-newsletter.js --content pipeline/draft-content.json --template assets/newsletter-template.html --output-dir output/`
+- **Generate HTML**: `node scripts/generate-newsletter.js --content pipeline/this-week.json --template assets/newsletter-template.html --output-dir output/`
+- **Publish to website**: `node scripts/publish-to-site.js` (reads `pipeline/this-week.json` to know which issue to publish)
 
 ## Brand Voice
 

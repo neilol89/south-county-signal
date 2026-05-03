@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive · The South County Signal</title>
+<meta name="description" content="Every issue of The South County Signal — your weekly cheat sheet for Southern Rhode Island.">
+<link rel="canonical" href="https://southcountysignal.com/issues/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  background: #FAF8F5;
+  color: #2D2D2D;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── SCS site wrapper (web archive only) ── */
+.scs-site-bar {
+  background: #1B4965;
+  color: #FAF8F5;
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+}
+.scs-site-bar a { color: #FAF8F5; text-decoration: none; }
+.scs-site-bar-brand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+}
+.scs-site-bar-links { display: flex; gap: 22px; align-items: center; font-weight: 600; }
+.scs-site-bar-links a:hover { color: #E8C96A; }
+.scs-site-bar-cta {
+  background: #D4A843;
+  color: #132F42 !important;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+.scs-site-bar-cta:hover { background: #E8C96A; }
+@media (max-width: 600px) {
+  .scs-site-bar { flex-direction: column; padding: 14px 16px; }
+  .scs-site-bar-links { gap: 14px; flex-wrap: wrap; justify-content: center; }
+}
+
+.scs-site-cta {
+  background: #1B4965;
+  color: #FAF8F5;
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  padding: 48px 24px;
+  text-align: center;
+}
+.scs-site-cta h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+.scs-site-cta p {
+  margin: 0 auto 24px auto;
+  max-width: 480px;
+  color: rgba(250,248,245,0.85);
+  font-size: 16px;
+}
+.scs-site-cta-btn {
+  display: inline-block;
+  background: #D4A843;
+  color: #132F42;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  font-size: 15px;
+}
+.scs-site-cta-btn:hover { background: #E8C96A; }
+.scs-site-cta-meta {
+  margin-top: 28px;
+  font-size: 13px;
+  color: rgba(250,248,245,0.6);
+}
+.scs-site-cta-meta a {
+  color: rgba(250,248,245,0.85);
+  text-decoration: none;
+  margin: 0 8px;
+}
+.scs-site-cta-meta a:hover { color: #E8C96A; }
+
+.archive-main { max-width: 760px; margin: 0 auto; padding: 64px 24px 32px 24px; }
+.archive-header { text-align: center; margin-bottom: 48px; }
+.archive-header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 56px;
+  font-weight: 900;
+  color: #1B4965;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+.archive-header p { font-size: 18px; color: #4A4A4A; }
+.archive-list { list-style: none; }
+.archive-item { margin-bottom: 16px; }
+.archive-item a {
+  display: block;
+  background: #fff;
+  border: 1px solid #E8E2D9;
+  border-radius: 8px;
+  padding: 24px 28px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+.archive-item a:hover {
+  border-color: #D4A843;
+  box-shadow: 0 4px 20px rgba(27, 73, 101, 0.08);
+  transform: translateY(-1px);
+}
+.archive-item-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1B4965;
+  margin-bottom: 4px;
+}
+.archive-item-meta {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #888;
+  margin-bottom: 8px;
+}
+.archive-item-headliner {
+  font-weight: 600;
+  color: #2D2D2D;
+  margin-bottom: 6px;
+}
+.archive-item-preview {
+  font-size: 14px;
+  color: #4A4A4A;
+}
+.archive-empty {
+  text-align: center;
+  padding: 64px 24px;
+  color: #888;
+}
+@media (max-width: 600px) {
+  .archive-header h1 { font-size: 40px; }
+  .archive-main { padding: 40px 20px 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="scs-site-bar">
+  <a class="scs-site-bar-brand" href="/">The South County Signal</a>
+  <div class="scs-site-bar-links">
+    <a href="/issues/">Archive</a>
+    <a href="/#about">About</a>
+    <a href="/#subscribe" class="scs-site-bar-cta">Subscribe</a>
+  </div>
+</div>
+<main class="archive-main">
+  <header class="archive-header">
+    <h1>Archive</h1>
+    <p>Every issue of The South County Signal.</p>
+  </header>
+  <ul class="archive-list">
+    <li class="archive-item">
+      <a href="/issues/issue-3">
+        <div class="archive-item-num">Issue #3</div>
+        <div class="archive-item-meta">Week of May 7, 2026</div>
+        <div class="archive-item-headliner">Greg Piccolo &amp; Heavy Juice — 75th Birthday at the Knick</div>
+        <div class="archive-item-preview">Plus a Mother's Day brunch worth the splurge, a Pump House deal, and a real Friday-night debate.</div>
+      </a>
+    </li>
+    <li class="archive-item">
+      <a href="/issues/issue-2">
+        <div class="archive-item-num">Issue #2</div>
+        <div class="archive-item-meta">Week of March 18, 2026</div>
+        <div class="archive-item-headliner">Better Than Ezra at the Greenwich Odeum</div>
+        <div class="archive-item-preview">Plus a new Wakefield venue you need to know, an insider deal, and a debate about the best live music spot.</div>
+      </a>
+    </li>
+  </ul>
+</main>
+
+<div class="scs-site-cta">
+  <h3>Want this in your inbox every Thursday?</h3>
+  <p>One email a week. Everything worth doing in Southern Rhode Island. Free.</p>
+  <a class="scs-site-cta-btn" href="/#subscribe">Subscribe Free</a>
+  <div class="scs-site-cta-meta">
+    <a href="/issues/">View archive</a> · <a href="/">Home</a> · <a href="mailto:hello@southcountysignal.com">Contact</a>
+  </div>
+</div>
+</body>
+</html>
