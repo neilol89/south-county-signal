@@ -73,27 +73,14 @@ if (styleBlocks.length === 0 || !bodyMatch) {
 const emailStyles = styleBlocks.join('\n');
 let emailBody = bodyMatch[1];
 
-// Strip the email's manage/unsubscribe/view-in-browser link block — those are
-// Beehiiv/Buttondown merge tags that don't apply on the web.
-emailBody = emailBody.replace(
-  /<div class="footer-links">[\s\S]*?<\/div>/,
-  ''
-);
-
-// Strip the Buttondown subscribe-form block — the wrapped page has its own
-// subscribe CTA, and {{ subscribe_form }} would render as broken text.
+// Strip the forward-to-a-friend block — the wrapped page already has its own
+// subscribe CTA below the content.
 emailBody = emailBody.replace(
   /<!-- ═+ FORWARD-TO-A-FRIEND[\s\S]*?<\/div>\s*(?=<!-- ═+ FOOTER)/,
   ''
 );
 
-// Replace any leftover merge tags with sensible web URLs / strip them
 const canonicalUrl = `https://southcountysignal.com/issues/issue-${issueNumber}`;
-emailBody = emailBody
-  .replace(/\{\{\s*view_in_browser\s*\}\}/g, canonicalUrl)
-  .replace(/\{\{\s*manage_preferences\s*\}\}/g, '/#subscribe')
-  .replace(/\{\{\s*unsubscribe\s*\}\}/g, '/#subscribe')
-  .replace(/\{\{\s*subscribe_form\s*\}\}/g, '');
 
 // ── Site chrome (top bar + bottom CTA) ──
 const siteBar = `

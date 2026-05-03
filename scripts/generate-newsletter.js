@@ -207,9 +207,7 @@ if (content.ads && content.ads.footer_sponsor) {
 
 // ── Clean up remaining placeholders ──
 html = html.replace(/\[MEDIA KIT \/ RATE CARD URL\]/g, '#');
-html = html.replace(/\[MANAGE PREFERENCES\]/g, '{{manage_preferences}}');
-html = html.replace(/\[UNSUBSCRIBE\]/g, '{{unsubscribe}}');
-html = html.replace(/\[VIEW IN BROWSER\]/g, '{{view_in_browser}}');
+// Beehiiv auto-injects its own unsubscribe / view-in-browser footer — no merge tags needed.
 
 // ── Write output ──
 if (!fs.existsSync(outputDir)) {

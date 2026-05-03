@@ -10,7 +10,7 @@ A free weekly email newsletter curating the best events, food, music, nightlife,
 
 - **Live site:** https://southcountysignal.com
 - **Issues published:** 3 (issue #3 = week of May 7, 2026; previous: March 18, March 15)
-- **Send platform:** Buttondown (migrated from Beehiiv on `fd4ec20`)
+- **Send platform:** Beehiiv (originally on Beehiiv → migrated to Buttondown on `fd4ec20` → reverted back to Beehiiv on 2026-05-03 due to Buttondown parser issues and lack of support)
 - **Hosting:** Netlify (deployed via API — `git push` does NOT auto-deploy, see "Publish" step below)
 - **Repo:** github.com/neilol89/south-county-signal (public)
 
@@ -22,13 +22,13 @@ A free weekly email newsletter curating the best events, food, music, nightlife,
 ┌──────────┐  ┌─────────┐  ┌────────┐  ┌─────────┐  ┌─────────┐  ┌──────┐
 │  Scout   │→ │ Curate  │→ │ Draft  │→ │ Generate│→ │ Publish │→ │ Send │
 └──────────┘  └─────────┘  └────────┘  └─────────┘  └─────────┘  └──────┘
-  raw-events    curated-     this-      issue-N.html  site/        Buttondown
+  raw-events    curated-     this-      issue-N.html  site/        Beehiiv
   .json         events.json  week.json                issues/      campaign
 ```
 
 Each stage outputs a JSON file the next stage reads. The curator and drafter apply editorial logic from skill files in `Resources/`. The final HTML lands in two places:
 
-1. `output/issue-N.html` — paste into Buttondown for the actual email send
+1. `output/issue-N.html` — paste into Beehiiv for the actual email send
 2. `site/issues/issue-N.html` — wrapped in site chrome, deployed to the web archive
 
 ---
@@ -53,7 +53,7 @@ Each stage outputs a JSON file the next stage reads. The curator and drafter app
 │   ├── deploy-netlify.py           # Deploys site/ folder to Netlify via API
 │   └── beehiiv-client.py           # Beehiiv API wrapper (legacy — Beehiiv kept for subscriber data)
 │
-├── output/                         # Generated email-ready HTML — paste into Buttondown
+├── output/                         # Generated email-ready HTML — paste into Beehiiv
 │   └── issue-N.html
 │
 ├── site/                           # Public website (deployed to southcountysignal.com)
@@ -142,13 +142,13 @@ git push
 
 (Note: `git push` does NOT trigger a deploy because Netlify isn't connected to the repo. The `python scripts/deploy-netlify.py` step is what makes things live.)
 
-### 8. Send the email via Buttondown
+### 8. Send the email via Beehiiv
 
-1. Open Buttondown → New email
-2. Paste the contents of `output/issue-N.html` into the HTML editor
+1. Open https://app.beehiiv.com → Posts → New post
+2. Switch the editor to **HTML mode** and paste the contents of `output/issue-N.html`
 3. Set the subject line (3 candidates are in `pipeline/this-week.json` under `subject_lines`)
 4. Set preview text (in `pipeline/this-week.json` under `preview_text`)
-5. Set "View in Browser" URL to `https://southcountysignal.com/issues/issue-N`
+5. Beehiiv auto-injects its own unsubscribe + view-in-browser footer — nothing to configure
 6. Schedule for Thursday 8:30 AM ET
 
 ---
@@ -160,7 +160,7 @@ git push
 - Node.js 18+
 - Python 3.9+ with `requests` and `python-dotenv`
 - A Netlify account with deploy token (https://app.netlify.com/user/applications#personal-access-tokens)
-- A Buttondown account with API key
+- A Beehiiv account with API key
 
 ### Environment variables
 
@@ -188,7 +188,7 @@ pip install requests python-dotenv
 
 | Layer | Tool | Notes |
 |---|---|---|
-| Newsletter sending | Buttondown | Migrated from Beehiiv on commit `fd4ec20` |
+| Newsletter sending | Beehiiv | Migrated from Beehiiv on commit `fd4ec20` |
 | Hosting | Netlify | Site ID `d42ceedd-e6d2-44e2-988c-fbe9f59a43f8`. Domain on Netlify DNS. |
 | Domain | southcountysignal.com | Custom domain on Netlify with HTTPS |
 | Repo | GitHub (public) | github.com/neilol89/south-county-signal |
@@ -231,7 +231,7 @@ In priority order:
 3. **`sources.json` additions** discovered during the May 7 scout: Patch (high value), Contemporary Theater Company, Surf Exchange Cafe, Misquamicut Drive-In (seasonal), Kinney Azalea Gardens (seasonal).
 4. **Bump GitHub Actions versions** in `deploy-pages.yml` — Node 20 deprecation by Sept 2026 (or remove the workflow entirely since Netlify is the real deploy).
 5. **Image hosting for headliner cards** — currently text-only; could pull venue photos for visual interest.
-6. **Open rate / click-through analytics** — wire up Buttondown's stats feedback into the editorial loop.
+6. **Open rate / click-through analytics** — wire up Beehiiv's stats feedback into the editorial loop.
 7. **Sponsor/advertiser placements UI** — replace `manual-additions.json` editing with a small admin form.
 
 ---

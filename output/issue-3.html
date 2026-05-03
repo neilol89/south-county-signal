@@ -395,7 +395,7 @@
   /* ── FORWARD-TO-A-FRIEND SUBSCRIBE BLOCK ── */
   .forward-block {
     background: #F2EDE6;
-    padding: 28px 32px;
+    padding: 32px;
     text-align: center;
     border-top: 1px solid #E8E2D9;
   }
@@ -412,11 +412,19 @@
     font-size: 20px;
     font-weight: 700;
     color: #1B4965;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
     line-height: 1.3;
   }
-  .forward-block .forward-form {
-    margin-top: 12px;
+  .forward-block .forward-btn {
+    display: inline-block;
+    background: #1B4965;
+    color: #FAF8F5 !important;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    font-size: 15px;
   }
 
   /* ── FOOTER ── */
@@ -629,13 +637,11 @@
   </div>
 
   <!-- ═══════════ FORWARD-TO-A-FRIEND SUBSCRIBE BLOCK ═══════════ -->
-  <!-- Buttondown expands {{ subscribe_form }} server-side. Stripped from web archive. -->
+  <!-- Platform-agnostic: links to the website's subscribe section. -->
   <div class="forward-block">
     <div class="forward-eyebrow">Was this forwarded to you?</div>
     <div class="forward-msg">Get the Signal in your inbox every Thursday.</div>
-    <div class="forward-form">
-{{ subscribe_form }}
-    </div>
+    <a href="https://southcountysignal.com/#subscribe" class="forward-btn">Subscribe Free</a>
   </div>
 
   <!-- ═══════════ FOOTER ═══════════ -->
@@ -655,12 +661,7 @@
       <div class="ad-label">Presented By</div>
       <div class="sponsor-name"></div>
     </div>
-
-    <div class="footer-links">
-      <a href="{{manage_preferences}}">Preferences</a>
-      <a href="{{unsubscribe}}">Unsubscribe</a>
-      <a href="{{view_in_browser}}">View in Browser</a>
-    </div>
+    <!-- Beehiiv auto-injects its own footer with unsubscribe + view-in-browser links. -->
   </div>
 
 </div>

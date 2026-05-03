@@ -36,7 +36,7 @@ Resources/         — Planning docs, skill files, brand bible
 4. **Draft**: Write all newsletter sections → `pipeline/this-week.json`
 5. **Assemble**: `node scripts/generate-newsletter.js` → `output/issue-X.html`
 6. **Publish to web**: `node scripts/publish-to-site.js` → wraps issue in site chrome, copies to `site/issues/`, rebuilds archive page, updates `latest.html`. Then `git add site/ && git commit -m "Publish issue #N" && git push` — GitHub Actions auto-deploys to southcountysignal.com.
-7. **Send**: Paste `output/issue-X.html` into Beehiiv. In Beehiiv's "View in Browser" link setting, point to `https://southcountysignal.com/issues/issue-N`. Schedule for Thursday 8:30 AM.
+7. **Send**: Paste `output/issue-X.html` into Beehiiv (HTML mode). Beehiiv auto-injects unsubscribe + view-in-browser links. Schedule for Thursday 8:30 AM.
 
 ## Key Commands
 
