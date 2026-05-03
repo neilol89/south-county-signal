@@ -378,12 +378,45 @@ const latestHtml = `<!DOCTYPE html>
 `;
 fs.writeFileSync(path.join(siteDir, 'latest.html'), latestHtml, 'utf8');
 
+// ── Update homepage archive cards ──
+// Show up to MAX_HOMEPAGE_CARDS issues on the homepage. The full archive
+// lives at /issues/ — homepage just teases the most recent few.
+const MAX_HOMEPAGE_CARDS = 6;
+const indexPath = path.join(siteDir, 'index.html');
+let homepageUpdated = false;
+if (fs.existsSync(indexPath)) {
+  const indexHtml = fs.readFileSync(indexPath, 'utf8');
+  const startMarker = '<!-- ARCHIVE_CARDS_START';
+  const endMarker = '<!-- ARCHIVE_CARDS_END -->';
+  const startIdx = indexHtml.indexOf(startMarker);
+  const endIdx = indexHtml.indexOf(endMarker);
+  if (startIdx !== -1 && endIdx !== -1) {
+    const homepageCards = manifest.slice(0, MAX_HOMEPAGE_CARDS).map(m => {
+      const headline = m.headliner || m.subject || `Issue #${m.issue_number}`;
+      return `      <a href="${m.url}" class="archive-card">
+        <div class="issue-num">Issue #${m.issue_number}</div>
+        <div class="issue-headline">${escapeHtml(headline)}</div>
+        <div class="issue-date">Week of ${escapeHtml(m.week_of)}</div>
+        <div class="read-link">Read issue &rarr;</div>
+      </a>`;
+    }).join('\n');
+    const startTagEnd = indexHtml.indexOf('-->', startIdx) + 3;
+    const newIndexHtml =
+      indexHtml.slice(0, startTagEnd) +
+      '\n' + homepageCards + '\n      ' +
+      indexHtml.slice(endIdx);
+    fs.writeFileSync(indexPath, newIndexHtml, 'utf8');
+    homepageUpdated = true;
+  }
+}
+
 // ── Report ──
 console.log(`✅ Published Issue #${issueNumber} — Week of ${weekOf}`);
 console.log(`   Issue page:  ${outFile}`);
 console.log(`   Archive:     ${path.join(issuesDir, 'index.html')} (${manifest.length} issue${manifest.length === 1 ? '' : 's'})`);
 console.log(`   Latest:      ${path.join(siteDir, 'latest.html')} → ${newest.url}`);
 console.log(`   Manifest:    ${manifestPath}`);
+console.log(`   Homepage:    ${homepageUpdated ? `${indexPath} (refreshed)` : 'skipped — no ARCHIVE_CARDS markers in index.html'}`);
 console.log(``);
 console.log(`📋 Next:`);
 console.log(`   1. Preview locally: open ${outFile} in your browser`);
