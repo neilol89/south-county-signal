@@ -1,9 +1,25 @@
 #!/usr/bin/env python3
-"""Deploy site/ folder to Netlify via API."""
-import os, json, hashlib, requests
+"""Deploy site/ folder to Netlify via API.
 
-TOKEN = "nfc_nnNR2DMLB714mhFYRm9SFveDrgHq7yf7431c"
-SITE_ID = "d42ceedd-e6d2-44e2-988c-fbe9f59a43f8"
+Reads NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID from the environment (or .env).
+Create a token at https://app.netlify.com/user/applications#personal-access-tokens
+"""
+import os, hashlib, sys, requests
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
+TOKEN = os.environ.get("NETLIFY_AUTH_TOKEN")
+SITE_ID = os.environ.get("NETLIFY_SITE_ID")
+
+if not TOKEN or not SITE_ID:
+    print("ERROR: NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID must be set.", file=sys.stderr)
+    print("Add them to .env (already gitignored) — see scripts/deploy-netlify.py for details.", file=sys.stderr)
+    sys.exit(1)
+
 SITE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site")
 
 headers = {"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"}
