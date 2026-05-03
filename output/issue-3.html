@@ -392,6 +392,30 @@
     text-decoration: none;
   }
 
+  /* ── FORWARD-TO-A-FRIEND SUBSCRIBE BLOCK ── */
+  .forward-block {
+    background: #F2EDE6;
+    padding: 28px 32px;
+    text-align: center;
+    border-top: 1px solid #E8E2D9;
+  }
+  .forward-block .forward-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #D4A843;
+    margin-bottom: 10px;
+  }
+  .forward-block .forward-msg {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1B4965;
+    margin-bottom: 18px;
+    line-height: 1.3;
+  }
+
   /* ── FOOTER ── */
   .footer {
     background: #1B4965;
@@ -599,6 +623,14 @@
         <a href="mailto:signal@southcountysignal.com?subject=Just%20the%20farmers%20market" class="poll-btn">Just the farmers market</a>
       </div>
     </div>
+  </div>
+
+  <!-- ═══════════ FORWARD-TO-A-FRIEND SUBSCRIBE BLOCK ═══════════ -->
+  <!-- Buttondown expands {{ subscribe_form }} server-side. Stripped from web archive. -->
+  <div class="forward-block">
+    <div class="forward-eyebrow">Was this forwarded to you?</div>
+    <div class="forward-msg">Get the Signal in your inbox every Thursday.</div>
+    {{ subscribe_form }}
   </div>
 
   <!-- ═══════════ FOOTER ═══════════ -->
