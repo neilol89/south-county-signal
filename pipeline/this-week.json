@@ -1,114 +1,114 @@
 {
-  "issue_number": 3,
-  "week_of": "May 7, 2026",
-  "opener": "Mother's Day lands Sunday and the spring season is officially open for business. The Knick's birthday calendar keeps rolling, the gardens are at peak bloom, and Friday night has three shows worth fighting traffic for. If you've been waiting for the week that stops feeling like winter — congratulations, you found it.",
+  "issue_number": 4,
+  "week_of": "May 14, 2026",
+  "opener": "Three things we teased last week are all happening this week — the drive-in opens, Eight to the Bar plays the Knick, the Dirty Dozen Brass Band rolls through East Greenwich — and somehow that's still not the most stacked Friday on the calendar. Summer in South County doesn't start on a calendar date. It starts the night Wuskenau Beach turns into a parking lot, the projector flips on, and the first opening notes of Jaws come through the windshield. Buckle up.",
 
   "headliner": {
-    "name": "Greg Piccolo & Heavy Juice — 75th Birthday at the Knick",
-    "date": "Friday, May 8",
-    "time": "8:00 PM",
-    "venue": "Knickerbocker Music Center",
+    "name": "Misquamicut Drive-In Season Opener — Jaws on the Beach",
+    "date": "Friday, May 15",
+    "time": "9:00 PM (gates 6:30 PM, previews 8:00 PM)",
+    "venue": "Wuskenau Beach Pondside",
     "town": "Westerly",
-    "description": "Greg Piccolo helped build the Rhode Island R&B sound with Roomful of Blues, and he's hitting 75 the right way — playing the Knick with Heavy Juice and pre-releasing a brand-new album the same night. This is the kind of birthday party where the gift is the room. The 91-year-old dance floor doesn't fit everybody — get there early. Milestones like this are exactly why the Knick was worth saving.",
-    "link": "https://unitedtheatre.org/shows/greg-piccolo-heavy-juice-75th-birthday-celebration/",
+    "description": "The Misquamicut Drive-In is one of the last working drive-ins in New England, and the night it flips on for the season is a South County summer ritual — the unofficial start to the months that matter. Opening with Jaws is the kind of cosmic alignment between movie and venue you don't get twice. One ticket per carload, first-come parking, gates at 6:30, previews at 8, sharks at 9. Bring blankets, bring snacks, leave the convertible at home. The drive-in is back. So is summer.",
+    "link": "https://www.eventbrite.com/e/jaws-at-the-misquamicut-drive-in-season-opener-tickets-1987364176751",
     "sponsor": null
   },
 
   "lineup": [
     {
-      "category": "arts",
-      "category_label": "Arts & Culture",
-      "name": "Salt Marsh Opera presents Cinderella",
-      "date": "Thursday, May 7",
-      "time": "7:00 PM",
-      "venue": "United Theatre — Black Box",
-      "town": "Westerly",
-      "description": "Rossini's Cinderella in the Black Box, performed by South County's own opera company. If you've ever rolled your eyes at opera, this is the size of room that changes minds — every seat is whispering distance from the singers.",
-      "link": "https://unitedtheatre.org/shows/salt-marsh-opera-presents-cinderella/",
-      "sponsored": false
-    },
-    {
       "category": "music",
       "category_label": "Live Music",
-      "name": "Paul Gilbert with Greg Koch",
-      "date": "Friday, May 8",
+      "name": "Dirty Dozen Brass Band",
+      "date": "Thursday, May 14",
       "time": "Evening",
       "venue": "Greenwich Odeum",
       "town": "East Greenwich",
-      "description": "Mr. Big's guitar god in a 400-seat room with another guitar god — the kind of night where you remember why people fell in love with the electric guitar in the first place. The VIP add-on is reportedly almost gone.",
+      "description": "Forty-five years of GRAMMY-winning brass-band-meets-funk-meets-bebop in a 400-seat room — the band that invented the phrase 'musical gumbo' and meant it. New Orleans walks into East Greenwich and turns Thursday into a school night you'll regret in exactly the right way.",
       "link": "https://www.greenwichodeum.com/calendar/",
       "sponsored": false
     },
     {
+      "category": "food",
+      "category_label": "Food & Drink",
+      "name": "The Delightfully Respectful Celebration of the Nation's 50 States",
+      "date": "Thursday, May 14",
+      "time": "Doors 5:00 PM",
+      "venue": "Westerly Armory",
+      "town": "Westerly",
+      "description": "BBQ chicken and pork, mac & cheese, salad, Toll House cookies, and a guided tour through all fifty states from Roberta Mudge Humble of the RI Heritage Hall of Fame. Twenty-eight bucks, ages ten and up, reservations at 401.596.8554. The weirdest, warmest, most Westerly Thursday on the schedule — and we mean that as a compliment.",
+      "link": "https://westerlyarmory.com/events",
+      "sponsored": false
+    },
+    {
+      "category": "music",
+      "category_label": "Live Music",
+      "name": "Dance Night at the Knick — Eight to the Bar + UNITED Big Band Album Release",
+      "date": "Friday, May 15",
+      "time": "8:00 PM",
+      "venue": "Knickerbocker Music Center",
+      "town": "Westerly",
+      "description": "Eight to the Bar has been moving dance floors with swing, boogie-woogie, and Motown for forty-plus years. They share the stage with the UNITED Big Band and Jazz Combo for an album release party, and the Knick's Starlight Ballroom is the exact room this music was built for. Wear shoes you can move in.",
+      "link": "https://unitedtheatre.org/coming-soon-events/",
+      "sponsored": false
+    },
+    {
+      "category": "nightlife",
+      "category_label": "Nightlife",
+      "name": "LaMP — Russ Lawton, Scott Metzger & Ray Paczkowski",
+      "date": "Friday, May 15",
+      "time": "9:00 PM",
+      "venue": "Ocean Mist",
+      "town": "Matunuck",
+      "description": "Russ Lawton and Ray Paczkowski are Trey Anastasio's rhythm section. Scott Metzger plays in JRAD. The three of them at the Mist on a Friday night is not the kind of show that usually happens at a beach bar — and the deck on a clear May evening is reason enough on its own. This will draw.",
+      "link": "https://www.eventbrite.com/e/lamp-ft-russ-lawton-scott-metzger-ray-paczkowski-the-ocean-mist-tickets-1983820351073",
+      "sponsored": false
+    },
+    {
       "category": "arts",
       "category_label": "Arts & Culture",
-      "name": "The Psychology of Serial Killers",
-      "date": "Friday, May 8",
-      "time": "8:00 PM",
-      "venue": "United Theatre — Black Box",
-      "town": "Westerly",
-      "description": "A clinical psychologist on a stage talking about the brains of America's worst people. Macabre, weirdly compelling, and probably the most-asked-about ticket at the United this season. Pick your Friday — this one will be talked about Monday.",
-      "link": "https://unitedtheatre.org/shows/the-psychology-of-serial-killers/",
-      "sponsored": false
-    },
-    {
-      "category": "music",
-      "category_label": "Live Music",
-      "name": "Led Zeppelin — Houses of the Holy (Tribute)",
-      "date": "Saturday, May 9",
-      "time": "7:30 PM",
-      "venue": "Courthouse Center for the Arts",
+      "name": "SCAA 'Quality Seconds' Pottery & Art Sale",
+      "date": "Saturday, May 16",
+      "time": "9:00 AM",
+      "venue": "South County Art Association",
       "town": "South Kingstown",
-      "description": "The Courthouse is doing classic albums note-for-note all spring, and Houses of the Holy is the one Zep fans actually want. Tribute night done with reverence — and within 15 minutes of every diner in the county.",
-      "link": "https://courthousearts.org",
+      "description": "Once a year, the South County Art Association sells slightly-imperfect pottery and member artwork at a fraction of gallery price. Collectors line up at nine. If you've been putting off buying real art for your kitchen wall — and you have been — this is the morning.",
+      "link": "https://patch.com/rhode-island/narragansett/calendar",
       "sponsored": false
     },
     {
       "category": "music",
       "category_label": "Live Music",
-      "name": "In Lieu of Flowers",
-      "date": "Saturday, May 9",
-      "time": "8:00 PM (Doors 7:00 PM)",
+      "name": "Mark Cutler & Men of Great Courage",
+      "date": "Saturday, May 16",
+      "time": "9:30 PM (Doors 9:00 PM)",
       "venue": "Pump House Music Works",
       "town": "Wakefield",
-      "description": "$15 advance for an indie show at the Pump House — the venue keeps quietly being one of the best music rooms in the state. You don't have to know the band. That's kind of the point.",
+      "description": "Mark Cutler has been an RI rock institution since the Schemers, and Men of Great Courage is the project he's pouring his catalog into now. $15 advance, $20 at the door. Wakefield's late-Saturday move.",
       "link": "https://www.pumphousemusicworks.com/event-calendar",
       "sponsored": false
     },
     {
-      "category": "outdoor",
-      "category_label": "Beach & Outdoor",
-      "name": "Kingston Hill Gardeners Annual Plant Sale",
-      "date": "Saturday, May 9",
-      "time": "9:00 AM – 1:00 PM",
-      "venue": "1859 Mooresfield Rd",
-      "town": "South Kingstown",
-      "description": "Mother's Day-eve perennial sale, run by the people who actually grew the plants. Smarter than rushing through Sunday brunch — give her something that lives. Get there at nine; the good stuff goes fast.",
-      "link": "https://patch.com/rhode-island/narragansett/calendar",
+      "category": "music",
+      "category_label": "Live Music",
+      "name": "The Wailers — 50 Years of Positive Vibrations",
+      "date": "Sunday, May 17",
+      "time": "8:00 PM",
+      "venue": "United Black Box",
+      "town": "Westerly",
+      "description": "Fifty years of Wailers. Two hundred seats. The Black Box turning into a reggae club on a Sunday night, performing Bob Marley's Rastaman Vibration end to end. The math is unfair to the band — this room is way too small for what they do — and that's exactly why you want to be in it.",
+      "link": "https://unitedtheatre.org/coming-soon-events/",
       "sponsored": false
     },
     {
       "category": "outdoor",
       "category_label": "Beach & Outdoor",
       "name": "RI Grown Farmers Market at Fishermen's Memorial",
-      "date": "Sunday, May 10",
+      "date": "Sunday, May 17",
       "time": "8:30 AM – 12:00 PM",
       "venue": "Fishermen's Memorial State Park",
       "town": "Narragansett",
-      "description": "Sunday morning farmers market on Mother's Day — flowers, RI seafood, maple syrup, the whole spring opener. The pre-brunch move, or the entire plan if you read the room right.",
+      "description": "The Sunday market is officially open for the season. RI seafood, asparagus, the first strawberries if you're lucky, eggs, flowers, the works. Post-Wailers brunch fuel — or the whole Sunday if you read the room right.",
       "link": "https://www.farmfreshri.org/programs/farmers-markets/rimarketguide/",
-      "sponsored": false
-    },
-    {
-      "category": "nightlife",
-      "category_label": "Nightlife",
-      "name": "Dudemanbro w/ Professor Roots at the Ocean Mist",
-      "date": "Saturday, May 9",
-      "time": "9:00 PM",
-      "venue": "Ocean Mist",
-      "town": "Matunuck",
-      "description": "Late Saturday at the Mist with Dudemanbro and Professor Roots. Beach bar, deck over the water, bands you didn't plan on liking but will. Ocean Mist season is back.",
-      "link": "https://www.eventbrite.com/d/ri--narragansett-pier/events--this-week/",
       "sponsored": false
     }
   ],
@@ -116,40 +116,53 @@
   "mid_ad": null,
 
   "spotlight": {
-    "name": "Weekapaug Inn",
+    "name": "The Olympia Tea Room",
     "town": "Westerly",
-    "location_detail": "25 Spray Rock Rd, on Quonochontaug Pond",
-    "description": "Yes, $95 a person is real money. But Weekapaug Inn on Mother's Day morning — dining room opening onto Quonochontaug Pond, tide doing what the tide does, family-style spread that rotates with the season — is the kind of brunch that makes mom forget the rest of the year. Seatings run 10:30 to 2:30, and they book up early. If you can swing it: reserve now, sit by the windows, take the long way home through Watch Hill."
+    "location_detail": "74 Bay St, Watch Hill",
+    "description": "Open in Watch Hill since 1916 — the kind of sentence that gets thrown around carelessly but this one really has the years to back it up. The room is the draw: long bar, old wood, the way Bay Street looks through the windows in late spring. The kitchen does classic American with a strong seafood lean, the bartenders know the regulars by drink, and the patio comes back to life this month. Ten minutes from Wuskenau if you're building a full evening around Jaws — early dinner here, then over to the drive-in. Reservations smart on weekends."
   },
 
-  "pvd_events": [],
+  "pvd_events": [
+    {
+      "category": "food",
+      "category_label": "Worth the Drive",
+      "name": "Newport Oyster & Chowder Festival",
+      "date": "Saturday May 16 – Sunday May 17",
+      "time": "All day",
+      "venue": "Bowen's Wharf",
+      "town": "Newport",
+      "description": "Rhode Island's entire oyster industry on one wharf, plus award-winning chowders from kitchens across the state, live music, signature cocktails. Yes, it's Newport in May — but the weather window is exactly right, the parking is doable if you go early, and this is the rare festival where you actually leave full.",
+      "link": "https://www.visitrhodeisland.com/events/",
+      "sponsored": false
+    }
+  ],
 
   "deal": {
     "business": "Pump House Music Works",
     "offer": "$5 Off Any Advance Ticket This Week",
-    "details": "Mention 'South County Signal' when buying advance tickets for any May show. Use it on In Lieu of Flowers (Sat 5/9) or save it for Clatta Bumboo (Fri 5/15) and Stacy Kendro Comedy (Sat 5/16).",
+    "details": "Mention 'South County Signal' when buying advance tickets to any of this week's three Pump House shows — Stacy Kendro Comedy (Sat 5/16 at 7:30), Mark Cutler & Men of Great Courage (Sat 5/16 late), or Donna Byrne Quartet (Sun 5/17 at 7).",
     "code": "SIGNALPUMP"
   },
 
   "signal_noise": {
     "type": "poll",
-    "question": "Mother's Day Mom Test — where do you actually take her?",
+    "question": "What's the real first sign of summer in South County?",
     "options": [
-      "Weekapaug Inn (the splurge)",
-      "Matunuck Oyster Bar (the local move)",
-      "Coast Guard House (the classic)",
-      "Just the farmers market"
+      "The drive-in's opening night",
+      "First show on the Ocean Mist deck",
+      "Sunday market is open again",
+      "The day you finally switch to iced coffee"
     ],
     "poll_link": null
   },
 
   "subject_lines": [
-    "A Saxophone Legend Turns 75 at the Knick 🎷",
-    "Mother's Day Plan + Friday's 3-Show Dilemma 🌷",
-    "The Knick's Birthday Party (and 7 More) 🎂"
+    "The Drive-In Is Back 🦈",
+    "Jaws on the Beach + Friday's 4-Show Pile-Up 🎬",
+    "Opening Night at the Drive-In (and 7 More) 🌊"
   ],
 
-  "preview_text": "Plus a Mother's Day brunch worth the splurge, a Pump House deal, and a real Friday-night debate.",
+  "preview_text": "Plus a Phish-adjacent jam trio at the Mist, the Wailers in 200 seats, and last week's teaser delivering on all three counts.",
 
   "social": {
     "instagram": "https://instagram.com/southcountysignal",
@@ -163,5 +176,5 @@
     "footer_sponsor": null
   },
 
-  "teaser": "COMING NEXT WEEK: Misquamicut Drive-In opens Friday with Jaws on the beach. Dance Night at the Knick with Eight to the Bar's album release. And the Dirty Dozen Brass Band brings 45 years of New Orleans funk to the Odeum."
+  "teaser": "COMING NEXT WEEK: Memorial Day weekend, beach season officially open. The drive-in goes round two. Watch Hill Lighthouse opens to visitors for the season. And if you live anywhere near Kingston — URI commencement traffic. Godspeed."
 }
